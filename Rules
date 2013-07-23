@@ -22,20 +22,21 @@ compile 'posts/*' do
     layout 'post'
 end
 
+#compile 'overlays/*' do
+#    filter :kramdown
+#    layout 'overlays'
+#end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
   else
+    layout item[:layout] || 'default'
     case item[:extension]
-      when 'erb'
-        filter :erb
-        layout 'default'
       when 'md'
         filter :kramdown
-        layout 'default'
       else
         filter :erb
-	layout 'default'
     end
   end
 end
