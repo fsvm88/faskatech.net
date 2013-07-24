@@ -1,15 +1,17 @@
-<%= render 'default' %>
+<% render 'default' do %>
   <div class="container-fluid">
     <h3>Overlays</h3>
     <div class="row-fluid">
       <div class="span12">
         <p>
 There goes a list of my actual overlays. In the outdated-overlay ebuild list only appear ebuilds that are no longer mantained. Ebuilds that have newer versions available in neo2-overlay are not listed, though available in the overlay.
-	</p>
+        </p>
       </div>
     </div>
-    <div>
-      <%= yield %>
+    <div class="row-fluid">
+      <p>
+        <%= yield %>
+      </p>
     </div>
   </div>
 <% end %>

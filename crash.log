@@ -1,0 +1,149 @@
+Crashlog created at 2013-07-23 23:46:30 +0200
+
+===== MESSAGE:
+
+SyntaxError: layout /post/:8: syntax error, unexpected keyword_end, expecting end-of-input
+;  end ; _erbout.concat "\n"
+      ^
+
+===== COMPILATION STACK:
+
+  - [item]   /overlay/neo2/sys-kernel-reiser4-sources/ (rep default)
+
+===== STACK TRACE:
+
+  0. /home/nanoc/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/erb.rb:849:in `eval'
+  1. /home/nanoc/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/erb.rb:849:in `result'
+  2. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/filters/erb.rb:34:in `run'
+  3. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/compilation/filter.rb:122:in `setup_and_run'
+  4. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/result_data/item_rep.rb:409:in `layout'
+  5. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/compilation/item_rep_proxy.rb:69:in `layout'
+  6. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/compilation/rule_context.rb:68:in `layout'
+  7. ./Rules:28:in `block in load'
+  8. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/compilation/rule.rb:68:in `instance_eval'
+  9. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/compilation/rule.rb:68:in `apply_to'
+  10. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:384:in `compile_rep'
+  11. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:340:in `block in compile_reps'
+  12. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:333:in `loop'
+  13. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:333:in `compile_reps'
+  14. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:89:in `run'
+  15. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:58:in `compile'
+  16. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:363:in `block in run'
+  17. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:404:in `run_listeners_while'
+  18. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:362:in `run'
+  19. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:14:in `block in call'
+  20. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  21. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  22. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:13:in `call'
+  23. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.3.0/lib/cri/command_dsl.rb:185:in `block in runner'
+  24. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
+  25. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
+  26. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
+  27. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.3.0/lib/cri/command.rb:262:in `run'
+  28. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/cli.rb:52:in `block in run'
+  29. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  30. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  31. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib/nanoc/cli.rb:50:in `run'
+  32. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/bin/nanoc:19:in `<top (required)>'
+  33. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/bin/nanoc:23:in `load'
+  34. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/bin/nanoc:23:in `<main>'
+  35. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/bin/ruby_noexec_wrapper:14:in `eval'
+  ... 38 more lines omitted. See full crash log for details.
+
+===== VERSION INFORMATION:
+
+nanoc 3.6.4 © 2007-2013 Denis Defreyne.
+Running ruby 2.0.0 (2013-06-27) on x86_64-linux with RubyGems 2.0.5.
+
+===== SYSTEM INFORMATION:
+
+Linux matrix.faskatech.net 3.8.10+ #1 SMP PREEMPT Sat Apr 27 12:11:18 Local time zone must be set-- x86_64 Intel(R) Core(TM) i3-2130 CPU @ 3.40GHz GenuineIntel GNU/Linux
+
+===== INSTALLED GEMS:
+
+  bigdecimal 1.2.0, 1.2.1
+  bundler 1.3.5
+  bundler-unload 1.0.1
+  colored 1.2
+  cri 2.3.0
+  io-console 0.4.2
+  jsmin 1.0.1
+  json 1.7.7, 1.8.0
+  kramdown 1.1.0
+  mini_portile 0.5.1
+  minitest 4.3.2, 5.0.6
+  nanoc 3.6.4
+  nanoc-toolbox 0.1.3
+  nokogiri 1.6.0
+  psych 2.0.0
+  rake 0.9.6, 10.1.0
+  rdoc 4.0.0, 4.0.1
+  rubygems-bundler 1.2.2
+  rvm 1.11.3.8
+  test-unit 2.0.0.0, 2.5.5
+  w3c_validators 1.2
+
+===== ENVIRONMENT:
+
+CONFIG_PROTECT => "/var/bind /usr/share/gnupg/qualified.txt"
+CONFIG_PROTECT_MASK => "/etc/gentoo-release /etc/sandbox.d /etc/php/cli-php5.4/ext-active/ /etc/php/cgi-php5.4/ext-active/ /etc/php/apache2-php5.4/ext-active/ /etc/fonts/fonts.conf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild"
+EDITOR => "/bin/nano"
+GCC_SPECS => ""
+GEM_HOME => "/home/nanoc/.rvm/gems/ruby-2.0.0-p247"
+GEM_PATH => "/home/nanoc/.rvm/gems/ruby-2.0.0-p247:/home/nanoc/.rvm/gems/ruby-2.0.0-p247@global"
+GUILE_LOAD_PATH => "/usr/share/guile/1.8"
+HOME => "/home/nanoc"
+INFOPATH => "/usr/share/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.23.1/info"
+IRBRC => "/home/nanoc/.rvm/rubies/ruby-2.0.0-p247/.irbrc"
+JAVAC => "/etc/java-config-2/current-system-vm/bin/javac"
+JAVA_HOME => "/etc/java-config-2/current-system-vm"
+JDK_HOME => "/etc/java-config-2/current-system-vm"
+LANG => "it_IT.UTF-8"
+LESS => "-R -M --shift 5"
+LESSOPEN => "|lesspipe %s"
+LOGNAME => "nanoc"
+LS_COLORS => "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.pdf=00;32:*.ps=00;32:*.txt=00;32:*.patch=00;32:*.diff=00;32:*.log=00;32:*.tex=00;32:*.doc=00;32:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:"
+MAIL => "/var/mail/nanoc"
+MANPATH => "/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.7.3/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.23.1/man:/etc/java-config-2/current-system-vm/man/:/usr/lib64/php5.4/man/:/usr/share/postgresql/man/:/usr/share/postgresql-9.2/man/"
+MULTIOSDIRS => "../lib64:../lib32"
+MY_RUBY_HOME => "/home/nanoc/.rvm/rubies/ruby-2.0.0-p247"
+OLDPWD => "/home/nanoc"
+OPENGL_PROFILE => "xorg-x11"
+PACKAGE_MANAGER => "portage"
+PAGER => "/usr/bin/less"
+PATH => "/home/nanoc/.rvm/gems/ruby-2.0.0-p247/bin:/home/nanoc/.rvm/gems/ruby-2.0.0-p247@global/bin:/home/nanoc/.rvm/rubies/ruby-2.0.0-p247/bin:/home/nanoc/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.7.3:/nr/scripts"
+PWD => "/home/nanoc/repositories/www.faskatech.net"
+RUBY_VERSION => "ruby-2.0.0-p247"
+SHELL => "/bin/bash"
+SHLVL => "1"
+SSH_CLIENT => "82.54.113.30 44767 22"
+SSH_CONNECTION => "82.54.113.30 44767 94.23.214.98 22"
+SSH_TTY => "/dev/pts/2"
+TERM => "xterm"
+USER => "nanoc"
+VISUAL => "/bin/nano"
+_ => "/home/nanoc/.rvm/gems/ruby-2.0.0-p247/bin/nanoc"
+_ORIGINAL_GEM_PATH => "/home/nanoc/.rvm/gems/ruby-2.0.0-p247:/home/nanoc/.rvm/gems/ruby-2.0.0-p247@global"
+rvm_bin_path => "/home/nanoc/.rvm/bin"
+rvm_path => "/home/nanoc/.rvm"
+rvm_prefix => "/home/nanoc"
+rvm_version => "1.21.12 (stable)"
+
+===== LOAD PATHS:
+
+  0. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib
+  1. /home/nanoc/.rvm/gems/ruby-2.0.0-p247@global/gems/bundler-unload-1.0.1/lib
+  2. /home/nanoc/.rvm/gems/ruby-2.0.0-p247@global/gems/rubygems-bundler-1.2.2/lib
+  3. /home/nanoc/.rvm/gems/ruby-2.0.0-p247@global/gems/bundler-1.3.5/lib
+  4. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/colored-1.2/lib
+  5. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/cri-2.3.0/lib
+  6. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/nanoc-3.6.4/lib
+  7. /home/nanoc/.rvm/gems/ruby-2.0.0-p247/gems/kramdown-1.1.0/lib
+  8. /home/nanoc/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0
+  9. /home/nanoc/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby/2.0.0/x86_64-linux
+  10. /home/nanoc/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/site_ruby
+  11. /home/nanoc/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby/2.0.0
+  12. /home/nanoc/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby/2.0.0/x86_64-linux
+  13. /home/nanoc/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/vendor_ruby
+  14. /home/nanoc/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0
+  15. /home/nanoc/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/x86_64-linux

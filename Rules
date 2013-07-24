@@ -22,21 +22,17 @@ compile 'posts/*' do
     layout 'post'
 end
 
-#compile 'overlays/*' do
-#    filter :kramdown
-#    layout 'overlays'
-#end
-
 compile '*' do
   if item.binary?
     # don’t filter binary items
   else
-    layout item[:layout] || 'default'
     case item[:extension]
       when 'md'
         filter :kramdown
+        layout item[:layout] || 'default'
       else
         filter :erb
+        layout item[:layout] || 'default'
     end
   end
 end
@@ -50,6 +46,14 @@ route '/posts/*' do
       .match(item.identifier).captures
 
     "/#{y}/#{m}/#{d}/#{slug}/index.html"
+end
+
+route '/overlay/neo2/*' do
+  '/overlay/neo2-overlay.html'
+end
+
+route '/overlay/outdated-overlay.md' do
+  '/overlay/outdated-overlay.html'
 end
 
 route '*' do
