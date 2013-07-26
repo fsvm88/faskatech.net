@@ -1,8 +1,9 @@
 ---
 title: outdated-overlay
+kind: overlay
+overlay: outdated
 layout: overlay
 ---
-#### outdated-overlay
 This overlay used to contain all the ebuilds that were not present anymore in my main overlay due to the following reasons:
 
 * newer ebuilds were available

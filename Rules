@@ -49,11 +49,11 @@ route '/posts/*' do
 end
 
 route '/overlay/neo2/*' do
-  '/overlay/neo2-overlay.html'
+    '/overlay/neo2-overlay.html'
 end
 
-route '/overlay/outdated-overlay.md' do
-  '/overlay/outdated-overlay.html'
+route '/overlay/outdated/*' do
+    '/overlay/outdated-overlay.html'
 end
 
 route '*' do
