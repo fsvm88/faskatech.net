@@ -9,35 +9,35 @@
       <a class="brand" href="index.html">Faskatech.net</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><% link_to('Home', '/') %></li>
           <li></li>
           <li></li>
 	  <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">LiveCDs<b class="caret"></b></a>
+	    <a href="/livecd/" class="dropdown-toggle" data-toggle="dropdown">LiveCDs<b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Changelog</a></li>
-              <li><a href="#">Download</a></li>
-              <li><a href="#">Disclaimer (TrueCrypt)</a></li>
-              <li><a href="#">Official thread @gentoo-forums</a></li>
+              <li><%= link_to_unless_current('Features', '/livecd/features/') %></li>
+              <li><%= link_to_unless_current('Changelog', '/livecd/changelog/') %></li>
+              <li><%= link_to_unless_current('Download', '/livecd/download/') %></li>
+              <li><%= link_to_unless_current('Disclaimer (TrueCrypt)', '/livecd/disclaimer/') %></li>
+              <li><%= link_to_unless_current('Official thread @gentoo-forums', 'http://forums.gentoo.org/viewtopic-t-841256.html') %></li>
             </ul>
           </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Scripts<b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="#">dfg2ext</a></li>
-              <li><a href="#">mp3conv</a></li>
+              <li><%= link_to_unless_current('dfg2ext', '/scripts/dfg2ext/') %></li>
+              <li><%= link_to_unless_current('mp3conv', '/scripts/mp3conv/') %></li>
             </ul>
           </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overlays<b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="overlay/neo2-overlay.html">neo2-overlay</a></li>
-              <li><a href="overlay/outdated-overlay.html">outdated-overlay</a></li>
+              <li><%= link_to_unless_current('neo2', '/overlay/neo2/') %></li>
+              <li><%= link_to_unless_current('outdated', '/overlay/outdated/') %></li>
             </ul>
           </li>
-          <li><a href="/about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><%= link_to_unless_current('About', '/about/') %></li>
+          <li><%= link_to_unless_current('Contact', '/contact/') %></li>
         </ul>
       </div>
     </div>
