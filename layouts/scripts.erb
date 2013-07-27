@@ -1,0 +1,18 @@
+<% render 'default' do %>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span2 offset1">
+        <h3>Scripts</h3>
+        <p>
+This is a simple list of scripts that I've written myself. They are proof-of-concepts or small utilities which I could not find elsewhere.
+        </p>
+      </div>
+      <div class="span8">
+        <div class="article">
+          <h4><%= @item[:title] %> - <%= @item[:subtitle] %></h4>
+            <%= yield %>
+	</div>
+      </div>
+    </div>
+  </div>
+<% end %>
