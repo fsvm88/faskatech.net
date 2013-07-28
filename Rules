@@ -56,6 +56,10 @@ route '/overlay/outdated/*' do
     '/overlay/outdated/index.html'
 end
 
+route '/livecd/changelog/*' do
+	'/livecd/changelog/index.html'
+end
+
 route '*' do
   if item.binary?
     # Write item with identifier /foo/ to /foo.ext
