@@ -17,7 +17,7 @@
   # don’t filter or layout
 #end
 
-compile 'posts/*' do
+compile '/posts/*' do
     filter :kramdown
     layout 'post'
 end
