@@ -42,10 +42,10 @@ end
 #end
 
 route '/posts/*' do
-    y,m,d,slug = /([0-9]+)\-([0-9]+)\-([0-9]+)\-([^\/]+)/
+    y,m,slug = /([0-9]+)\/([0-9]+)\/([^\/]+)/
       .match(item.identifier).captures
 
-    "/#{y}/#{m}/#{d}/#{slug}/index.html"
+    "/#{y}/#{m}/#{slug}/index.html"
 end
 
 route '/overlay/neo2/*' do

@@ -10,7 +10,7 @@ module PostHelper
 			content = content.partition('<!-- more -->').first +
 			"<div class='read-more'><a href='#{post.path}'>Continue reading &rsaquo;</a></div>"
 		end
-	return content
+		return content
 	end
 
 end
