@@ -49,11 +49,11 @@ route '/posts/*' do
 end
 
 route '/overlay/neo2/*' do
-    '/overlay/neo2/index.html'
+	'/overlay/neo2/index.html'
 end
 
 route '/overlay/outdated/*' do
-    '/overlay/outdated/index.html'
+	'/overlay/outdated/index.html'
 end
 
 route '/livecd/changelog/*' do
