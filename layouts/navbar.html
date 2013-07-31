@@ -1,18 +1,18 @@
 <div class="navbar navbar-inverse">
   <div class="navbar-inner">
-    <div class="container-fluid">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    <div class="container">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="/">Faskatech.net</a>
-      <div class="nav-collapse collapse">
-        <ul class="nav">
+      <a class="navbar-brand" href="/">Faskatech.net</a>
+      <div class="nav-collapse collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav nav-pills">
           <li></li>
           <li></li>
 	  <li class="dropdown">
-	    <a href="/livecd/" class="dropdown-toggle" data-toggle="dropdown">LiveCDs<b class="caret"></b></a>
+	    <a href="/livecd/" class="dropdown-toggle" data-toggle="dropdown">LiveCDs<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><%= link_to_unless_current('Features', '/livecd/features/') %></li>
               <li><%= link_to_unless_current('Changelog', '/livecd/changelog/') %></li>
@@ -22,14 +22,14 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="/scripts/" class="dropdown-toggle" data-toggle="dropdown">Scripts<b class="caret"></b></a>
+            <a href="/scripts/" class="dropdown-toggle" data-toggle="dropdown">Scripts<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><%= link_to_unless_current('dfg2ext', '/scripts/dfg2ext/') %></li>
               <li><%= link_to_unless_current('mp3conv', '/scripts/mp3conv/') %></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="/overlay/" class="dropdown-toggle" data-toggle="dropdown">Overlays<b class="caret"></b></a>
+            <a href="/overlay/" class="dropdown-toggle" data-toggle="dropdown">Overlays<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><%= link_to_unless_current('neo2', '/overlay/neo2/') %></li>
               <li><%= link_to_unless_current('outdated', '/overlay/outdated/') %></li>
