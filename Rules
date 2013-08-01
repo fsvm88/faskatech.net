@@ -17,6 +17,10 @@
   # don’t filter or layout
 #end
 
+compile '/assets/*' do
+	# No-op
+end
+
 compile '/posts/*' do
     filter :kramdown
     layout 'post'
@@ -61,7 +65,7 @@ route '/livecd/changelog/*' do
 end
 
 route '*' do
-  if item.binary?
+  if item.binary? || item.identifier.start_with?('/assets/')
     # Write item with identifier /foo/ to /foo.ext
     item.identifier.chop + '.' + item[:extension]
   else
