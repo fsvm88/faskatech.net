@@ -24,6 +24,7 @@ end
 compile '/posts/*' do
     filter :kramdown
     layout 'post'
+    filter :cache_buster 
 end
 
 compile '*' do
@@ -34,9 +35,11 @@ compile '*' do
       when 'md'
         filter :kramdown
         layout item[:layout] || 'default'
+        filter :cache_buster 
       else
         filter :erb
         layout item[:layout] || 'default'
+        filter :cache_buster 
     end
   end
 end
@@ -64,8 +67,13 @@ route '/livecd/changelog/*' do
 	'/livecd/changelog/index.html'
 end
 
+route '/assets/*' do
+	hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
+	item.identifier.chop + hash + '.' + item[:extension]
+end
+
 route '*' do
-  if item.binary? || item.identifier.start_with?('/assets/')
+  if item.binary?
     # Write item with identifier /foo/ to /foo.ext
     item.identifier.chop + '.' + item[:extension]
   else
