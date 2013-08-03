@@ -9,3 +9,25 @@
 .navbar-inverse .navbar-brand {
 	color: #333;
 }
+
+.navbar-inverse .navbar-nav>.open>a {
+	background-color: #8BD94C;
+}
+
+.navbar-inverse .navbar-nav>.open>a:hover {
+	background-color: #006400;
+}
+
+.navbar-inverse .navbar-nav>.open>a:focus {
+	background-color: #009E60;
+}
+
+.dropdown-menu>li>a:hover {
+	background-color: #009874;
+	background-image: inherit;
+}
+
+.dropdown-menu>li>a:focus {
+	background-color: #009874;
+	background-image: inherit;
+}
