@@ -32,6 +32,16 @@
 	background-image: inherit;
 }
 
+.navbar-inverse .navbar-toggle:hover {
+	background-color: #006400;
+	background-image: inherit;
+}
+
+.navbar-inverse .navbar-toggle:focus {
+	background-color: #009E60;
+	background-image: inherit;
+}
+
 .dropdown-menu>li>span {
 	display: block;
 	padding: 3px 20px;
