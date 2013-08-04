@@ -1,6 +1,7 @@
 ---
 title: "Hello world!"
 kind: article
+layout: post
 created_at: 2008-10-12 11:11
 subject: 'site'
 tags: [ 'hello', 'world' ]

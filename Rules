@@ -21,11 +21,11 @@ compile '/assets/*' do
 	# No-op
 end
 
-compile '/posts/*' do
-    filter :kramdown
-    layout 'post'
-    filter :cache_buster 
-end
+#compile '/posts/*' do
+#    filter :kramdown
+#    layout 'post'
+#    filter :cache_buster 
+#end
 
 compile '*' do
   if item.binary?

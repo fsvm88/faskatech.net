@@ -1,6 +1,7 @@
 ---
 title: "April release revision 1"
 kind: article
+layout: post
 created_at: 2009-05-24 20:32
 subject: 'livecd'
 tags: [ 'minimal', 'april' ]

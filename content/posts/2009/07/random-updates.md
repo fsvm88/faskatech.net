@@ -1,6 +1,7 @@
 ---
 title: "Random updates"
 kind: article
+layout: post
 created_at: 2009-07-27 09:22
 subject: 'site'
 tags: [ 'minimal', 'server' ]

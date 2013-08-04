@@ -1,6 +1,7 @@
 ---
 title: "December release preview"
 kind: article
+layout: post
 created_at: 2008-12-14 11:08
 subject: 'livecd'
 tags: [ 'december', '2008', 'preview' ]

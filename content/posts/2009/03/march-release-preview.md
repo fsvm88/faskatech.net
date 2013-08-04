@@ -1,6 +1,7 @@
 ---
 title: "March release preview"
 kind: article
+layout: post
 created_at: 2009-03-05 10:32
 subject: 'livecd'
 tags: [ 'march', 'preview' ]
