@@ -2,7 +2,7 @@
 kind: livecd
 layout: livecd
 ---
-#### Current set of features
+### Current set of features
 This is a list of what you'll find in the latest release
 
 *Current key features*

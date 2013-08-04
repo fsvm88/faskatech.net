@@ -2,7 +2,7 @@
 kind: livecd
 layout: livecd
 ---
-#### Features
+### Features
 LiveCD releases are based off Gentoo Minimal LiveCDs, they feature\:
 
 * dev\-lang/perl
@@ -20,7 +20,7 @@ Some have already asked for X/graphics inclusion, my answer has always been \"no
 * troubleshooting the base profile with basic settings it\'s a matter of hours, whereas troubleshooting \>700 packages it\'s a matter of weeks \(I don\'t have such time\)
 * I don\'t have enough CPU power available to make a big release available to the public in my few spare weeks \(2~3 weeks every 3~4 months\)
 
-#### Known & Solved issues
+### Known & Solved issues
 Since nothing is perfect, here\'s a list of the known issues with the all the current releases\:
 
 * doesn\'t have splashscreen/progress bar at boot, no framebuffer decorations

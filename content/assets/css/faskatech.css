@@ -31,3 +31,18 @@
 	background-color: #009E60;
 	background-image: inherit;
 }
+
+.dropdown-menu>li>span {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: normal;
+	line-height: 1.428571429;
+	color: #333;
+	white-space: nowrap;
+	background-color: #C1E6A3;
+}
+
+.sections-sidetext {
+	font-size: 12px;
+}

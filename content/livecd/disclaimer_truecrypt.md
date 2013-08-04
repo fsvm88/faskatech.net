@@ -2,7 +2,7 @@
 kind: livecd
 layout: livecd
 ---
-#### Disclaimer (about TrueCrypt)
+### Disclaimer (about TrueCrypt)
 This section exists only to fully meet the [TrueCrypt license](http://www.truecrypt.org/legal/license).
 
 I am not associated in any way to the [TrueCrypt foundation](http://www.truecrypt.org) and I do not re-distribute copy of the source code or the binary packages as standalone packages.
