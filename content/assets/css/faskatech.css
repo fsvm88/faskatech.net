@@ -23,11 +23,11 @@
 }
 
 .dropdown-menu>li>a:hover {
-	background-color: #009874;
+	background-color: #006400;
 	background-image: inherit;
 }
 
 .dropdown-menu>li>a:focus {
-	background-color: #009874;
+	background-color: #009E60;
 	background-image: inherit;
 }
