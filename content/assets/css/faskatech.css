@@ -56,3 +56,14 @@
 .sections-sidetext {
 	font-size: 12px;
 }
+
+.navbar-inverse .navbar-nav>li>span {
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	line-height: 20px;
+	border-radius: 0;
+	color: #333;
+	display: block;
+}
