@@ -1,5 +1,5 @@
 .navbar-inverse {
-	background-color: #7dd338;
+	background-color: #7DD338;
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -11,7 +11,7 @@
 }
 
 .navbar-inverse .navbar-nav>.open>a {
-	background-color: #8BD94C;
+	background-color: #006400;
 }
 
 .navbar-inverse .navbar-nav>.open>a:hover {
@@ -19,7 +19,7 @@
 }
 
 .navbar-inverse .navbar-nav>.open>a:focus {
-	background-color: #009E60;
+	background-color: #006400;
 }
 
 .dropdown-menu>li>a:hover {
@@ -28,7 +28,7 @@
 }
 
 .dropdown-menu>li>a:focus {
-	background-color: #009E60;
+	background-color: #006400;
 	background-image: inherit;
 }
 
@@ -38,17 +38,17 @@
 }
 
 .navbar-inverse .navbar-toggle:focus {
-	background-color: #009E60;
+	background-color: #006400;
+	background-image: inherit;
+}
+
+.dropdown-toggle:hover {
+	background-color: #006400;
 	background-image: inherit;
 }
 
 .dropdown-toggle:focus {
-	background-color: #009E60;
-	background-image: inherit;
-}
-
-.dropdown-toggle:focus {
-	background-color: #009E60;
+	background-color: #006400;
 	background-image: inherit;
 }
 
