@@ -1,3 +1,7 @@
+<ul class="pager" id="pagerContainer">
+	<li class="previous previousPagerButton" id="previousPagerButtonTop"><a>&larr; Older posts</a></li>
+	<li class="next nextPagerButton" id="nextPagerButtonTop"><a>Newer posts &rarr;</a></li>
+</ul>
 <% sorted_articles.each do |post| %>
 	<div class='post'>
 		<h3><%= link_to post[:title], post.path %></h3>
@@ -8,6 +12,6 @@
 	</div>
 <% end %>
 <ul class="pager" id="pagerContainer">
-	<li class="previous" id="previousPagerButton"><a>&larr; Older posts</a></li>
-	<li class="next" id="nextPagerButton"><a>Newer posts &rarr;</a></li>
+	<li class="previous previousPagerButton" id="previousPagerButtonBottom"><a>&larr; Older posts</a></li>
+	<li class="next nextPagerButton" id="nextPagerButtonBottom"><a>Newer posts &rarr;</a></li>
 </ul>

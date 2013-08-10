@@ -8,10 +8,10 @@ $(document).ready(function() {
 		}
 	});
 	// Add listeners to buttons
-	$('#nextPagerButton').click(goForth);
-	$('#previousPagerButton').click(goBack);
+	$('.nextPagerButton').click(goForth);
+	$('.previousPagerButton').click(goBack);
 	// Deactivate "newer posts" button
-	$('#nextPagerButton').addClass('disabled');
+	$('.nextPagerButton').addClass('disabled');
 });
 
 function numberPosts() {
@@ -34,24 +34,29 @@ function determineFirstVisible(posts) {
 	return min;
 }
 
-function activateButton(id) {
-	var button = $(id);
-	if (button.hasClass('disabled')) { button.removeClass('disabled'); }
-}
+function activateButton(button) { if (!isActivatedButton(button)) { $(button).removeClass('disabled'); } }
+function deactivateButton(button) { if (isActivatedButton(button)) { $(button).addClass('disabled'); } }
+function isActivatedButton(button) { return !$(button).hasClass('disabled'); }
 
-function deactivateButton(id) {
-	var button = $(id);
-	if (!button.hasClass('disabled')) { button.addClass('disabled'); }
-}
-
-function isActivatedButton(id) {
-	var button = $(id);
-	if (button.hasClass('disabled')) { return false; }
-	else { return true; }
+function changeButtonState(btnclass, state) {
+	var buttons = $(btnclass);
+	buttons.each(function() {
+		var item = $(this);
+		switch (state) {
+			case 'on':
+				activateButton(item);
+				break;
+			case 'off':
+				deactivateButton(item);
+				break;
+			default:
+				break;
+		}
+	});
 }
 
 function goBack() {
-	if (!isActivatedButton('#previousPagerButton')) { return; }
+	if (!isActivatedButton('.previousPagerButton')) { return; }
 	var posts = $('.post');
 	var first = determineFirstVisible(posts);
 	var count = posts.length;
@@ -63,7 +68,7 @@ function goBack() {
 }
 
 function goForth() {
-	if (!isActivatedButton('#nextPagerButton')) { return; }
+	if (!isActivatedButton('.nextPagerButton')) { return; }
 	var posts = $('.post');
 	var first = determineFirstVisible(posts);
 	var count = posts.length;
@@ -76,11 +81,11 @@ function goForth() {
 
 function toggleButtons(count, first) {
 	var last = getShifted(first);
-	if (first>0) { activateButton('#nextPagerButton'); }
-	else { deactivateButton('#nextPagerButton'); }
+	if (first>0) { changeButtonState('.nextPagerButton', 'on'); }
+	else { changeButtonState('.nextPagerButton', 'off'); }
 	if ( (last>=(count-1)) ||
-		((last-first)<2)) { deactivateButton('#previousPagerButton'); }
-	else { activateButton('#previousPagerButton'); }
+		((last-first)<2)) { changeButtonState('.previousPagerButton', 'off'); }
+	else { changeButtonState('.previousPagerButton', 'on'); }
 }
 
 function setPostsVisibility(posts, first) {
