@@ -77,3 +77,9 @@
 	color: #333;
 	display: block;
 }
+
+#navbar-atom-feed
+{
+	display:inline-block;
+	background-image:url('/assets/img/feed.png');
+}
