@@ -42,6 +42,10 @@ compile '/assets/*' do
 	# No-op
 end
 
+compile '/posts/feed' do
+	filter :erb
+end
+
 #compile '/posts/*' do
 #    filter :kramdown
 #    layout 'post'
@@ -68,6 +72,10 @@ end
 #route '/stylesheet/' do
 #  '/style.css'
 #end
+
+route '/posts/feed' do
+	'/atom.xml'
+end
 
 route '/posts/*' do
     y,m,slug = /([0-9]+)\/([0-9]+)\/([^\/]+)/
