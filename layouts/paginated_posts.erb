@@ -1,0 +1,12 @@
+<%= render 'pager', { :item_id => @item[:item_id], :last_id => @item[:last_id] } %>
+<% pages = sorted_articles.slice(@item[:item_id]*@config[:page_size], @config[:page_size]) %>
+<% pages.each do |post| %>
+	<div class='post'>
+		<h3><%= link_to post[:title], post.path %></h3>
+		<aside>Posted at: <%= post[:created_at] %></aside>
+		<article>
+			<%= post.compiled_content %>
+		</article>
+	</div>
+<% end %>
+<%= render 'pager', { :item_id => @item[:item_id], :last_id => @item[:last_id] } %>
