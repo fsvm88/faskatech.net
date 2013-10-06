@@ -1,45 +1,51 @@
-<div class="navbar navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+<div class="navbar navbar-inverse" role="navigation">
+  <div class="container">
+  <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-exl-collapse">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">Faskatech.net</a>
-      <div class="nav-collapse collapse navbar-responsive-collapse nav-collapse-scrollable">
-        <ul class="nav navbar-nav nav-pills">
-          <li></li>
-          <li></li>
-	  <li class="dropdown">
-	    <a href="/livecd/" class="dropdown-toggle" data-toggle="dropdown">LiveCDs<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><%= link_to_unless_current('Features', '/livecd/features/') %></li>
-              <li><%= link_to_unless_current('Changelog', '/livecd/changelog/') %></li>
-              <li><%= link_to_unless_current('Download', '/livecd/download/') %></li>
-              <li><%= link_to_unless_current('Disclaimer (TrueCrypt)', '/livecd/disclaimer_truecrypt/') %></li>
-              <li><%= link_to_unless_current('Official thread @gentoo-forums', 'http://forums.gentoo.org/viewtopic-t-841256.html') %></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="/scripts/" class="dropdown-toggle" data-toggle="dropdown">Scripts<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><%= link_to_unless_current('dfg2ext', '/scripts/dfg2ext/') %></li>
-              <li><%= link_to_unless_current('mp3conv', '/scripts/mp3conv/') %></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="/overlay/" class="dropdown-toggle" data-toggle="dropdown">Overlays<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><%= link_to_unless_current('neo2', '/overlay/neo2/') %></li>
-              <li><%= link_to_unless_current('outdated', '/overlay/outdated/') %></li>
-            </ul>
-          </li>
-          <li><%= link_to_unless_current('About', '/about/') %></li>
-          <li><%= link_to_unless_current('Contact', '/contact/') %></li>
-	  <li><%= link_to('', '/atom.xml', { :title => 'ATOM feed', :id => 'navbar-atom-feed' }) %></li>
-        </ul>
-      </div>
-    </div>
   </div>
+  <div class="collapse navbar-collapse navbar-exl-collapse">
+    <ul class="nav navbar-nav nav-pills">
+      <li></li>
+      <li></li>
+
+      <li class="dropdown">
+        <a href="/livecd/" class="dropdown-toggle" data-toggle="dropdown">LiveCDs<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to_unless_current('Features', '/livecd/features/') %></li>
+          <li><%= link_to_unless_current('Changelog', '/livecd/changelog/') %></li>
+          <li><%= link_to_unless_current('Download', '/livecd/download/') %></li>
+          <li><%= link_to_unless_current('Disclaimer (TrueCrypt)', '/livecd/disclaimer_truecrypt/') %></li>
+          <li><%= link_to_unless_current('Official thread @gentoo-forums', 'http://forums.gentoo.org/viewtopic-t-841256.html') %></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="/scripts/" class="dropdown-toggle" data-toggle="dropdown">Scripts<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to_unless_current('dfg2ext', '/scripts/dfg2ext/') %></li>
+          <li><%= link_to_unless_current('mp3conv', '/scripts/mp3conv/') %></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="/overlay/" class="dropdown-toggle" data-toggle="dropdown">Overlays<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><%= link_to_unless_current('neo2', '/overlay/neo2/') %></li>
+          <li><%= link_to_unless_current('outdated', '/overlay/outdated/') %></li>
+        </ul>
+      </li>
+
+      <li><%= link_to_unless_current('About', '/about/') %></li>
+      <li><%= link_to_unless_current('Contact', '/contact/') %></li>
+      <li><%= link_to('', '/atom.xml', { :title => 'ATOM feed', :id => 'navbar-atom-feed' }) %></li>
+
+    </ul>
+  </div> <!-- collapse -->
+  </div> <!-- container -->
 </div>
