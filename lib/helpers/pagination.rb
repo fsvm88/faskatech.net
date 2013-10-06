@@ -43,7 +43,7 @@ module Pagination
 		if (id == 0)
 			return ""
 		elsif (id == 1)
-			return "/index.html"
+			return "/"
 		else
 			return "/pages/#{id}"
 		end
