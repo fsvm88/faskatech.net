@@ -1,10 +1,12 @@
 ---
-title: "October release preview"
+title: 'October release preview'
 kind: article
 layout: post
 created_at: 2010-10-09 13:37
-subject: 'livecd'
-tags: [ 'metro', 'preview' ]
+subject: livecd
+tags:
+- metro
+- preview
 ---
 Hi all\!
 

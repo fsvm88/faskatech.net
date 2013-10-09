@@ -1,10 +1,14 @@
 ---
-title: "Grand Opening"
+title: 'Grand Opening'
 kind: article
 layout: post
 created_at: 2008-11-04 18:47
-subject: 'site'
-tags: [ 'server', 'webserver', 'grand', 'opening' ]
+subject: site
+tags:
+- server
+- webserver
+- grand
+- opening
 ---
 Well well, after a lot of time spent learning Joomla, Apache, MySQL and configuring them, I\'m proud to annouce the opening of a semi\-definitive site\.
 

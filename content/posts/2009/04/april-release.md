@@ -1,10 +1,12 @@
 ---
-title: "April release (formerly \"March release\")"
+title: 'April release (formerly "March release")'
 kind: article
 layout: post
 created_at: 2009-04-07 22:01
-subject: 'livecd'
-tags: [ 'minimal', 'april' ]
+subject: livecd
+tags:
+- minimal
+- april
 ---
 Hi all, guys\!
 

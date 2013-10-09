@@ -1,10 +1,12 @@
 ---
-title: "September release"
+title: 'September release'
 kind: article
 layout: post
 created_at: 2009-09-14 17:08
-subject: 'livecd'
-tags: [ 'september', 'awaiting' ]
+subject: livecd
+tags:
+- september
+- awaiting
 ---
 HI all\!
 

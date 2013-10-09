@@ -1,10 +1,12 @@
 ---
-title: "Awaiting..."
+title: 'Awaiting...'
 kind: article
 layout: post
 created_at: 2010-01-24 18:30
-subject: 'livecd'
-tags: [ 'awaiting', 'server' ]
+subject: livecd
+tags:
+- awaiting
+- server
 ---
 Hi all\!
 

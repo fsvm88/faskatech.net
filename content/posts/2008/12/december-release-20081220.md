@@ -1,10 +1,13 @@
 ---
-title: "December release - 20081220"
+title: 'December release - 20081220'
 kind: article
 layout: post
 created_at: 2008-12-23 22:02
-subject: 'livecd'
-tags: [ 'truecrypt', 'december', '2008' ]
+subject: livecd
+tags:
+- truecrypt
+- december
+- 2008
 ---
 Alright\! December release is ready and published\!
 
