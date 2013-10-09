@@ -1,10 +1,10 @@
 module Tags
 
-	def tags
-		if @item[:tags].nil?
+	def tags(item)
+		if item[:tags].nil?
 			'(none)'
 		else
-			@item[:tags].join(', ')
+			item[:tags].join(', ')
 		end
 	end
 

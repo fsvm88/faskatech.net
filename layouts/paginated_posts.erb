@@ -4,6 +4,8 @@
 	<div class='post'>
 		<h3><%= link_to post[:title], post.path %></h3>
 		<aside>Posted at: <%= post[:created_at] %></aside>
+		<p>Tags: <%= tags(post) %></p>
+		<p/>
 		<article>
 			<%= post.compiled_content %>
 		</article>
