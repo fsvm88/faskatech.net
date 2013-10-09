@@ -78,8 +78,25 @@
 	display: block;
 }
 
+.navbar-nav>li>span.active {
+	background-color: #006400;
+	color: #fff;
+}
+
 #navbar-atom-feed
 {
 	display:inline-block;
 	background-image:url('/assets/img/feed.png');
 }
+
+.navbar-inverse .navbar-nav>.dropdown>a .caret {
+	border-top-color: #000;
+	border-bottom-color: #000;
+}
+
+.navbar-inverse .navbar-nav>ul>li>span {
+	background-color: #C1E6A3;
+	clear: both;
+	display: block;
+}
+
