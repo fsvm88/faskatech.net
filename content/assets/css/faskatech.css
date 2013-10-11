@@ -128,3 +128,11 @@
 .pager li>a:hover, .pager li>a:focus {
 	background-color: #C1E6A3;
 }
+
+a {
+	color: #3633CF;
+}
+
+a:hover, a:focus {
+	color: #7472CF;
+}
