@@ -21,6 +21,10 @@ preprocess do
 	paginate_articles
 end
 
+compile '/assets/css/*' do
+	filter :cache_buster
+end
+
 compile '/assets/*' do
 	# No-op
 end
