@@ -123,6 +123,8 @@
 
 .pager li>a {
 	background-color: #95D660;
+	font-weight: bold;
+	font-size: 12px;
 }
 
 .pager li>a:hover, .pager li>a:focus {
@@ -135,4 +137,8 @@ a {
 
 a:hover, a:focus {
 	color: #7472CF;
+}
+
+.text-center {
+	font-weight: bold;
 }
