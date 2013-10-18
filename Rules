@@ -57,13 +57,11 @@ compile '*' do
     case item[:extension]
       when 'md'
         filter :kramdown
-        layout item[:layout] || 'default'
-        filter :cache_buster 
       else
         filter :erb
-        layout item[:layout] || 'default'
-        filter :cache_buster 
     end
+    layout item[:layout] || 'default'
+    filter :cache_buster 
   end
 end
 
