@@ -5,9 +5,9 @@ layout: post
 created_at: 2008-12-14 11:08
 subject: livecd
 tags:
-- december
-- 2008
-- preview
+ - december
+ - release
+ - preview
 ---
 Hi all! As you\'ve seen the template has been changed again\. This is the ultimate solution for clearer reading \(this one scales to the optimal page width\)\. Also, some sections have been reorganized \(look, font size\) and the overlay section has been completed\.
 

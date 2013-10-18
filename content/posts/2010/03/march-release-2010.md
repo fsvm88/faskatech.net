@@ -5,8 +5,9 @@ layout: post
 created_at: 2010-03-19 14:59
 subject: livecd
 tags:
-- march
-- 2010
+ - march
+ - livecd
+ - release
 ---
 Hi all\!
 

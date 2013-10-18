@@ -6,8 +6,8 @@ created_at: 2008-12-23 22:02
 subject: livecd
 tags:
 - truecrypt
+- release
 - december
-- 2008
 ---
 Alright\! December release is ready and published\!
 
