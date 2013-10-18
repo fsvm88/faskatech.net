@@ -1,5 +1,11 @@
-<%= render 'pager', { :item_id => @item[:item_id], :last_id => @item[:last_id] } %>
-<% pages = sorted_articles.slice(@item[:item_id]*@config[:page_size], @config[:page_size]) %>
+<% pages = sort_articles_for_tagger(items_with_tag(@item[:tag])) %>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h3>Posts tagged with: <%= @item[:tag] %></h3>
+		</div>
+	</div>
+</div>
 <% pages.each do |post| %>
 	<div class='post'>
 		<h3><%= link_to post[:title], post.path %></h3>
@@ -11,4 +17,3 @@
 		</article>
 	</div>
 <% end %>
-<%= render 'pager', { :item_id => @item[:item_id], :last_id => @item[:last_id] } %>
