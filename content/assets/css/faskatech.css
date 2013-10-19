@@ -3,10 +3,6 @@
 	border-color: #7DD338;
 }
 
-.navbar-inverse .navbar-nav>li>a, #navbar-atom-link {
-	color: #333;
-}
-
 .navbar-inverse .navbar-brand {
 	color: #333;
 }
@@ -21,6 +17,10 @@
 
 .navbar-inverse .navbar-nav>.open>a:focus {
 	background-color: #006400;
+}
+
+.navbar-inverse .navbar-nav>li>a, #navbar-atom-link {
+	color: #333;
 }
 
 .dropdown-menu>li>a:hover {
@@ -84,14 +84,8 @@
 	color: #fff;
 }
 
-.navbar-atom-image
-{
-	display:inline-block;
-	background-image:url('/assets/img/feed.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: local;
-	background-size: 40px;
+.navbar-nav>li>a>img {
+	width: 50%;
 }
 
 .navbar-inverse .navbar-nav>.dropdown>a .caret {
