@@ -43,8 +43,10 @@
 
       <li><%= link_to_unless_current('About', '/about/') %></li>
       <li><%= link_to_unless_current('Contact', '/contact/') %></li>
-      <li><%= link_to('Atom Feed', '/atom.xml', { :title => 'ATOM feed', :id => 'navbar-atom-link' }) %></li>
 
+      <li>
+        <%= link_to('<img src="/assets/img/feed.png">', '/atom.xml', { :title => 'ATOM feed', :id => 'navbar-atom-link' }) %>
+      </li>
     </ul>
   </div> <!-- collapse -->
   </div> <!-- container -->
