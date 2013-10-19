@@ -19,7 +19,7 @@
 	background-color: #006400;
 }
 
-.navbar-inverse .navbar-nav>li>a, #navbar-atom-link {
+.navbar-inverse .navbar-nav>li>a {
 	color: #333;
 }
 
@@ -131,6 +131,11 @@ a {
 
 a:hover, a:focus {
 	color: #7472CF;
+}
+
+#currently_active_item_father {
+	color: white;
+	background-color: #006400;
 }
 
 .text-center {
