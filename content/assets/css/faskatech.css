@@ -136,6 +136,7 @@ html, body {
 
 #main {
 	overflow: auto;
+	padding-bottom: 50px;
 }
 
 #wrapper {
@@ -148,6 +149,7 @@ html, body {
 .bs-footer {
 	background-color: #7DD338;
 	height: 50px;
+	margin-top: -50px;
 	font-size: 14px;
 	color: #fff;
 	clear: both;
@@ -156,8 +158,5 @@ html, body {
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
 	padding-top: 15px;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	position: relative;
 }
