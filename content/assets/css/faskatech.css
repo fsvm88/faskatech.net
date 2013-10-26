@@ -19,6 +19,10 @@
 	background-color: #006400;
 }
 
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+	color: black;
+}
+
 .navbar-inverse .navbar-nav>li>a {
 	color: #333;
 }
