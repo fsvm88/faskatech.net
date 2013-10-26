@@ -32,6 +32,10 @@ compile '/posts/feed' do
 	filter :erb
 end
 
+compile 'sitemap' do
+	filter :erb
+end
+
 #compile '/pages/*' do
 #	filter :erb
 #	layout '/default/'
@@ -71,6 +75,10 @@ end
 
 route '/posts/feed' do
 	'/atom.xml'
+end
+
+route 'sitemap' do
+	item.identifier.chop + '.xml'
 end
 
 route '/posts/*' do
