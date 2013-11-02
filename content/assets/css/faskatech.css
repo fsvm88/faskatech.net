@@ -86,6 +86,7 @@
 .navbar-nav>li>span.active {
 	background-color: #006400;
 	color: #fff;
+	border-radius: 5px;
 }
 
 .navbar-nav>li>a>img {
