@@ -164,3 +164,7 @@ html, body {
 	padding-top: 15px;
 	position: relative;
 }
+
+.text-justify {
+    text-align: justify;
+}
