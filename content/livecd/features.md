@@ -11,7 +11,7 @@ LiveCD releases are based off Gentoo Minimal LiveCDs, they feature\:
 * reiser4\-sources \(with custom power patches\) && reiser4progs 
 * latest unstable gcc
 * latest unstable glibc
-* 2008\.0 pure profile
+* latest pure profile \(no desktop, server, etc\)
 * wider hardware support \(mostly PATA/SATA controllers and wireless cards\)\: if the kernel being used for the new release supports new hardware it will be included in the next release as well \(ath5k etc\.\.\.\)
 * various extra packages
 
