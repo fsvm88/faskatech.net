@@ -3,7 +3,7 @@
 <% pages.each do |post| %>
 	<div class='post'>
 		<h3><%= link_to post[:title], post.path %></h3>
-		<aside>By Fabio Scaccabarozzi, <%= post[:created_at] %></aside>
+		<aside>By Fabio Scaccabarozzi, <%= get_pretty_date(post) %></aside>
 		<p>Tags: <%= tags_for(post, { :base_url => 'http://www.faskatech.net/tag/' } ) %></p>
 		<p></p>
 		<article>
