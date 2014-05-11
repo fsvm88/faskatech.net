@@ -42,11 +42,11 @@ end
 #	filter :cache_buster
 #end
 
-#compile '/tag/*' do
-#	filter :erb
-#	layout '/default/'
-#	filter :cache_buster
-#end
+compile '/tag/*' do
+	filter :erb
+	layout item[:layout] || 'default'
+	filter :cache_buster
+end
 
 #compile '/posts/*' do
 #    filter :kramdown
