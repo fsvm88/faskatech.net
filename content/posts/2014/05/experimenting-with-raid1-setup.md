@@ -67,8 +67,8 @@ Below is a summary of the key points that helped me decide when comparing the th
 
 Why MD when you have two next-generation filesystems competing for the lead?
 The answer is simple, as MD is. It is extremely well documented, extremely performant for daily usage, tightly integrated and tested by kernel developers for *YEARS*, and you don't have to manage it: partition, format, install, done. Nothing more to worry about.
-Whilst ZFS is upgradable in-place, allowing to slowly migrate between FS versions safely, it is not supported by the OVH boot media, so it is absolutely off the shelf, I wouldn't be able to perform nor the installation neither the manteinance.
-I must admit I tried putting up a multi-device setup with btrfs on the server. It lasted a kernel upgrade. As far as I know, some incompatible bits went in and the whole setup screwed up. Luckily, I was able to recover. Furthermore, while it is assumed that btrfs is somewhat "okay" for daily usage, it is years away from ZFS's absolute reliability when it comes to multi-device setups.
+Whilst ZFS is upgradable in-place, allowing to slowly migrate between FS versions safely, it is not supported by the OVH boot media, so it is absolutely off the shelf, I wouldn't be able to perform neither the installation nor the manteinance.
+I must admit I tried putting up a multi-device setup with btrfs on the server *without* initramfs, using a custom patch to support btrfs device detection at boot time. It lasted a kernel upgrade. As far as I know, some incompatible bits went in and the whole setup screwed up. Luckily, I was able to recover. Furthermore, while it is assumed that btrfs is somewhat "okay" for daily usage, it is years away from ZFS's reliability when it comes to multi-device setups.
 I then tested MD, the "old-gen" solution, and it's working perfectly. The only downside will be a 2-hours manteinance mode for the array to resync if a disk ever fails, but, well, you don't have to do it that often, at least.
 
 Enough with the talk, lets move to the prompt!
@@ -84,8 +84,28 @@ The layout will be the following:
  * 989Gb / on xfs
  * 10Gb swap
 
-Why a so-big partition on a simple volume with xfs, without a splitted /home? This maximizes disk space usage, as there is no wasted space dedicated to a partition that will never fill up.
+Points worth some words:
+
+ - Q: Why a so-big partition on a simple volume with xfs, without a splitted /home?
+   - A: This maximizes disk space usage, as there is no wasted space dedicated to a partition that will never fill up (I'm talking of the root one). As a linux user, this is one of the thougher decisions you have to make. While usually the /home partition is separated from the root one because of backup/data persistence/security issues, you will find yourself over or under provisioning the latter, due to the fact that not all runtime files created by the processes running on your server will allow to relocate their data easily, or conversely, due to the fact that your root is mostly static and never changes in size. This key point is where btrfs and ZFS win over any current filesystem: they allow to create a pool of space that can be easily split in subvolumes, allowing to efficiently manage all the available space without sacrificing data isolation.
+ - Q: Why a so-big swap partition when you have 8GB of RAM?
+   - A: With Gentoo, you will need it, period. It's just a matter of time before you fill up your RAM in virtual machines, /var/tmp/portage in tmpfs or you add some overzealous options to your compiler that won't allow the data to fit in RAM. In that case, wasting 10GB per-disk most of the year comes handy, as your server won't crash, it will experience a hell of a slowdown, but will keep running without allowing the infamous OOM killer to kick in and trash your vital application or DB, totally killing the user experience.
+
+## Step 1: Clearing the drives and partitioning
+For safety, you might want to zero out the first few megabytes of your drive. This will kill any previous MBR partition record and allow fdisk to present you a blank setup.
+
+    localhost dd if=/dev/zero of=/dev/sda bs=10M count=1
+    localhost dd if=/dev/zero of=/dev/sdb bs=10M count=1
+Now go ahead and partition your first drive (sda in this case) using fdisk. Don't use cfdisk. Although it may sound tempting, it doesn't align partitions on a divisible-by-8 sector boundary (yet, as far as I know), which means you may incour the write penalty for 4k drives.
+
+Do and don't:
+
+ * do: sort the partitions in the order you want (you may want: boot, swap, root)
+ * don't: use the linux MD partition type when creating partitions, use the linux default one
+ * don't: use the swap partition type for the swap partition, leave the linux default one
+ * don't: partition the second disk
 
 
-Cheers,  
-Fabio Scaccabarozzi  
+
+Cheers,
+Fabio Scaccabarozzi
