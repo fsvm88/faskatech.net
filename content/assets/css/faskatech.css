@@ -1,9 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates);
 
+/* GENERIC STYLES */
 html, body {
 	font-family: 'Montserrat Alternates', sans-serif;
 	height: 100%;
 }
+
+a { color: #1abc9c; }
+a:hover, a:focus { color: #16a085; }
 
 .navbar { background-color: #1abc9c; border-color: #1abc9c; color: white; }
 .navbar a { color: white; }
@@ -27,31 +31,10 @@ html, body {
 	background-color: #2c3e50;
 }
 
-.pager li>a, .pager li>a:hover, .pager li>a:focus {
-	color: black;
-}
+.pager li>a { color: white; background-color: #16a085; font-weight: bold; font-size: 14px; }
+.pager li>a:hover, .pager li>a:focus { background-color: #2c3e50; }
 
-.pager li>a {
-	background-color: #95D660;
-	font-weight: bold;
-	font-size: 12px;
-}
-
-.pager li>a:hover, .pager li>a:focus {
-	background-color: #C1E6A3;
-}
-
-/* LINK STYLES */
-#main>a { color: #3633CF; }
-
-#main>a:hover, #main>a:focus { color: #7472CF; }
-
-.text-center { font-weight: bold; }
-
-#main {
-	overflow: auto;
-	padding-bottom: 50px;
-}
+#main { overflow: auto; padding-bottom: 50px; }
 
 #wrapper {
 	min-height: 100%;
