@@ -10,7 +10,7 @@
 	<div class='post'>
 		<h3><%= link_to post[:title], post.path %></h3>
 		<aside>Posted at: <%= post[:created_at] %></aside>
-		<p>Tags: <%= tags_for(post, { :base_url => 'http://www.faskatech.net/tag/' } ) %></p>
+		<p>Tags: <%= tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } ) %></p>
 		<p></p>
 		<article>
 			<%= post.compiled_content %>

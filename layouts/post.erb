@@ -3,7 +3,7 @@
 		<div class="content">
 			<h4 class="post_title"><%= item[:title] %></h4>
 			<aside class="post_aside">By Fabio Scaccabarozzi, <%= get_pretty_date(item) %></aside>
-			<p class="post_tags">Tags: <%= tags_for(item, { :base_url => 'http://www.faskatech.net/tag/' } ) %></p>
+			<p class="post_tags">Tags: <%= tags_for(item, { :base_url => @site.config[:base_url] + '/tag/' } ) %></p>
 			<p/>
 			<article class="post_content">
 				<%= yield %>
