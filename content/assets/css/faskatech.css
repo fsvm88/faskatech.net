@@ -170,3 +170,7 @@ html, body {
 .text-justify {
     text-align: justify;
 }
+
+#gplusauthorattribution {
+	display: none;
+}
