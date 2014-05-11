@@ -67,6 +67,8 @@ a:hover, a:focus { color: #16a085; text-decoration: none; }
 
 #gplusauthorattribution { display: none; }
 
+/* VARIOUS STYLES */
+hr { border-top: 1px solid #16a085; border-bottom: 1px solid #16a085; }
 
 /* POST SPECIFIC STYLES */
 .post_title { font-size: 28px; font-family: 'Hammersmith One'; }
