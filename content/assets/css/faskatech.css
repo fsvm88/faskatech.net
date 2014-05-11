@@ -65,6 +65,8 @@ a:hover, a:focus { color: #16a085; text-decoration: none; }
 .text-justify { text-align: justify; }
 .sections-sidetext { font-size: 12px; }
 
+p { line-height: 1.7; }
+
 #gplusauthorattribution { display: none; }
 
 /* VARIOUS STYLES */
