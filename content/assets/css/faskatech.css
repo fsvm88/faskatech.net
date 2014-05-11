@@ -2,6 +2,7 @@
 
 html, body {
 	font-family: 'Montserrat Alternates', sans-serif;
+	height: 100%;
 }
 
 .navbar-inverse {
@@ -142,10 +143,6 @@ a:hover, a:focus {
 	font-weight: bold;
 }
 
-html, body {
-	height: 100%;
-}
-
 #main {
 	overflow: auto;
 	padding-bottom: 50px;
@@ -174,7 +171,7 @@ html, body {
 }
 
 .text-justify {
-    text-align: justify;
+	text-align: justify;
 }
 
 #gplusauthorattribution {
