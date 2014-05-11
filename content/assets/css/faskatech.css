@@ -5,32 +5,29 @@ html, body {
 	height: 100%;
 }
 
-.navbar-inverse {
-	background-color: #7DD338;
-	border-color: #7DD338;
-}
+.navbar { background-color: #1abc9c; border-color: #1abc9c; }
 
-.navbar-inverse .navbar-brand {
+.navbar-brand {
 	color: #333;
 }
 
-.navbar-inverse .navbar-nav>.open>a {
+.navbar-nav>.open>a {
 	background-color: #006400;
 }
 
-.navbar-inverse .navbar-nav>.open>a:hover {
+.navbar-nav>.open>a:hover {
 	background-color: #006400;
 }
 
-.navbar-inverse .navbar-nav>.open>a:focus {
+.navbar-nav>.open>a:focus {
 	background-color: #006400;
 }
 
-.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+.navbar-nav .open .dropdown-menu>li>a {
 	color: black;
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar-nav>li>a {
 	color: #333;
 }
 
@@ -44,12 +41,12 @@ html, body {
 	background-image: inherit;
 }
 
-.navbar-inverse .navbar-toggle:hover {
+.navbar-toggle:hover {
 	background-color: #006400;
 	background-image: inherit;
 }
 
-.navbar-inverse .navbar-toggle:focus {
+.navbar-toggle:focus {
 	background-color: #006400;
 	background-image: inherit;
 }
@@ -79,7 +76,7 @@ html, body {
 	font-size: 12px;
 }
 
-.navbar-inverse .navbar-nav>li>span {
+.navbar-nav>li>span {
 	padding-top: 15px;
 	padding-right: 15px;
 	padding-bottom: 15px;
@@ -100,12 +97,12 @@ html, body {
 	width: 50%;
 }
 
-.navbar-inverse .navbar-nav>.dropdown>a .caret {
+.navbar-nav>.dropdown>a .caret {
 	border-top-color: #000;
 	border-bottom-color: #000;
 }
 
-.navbar-inverse .navbar-nav>ul>li>span {
+.navbar-nav>ul>li>span {
 	background-color: #C1E6A3;
 	clear: both;
 	display: block;
@@ -139,9 +136,7 @@ a:hover, a:focus {
 	border-radius: 5px;
 }
 
-.text-center {
-	font-weight: bold;
-}
+.text-center { font-weight: bold; }
 
 #main {
 	overflow: auto;
@@ -170,10 +165,8 @@ a:hover, a:focus {
 	position: relative;
 }
 
-.text-justify {
-	text-align: justify;
-}
+/* TEXT STYLES */
+.text-center { font-weight: bold; }
+.text-justify { text-align: justify; }
 
-#gplusauthorattribution {
-	display: none;
-}
+#gplusauthorattribution { display: none; }
