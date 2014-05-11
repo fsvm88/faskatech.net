@@ -7,7 +7,7 @@ html, body {
 }
 
 a { color: #1abc9c; }
-a:hover, a:focus { color: #16a085; }
+a:hover, a:focus { color: #16a085; text-decoration: none; }
 
 .navbar { background-color: #1abc9c; border-color: #1abc9c; color: white; }
 .navbar a { color: white; }
