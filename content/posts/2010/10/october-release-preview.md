@@ -1,7 +1,6 @@
 ---
 title: 'October release preview'
 kind: article
-layout: post
 created_at: 2010-10-09 13:37
 subject: livecd
 tags:

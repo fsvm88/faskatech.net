@@ -1,7 +1,6 @@
 ---
 title: 'Two years later'
 kind: article
-layout: post
 created_at: 2013-12-11 19:10
 subject: livecd
 tags:

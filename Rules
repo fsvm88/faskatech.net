@@ -36,11 +36,17 @@ compile 'sitemap' do
 	filter :erb
 end
 
-#compile '/pages/*' do
-#	filter :erb
-#	layout '/default/'
-#	filter :cache_buster
-#end
+compile '/' do
+	filter :erb
+	layout '/home/'
+	filter :cache_buster
+end
+
+compile '/pages/*' do
+	filter :erb
+	layout '/home/'
+	filter :cache_buster
+end
 
 compile '/tag/*' do
 	filter :erb
@@ -61,6 +67,8 @@ compile '*' do
     case item[:extension]
       when 'md'
         filter :kramdown
+      when 'html'
+      	nil
       else
         filter :erb
     end
