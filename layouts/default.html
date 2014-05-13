@@ -1,29 +1,73 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <%= render 'head', :title => 'Faskatech | Linux projects for power users'  %>
-  <body>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      var pluginUrl = 
-       '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-       _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-      _gaq.push(['_setAccount', 'UA-7986002-2']);
-      _gaq.push(['_trackPageview']);
+<!-- START HTML -->
+<!-- HEAD -->
+<%= render 'head', :title => 'Faskatech | Linux projects for power users'  %>
+<!-- END HEAD  -->
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    <div id="wrapper">
-      <%= render 'navbar' %>
-       <div id="main">
-        <div class="container">
-         <%= yield %>
-	</div>
-       </div>
-      </div>
-    <%= render 'footer' %>
-  </body>
+
+<!-- BODY -->
+<body>
+
+<!-- Google Analytics with in-link tracking -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+_gaq.push(['_setAccount', 'UA-7986002-2']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<!-- END Google Analytics script -->
+
+<!-- WRAPPER to help with footer vertical alignment -->
+<div id="wrapper">
+
+<!-- NAVBAR --> <%= render 'navbar' %> <!-- END NAVBAR -->
+
+<!-- MAIN -->
+<div id="main">
+
+<!-- CONTAINER -->
+<div class="container">
+
+<!-- ROW -->
+<div class="row">
+
+<!-- CONTENT DIV -->
+<div class="col-xs-12 col-sm-12 col-md-11 col-lg-11">
+<!-- CONTAINER -->
+<div class="container">
+<%= yield %>
+</div> <!-- CONTAINER -->
+</div> <!-- CONTENT DIV -->
+
+
+<!-- RIGHT SKYSCRAPER -->
+<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+    style="display:inline-block;width:120px;height:300px"
+    data-ad-client="ca-pub-4671015040339426"
+    data-ad-slot="3834381951"></ins>
+<script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</div> <!-- END RIGHT SKYSCRAPER -->
+
+</div> <!-- END ROW -->
+
+</div> <!-- END CONTAINER -->
+
+</div> <!-- END MAIN -->
+
+</div> <!-- END WRAPPER -->
+
+<!-- FOOTER --> <%= render 'footer' %> <!-- END FOOTER -->
+
+</body> <!-- END BODY -->
+<!-- END HTML -->
 </html>
