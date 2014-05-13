@@ -61,6 +61,8 @@ compile '*' do
     case item[:extension]
       when 'md'
         filter :kramdown
+      when 'html'
+      	nil
       else
         filter :erb
     end
