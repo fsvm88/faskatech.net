@@ -1,7 +1,6 @@
 ---
 title: 'March release 2010 - Happy birthday!'
 kind: article
-layout: post
 created_at: 2010-03-19 14:59
 subject: livecd
 tags:

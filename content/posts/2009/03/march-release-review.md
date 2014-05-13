@@ -1,7 +1,6 @@
 ---
 title: 'March release - review'
 kind: article
-layout: post
 created_at: 2009-03-30 21:56
 subject: livecd
 tags:
