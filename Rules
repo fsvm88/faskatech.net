@@ -20,12 +20,13 @@ preprocess do
 end
 
 
-compile '/assets/css/*' do
-	filter :cache_buster
-end
+#compile '/assets/css/*' do
+#	filter :cache_buster
+#end
 
-compile '/assets/*' do
-	# No-op
+compile '/assets/(cs|j)s/*' do
+	# nil
+	filter :cache_buster
 end
 
 compile '/posts/feed' do
