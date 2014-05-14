@@ -75,4 +75,4 @@ hr { border-top: 1px solid #16a085; border-bottom: 1px solid #16a085; }
 .post_aside { font-size: 16px; font-family: 'Exo'; }
 
 #navbar-logo { max-height: 40px; padding: 0; }
-.navbar-brand { max-height: 30px; padding: 4px 4px 4px 4px; }
+.navbar-brand { padding: 4px 4px 4px 4px; }
