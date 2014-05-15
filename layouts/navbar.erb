@@ -9,15 +9,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand visible-xs visible-sm hidden-md hidden-lg" href="/">
       	<img id="navbar-logo" alt="Faskatech logo" src="/assets/img/logo.png" class="img-responsive">
       </a>
   </div>
-  <div class="collapse navbar-collapse navbar-exl-collapse pull-right">
-    <ul class="nav navbar-nav nav-pills">
-      <li></li>
-      <li></li>
-
+  <div class="collapse navbar-collapse navbar-exl-collapse">
+      <a class="navbar-brand pull-left hidden-xs hidden-sm visible-md visible-lg" href="/">
+      	<img id="navbar-logo" alt="Faskatech logo" src="/assets/img/logo.png" class="img-responsive">
+      </a>
+    <ul class="nav navbar-nav nav-pills pull-right">
       <li class="dropdown">
         <a href="/livecd/" class="dropdown-toggle" data-toggle="dropdown">LiveCDs<span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -47,7 +47,6 @@
 
       <li><%= link_to_unless_current_withid('About', '/about/') %></li>
       <li><%= link_to_unless_current_withid('Contact', '/contact/') %></li>
-
     </ul>
   </div> <!-- collapse -->
 </div>
