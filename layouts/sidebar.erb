@@ -1,8 +1,12 @@
+<% if defined? @sidebar_text %>
+	<p> puts @sidebar_text </p>
+<% end %>
+<div class="search-with-google">Search with Google</div>
 <form action="http://www.google.com" id="cse-search-box" target="_blank">
 <div>
 <input type="hidden" name="cx" value="partner-pub-4671015040339426:7813195831" />
 <input type="hidden" name="ie" value="UTF-8" />
-<input type="text" name="q" size="23" />
+<input type="text" name="q" size="19" />
 <input type="submit" name="sa" value="Search" />
 </div>
 </form>

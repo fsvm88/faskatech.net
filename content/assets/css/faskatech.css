@@ -80,3 +80,5 @@ hr { border-top: 1px solid #16a085; border-bottom: 1px solid #16a085; }
 
 .navbar-logo { max-height: 40px; padding: 0; }
 .navbar-brand { padding: 4px 4px 4px 4px; }
+
+.search-with-google { padding: 6px; border-radius: 4px; background-color: #16a085; color: white; }
