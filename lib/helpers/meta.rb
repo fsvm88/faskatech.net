@@ -1,16 +1,31 @@
-#module Meta
-#
-#	def get_meta_line(item)
-#		metas = [ :head =>
-#	end
-#
-#	def get_post_start(post)
-#		content = post.compiled_content
-#		if content =~ /\s<!-- more -->\s/
-#			content = content.partition('<!-- more -->').first +
-#			"<div class='read-more'><a href='#{post.path}'>Continue reading &rsaquo;</a></div>"
-#		end
-#		return content
-#	end
-#
-#end
+module Meta
+
+	def get_metas_for_head(item)
+		metas = Hash.new
+		metas["author"] = 'Fabio Scaccabarozzi'
+		metas["generator"] = 'nanoc'
+		if item[:title]
+			metas["title"] = item[:title]
+		else
+			metas["title"] = 'Faskatech | Linux projects for power users'
+		end
+		
+		if item[:desc]
+			metas["desc"] = item[:desc]
+		else
+			metas["desc"] = 'Linux projects for power users: reiser4+truecrypt enabled liveCDs, custom Gentoo overlays, linux guides and scripts.'
+		end
+
+		if item[:keywords]
+			metas["keywords"] = item[:keywords]
+		else
+			metas["keywords"] = 'reiser4, livecd, live-cd, live, cd, linux, truecrypt'
+		end
+
+		headAppend = Array.new
+		metas.each do | key, value |
+			headAppend << "<meta name=\"#key\" content=\"#value\">
+		end
+	end
+
+end
