@@ -2,11 +2,11 @@
 <% pages = sorted_articles.slice(@item[:item_id]*@config[:page_size], @config[:page_size]) %>
 <% pages.each do |post| %>
 	<div class='post'>
+		<article>
 		<h3 class="post_title"><%= link_to post[:title], post.path %></h3>
 		<aside class="post_aside">By Fabio Scaccabarozzi, <%= get_pretty_date(post) %></aside>
 		<p>Tags: <%= tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } ) %></p>
 		<p></p>
-		<article>
 			<%= article_summary(post) %>
 		</article>
 	</div>

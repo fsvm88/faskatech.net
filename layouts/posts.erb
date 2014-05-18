@@ -1,6 +1,7 @@
 <!-- DIV TO WRAP THE CONTENT -->
 <div class="content">
 
+<article class="post_content">
 <!-- TITLE --> <h4 class="post_title"><%= item[:title] %></h4> <!-- END TITLE -->
 
 <!-- Everything has a title, but not everything has metadata -->
@@ -11,7 +12,6 @@
 <p> <!-- EMPTY SPACER --> </p>
 
 <!-- ARTICLE CONTENT -->
-<article class="post_content">
 <%= yield %>
 </article> <!-- END ARTICLE CONTENT -->
 </div> <!-- END CONTENT WRAPPER -->
