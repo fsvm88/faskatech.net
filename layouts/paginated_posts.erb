@@ -7,7 +7,7 @@
 		<p>Tags: <%= tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } ) %></p>
 		<p></p>
 		<article>
-			<%= post.compiled_content %>
+			<%= article_summary(post) %>
 		</article>
 	</div>
 	<hr>

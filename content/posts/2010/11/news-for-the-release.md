@@ -1,6 +1,7 @@
 ---
 title: 'News for the release'
 kind: article
+layout: posts
 created_at: 2010-11-11 16:25
 subject: livecd
 tags:
