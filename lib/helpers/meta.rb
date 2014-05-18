@@ -23,8 +23,9 @@ module Meta
 		end
 
 		headAppend = Array.new
+		headAppend << "<title>#metas[\"title\"]</title>"
 		metas.each do | key, value |
-			headAppend << "<meta name=\"#key\" content=\"#value\">
+			headAppend << "<meta name=\"#key\" content=\"#value\">"
 		end
 	end
 
