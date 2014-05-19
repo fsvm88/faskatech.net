@@ -1,6 +1,7 @@
 ---
 title: 'Awaiting...'
 kind: article
+layout: posts
 created_at: 2010-01-24 18:30
 subject: livecd
 tags:
@@ -14,6 +15,7 @@ Four months have passed since last update, I shall shortly summarize what happen
 * A lot of updates to the server\: kernel \-> 2\.6\.32 + grsec, glibc 2\.11, gcc 4\.4
 * Now running on ~amd64 gentoo
 * Removal of a lot of cruft from the server\: unused users, applications, databases, configuration files etc
+<!--MORE-->
 * Shifted all partitions to XFS filesystem to allow much lesser fragmentation and much more reliability \(compared to ext3\); I personally don\'t really care if one or two temporary files get zero\-ed out upon power failure \(which is extremely unlikely to happen anyway\)
 * Set up an automatic fully incremental backup script for the whole system based on app\-backup/rdiff\-backup; I will release it in few days, time needed to study a little and remove the internal references to the paths\. Its name is \"rdiff2ftp\" because once done, it shifts everything to the FTP backup service granted by OVH
 * Now running the BOINC platform to support @home distributed computing programs, specifically\: [SETI@home](SETI@home) and [MilkyWay@home](MilkyWay@home); they are both sharing the same single\-core processor

@@ -1,0 +1,17 @@
+<!-- DIV TO WRAP THE CONTENT -->
+<div class="content">
+
+<article class="post_content">
+<!-- TITLE --> <h4 class="post_title"><%= item[:title] %></h4> <!-- END TITLE -->
+
+<!-- Everything has a title, but not everything has metadata -->
+<% if defined?(item[:kind]) && item[:kind] == "article" then %>
+<!-- POST META --> <aside class="post_aside">By Fabio Scaccabarozzi, <%= get_pretty_date(item) %></aside> <!-- END POST META -->
+<!-- TAGS --> <p class="post_tags">Tags: <%= tags_for(item, { :base_url => @site.config[:base_url] + '/tag/' } ) %></p> <!-- END TAGS -->
+<% end %>
+<p> <!-- EMPTY SPACER --> </p>
+
+<!-- ARTICLE CONTENT -->
+<%= yield %>
+</article> <!-- END ARTICLE CONTENT -->
+</div> <!-- END CONTENT WRAPPER -->

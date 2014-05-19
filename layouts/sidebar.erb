@@ -1,15 +1,19 @@
-<%= render 'pager', { :item_id => @item[:item_id], :last_id => @item[:last_id] } %>
-<% pages = sorted_articles.slice(@item[:item_id]*@config[:page_size], @config[:page_size]) %>
-<% pages.each do |post| %>
-	<div class='post'>
-		<h3 class="post_title"><%= link_to post[:title], post.path %></h3>
-		<aside class="post_aside">By Fabio Scaccabarozzi, <%= get_pretty_date(post) %></aside>
-		<p>Tags: <%= tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } ) %></p>
-		<p></p>
-		<article>
-			<%= post.compiled_content %>
-		</article>
-	</div>
-	<hr>
+<% if defined? @sidebar_text %>
+	<p> puts @sidebar_text </p>
 <% end %>
-<%= render 'pager', { :item_id => @item[:item_id], :last_id => @item[:last_id] } %>
+<div class="search-with-google">Search with Google</div>
+<form action="http://www.google.com" id="cse-search-box" target="_blank">
+<div>
+<input type="hidden" name="cx" value="partner-pub-4671015040339426:7813195831" />
+<input type="hidden" name="ie" value="UTF-8" />
+<input type="text" name="q" size="19" />
+<input type="submit" name="sa" value="Search" />
+</div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+<script type="text/javascript" src="http://www.google.com/cse/query_renderer.js"></script>
+<div id="queries"></div>
+<script src="http://www.google.com/cse/api/partner-pub-4671015040339426/cse/7813195831/queries/js?oe=UTF-8&amp;callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
+<!-- RIGHT SKYSCRAPER --> <%= render 'google_ads' %> <!-- END RIGHT SKYSCRAPER -->

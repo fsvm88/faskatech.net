@@ -33,26 +33,15 @@ compile '/posts/feed' do
 	filter :erb
 end
 
+compile '/posts/*' do
+	filter :kramdown
+	layout '/posts/'
+	layout '/default/'
+	filter :cache_buster
+end
+
 compile 'sitemap' do
 	filter :erb
-end
-
-compile '/' do
-	filter :erb
-	layout '/home/'
-	filter :cache_buster
-end
-
-compile '/pages/*' do
-	filter :erb
-	layout '/home/'
-	filter :cache_buster
-end
-
-compile '/tag/*' do
-	filter :erb
-	layout item[:layout] || 'default'
-	filter :cache_buster
 end
 
 #compile '/posts/*' do

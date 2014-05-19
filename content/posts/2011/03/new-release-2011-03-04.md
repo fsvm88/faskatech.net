@@ -1,6 +1,7 @@
 ---
 title: 'New release: 2011-03-06'
 kind: article
+layout: posts
 created_at: 2011-03-06 14:22
 subject: livecd
 tags:
@@ -13,6 +14,7 @@ tags:
 Hi all\!
 
 The new release if finally out\! It\'s been almost an year since the latest release\.
+<!--MORE-->
 The long time since the last update brings some interesting news for you\:
 
 * kernel 2\.6\.37\.2 with reiser4 patches
