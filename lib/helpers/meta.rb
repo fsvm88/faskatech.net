@@ -24,7 +24,7 @@ module Meta
 
 		headAppend = Array.new
 		# Insert the title meta (standalone tag)
-		headAppend << "<title>#{metas[:title]}</title>"
+		headAppend << "<title>" + metas["title"] + "</title>"
 		# Append default metas
 		metas.each do | key, value |
 			headAppend << "<meta name=\"" + key + "\" content=\"" + value + "\">"
