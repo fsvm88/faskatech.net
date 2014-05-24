@@ -33,12 +33,12 @@ compile '/posts/feed' do
 	filter :erb
 end
 
-compile '/posts/*' do
-	filter :kramdown
-	layout '/posts/'
-	layout '/default/'
-	filter :cache_buster
-end
+#compile '/posts/*' do
+#	filter :kramdown
+#	layout '/posts/'
+#	layout '/default/'
+#	filter :cache_buster
+#end
 
 compile 'sitemap' do
 	filter :erb
@@ -62,7 +62,8 @@ compile '*' do
       else
         filter :erb
     end
-    layout item[:layout] || 'default'
+    layout item[:layout] if item[:layout]
+    layout 'default'
     filter :cache_buster 
   end
 end

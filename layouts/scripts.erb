@@ -1,16 +1,5 @@
-<% render 'default' do %>
-     <% content_for :sidebar_extra do %>
-       <h4>Scripts</h4>
-       <p class="sections-sidetext">
-         This is a simple list of scripts that I've written myself. They are proof-of-concepts or small utilities which I could not find elsewhere.
-       </p>
-     <% end %>
-   <div class="row-fluid">
-      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10">
-        <div class="article">
-          <h3><%= @item[:title] %> - <%= @item[:subtitle] %></h3>
-            <%= yield %>
-	</div>
-      </div>
-    </div>
+<% content_for :sidebar_extra do %>
+  <%= get_sidebar_capture('Scripts', 'This is a simple list of scripts that I\'ve written myself. They are proof-of-concepts or small utilities which I could not find elsewhere.') %>
 <% end %>
+
+<%= yield %>
