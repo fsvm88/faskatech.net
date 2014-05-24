@@ -1,7 +1,5 @@
 <div class="searchDiv">
-<% if defined? @sidebar_text %>
-	<p> @sidebar_text </p>
-<% end %>
+<%= content_for(@item, :sidebar_extra) %>
 <div class="search-with-google">Search with Google</div>
 <form action="http://www.google.com" id="cse-search-box" target="_blank">
 <div>
