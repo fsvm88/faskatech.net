@@ -21,11 +21,12 @@
       <li class="dropdown">
         <a href="/livecd/" class="dropdown-toggle" data-toggle="dropdown">LiveCDs<span class="caret"></span></a>
         <ul class="dropdown-menu">
+          <li><%= link_to_unless_current_withid('Introduction', '/livecd/introduction/') %></li>
           <li><%= link_to_unless_current_withid('Features', '/livecd/features/') %></li>
           <li><%= link_to_unless_current_withid('Changelog', '/livecd/changelog/') %></li>
           <li><%= link_to_unless_current_withid('Download', '/livecd/download/') %></li>
           <li><%= link_to_unless_current_withid('Disclaimer (TrueCrypt)', '/livecd/disclaimer_truecrypt/') %></li>
-          <li><%= link_to_unless_current_withid('Official thread @gentoo-forums', 'http://forums.gentoo.org/viewtopic-t-841256.html') %></li>
+          <li><%= link_to_unless_current_withid('Official thread @gentoo-forums', 'http://forums.gentoo.org/viewtopic-t-841256.html', :target => '_blank' ) %></li>
         </ul>
       </li>
 

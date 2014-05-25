@@ -1,9 +1,11 @@
 ---
-layout: overlay
+title: neo2-overlay
+kind: overlay
+layout: pages_with_sidebar
 ---
 <% overlay_items('neo2').each do |item| %>
   <article>
-    <h3><%= item[:title] %></h3>
+    <h4><%= item[:title] %></h4>
     <%= item.compiled_content %>
   </article>
 <% end %>
