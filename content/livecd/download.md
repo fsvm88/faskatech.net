@@ -2,7 +2,7 @@
 kind: livecd
 layout: pages_with_sidebar
 ---
-### Downloads
+## Downloads
 These are the available downloads, I\'m showing only the latest version \(what everybody should want\)\.
 
 This product utilizes TrueCrypt, freely available at [TrueCrypt official site](http://www.truecrypt.org/)\.
