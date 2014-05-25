@@ -1,6 +1,6 @@
 ---
 kind: livecd
-layout: livecd
+layout: pages_with_sidebar
 ---
 ### Downloads
 These are the available downloads, I\'m showing only the latest version \(what everybody should want\)\.

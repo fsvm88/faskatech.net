@@ -1,0 +1,7 @@
+<% content_for :sidebar_extra do %>
+  <%= get_sidebar_capture('Scripts', 'This is a simple list of scripts that I\'ve written myself. They are proof-of-concepts or small utilities which I could not find elsewhere.') if item[:kind] == 'script' %>
+  <%= get_sidebar_capture('Reiser4-TrueCrypt liveCDs', 'LiveCDs dedicated to power users and system administrators. No GUI, reiser4&truecrypt enabled, with additional tools for offline system administration and disaster recovery.') if item[:kind] == 'livecd' %>
+  <%= get_sidebar_capture('Overlays', 'There goes a list of my actual overlays. In the outdated-overlay ebuild list only appear ebuilds that are no longer mantained. Ebuilds that have newer versions available in neo2-overlay are not listed, though available in the overlay.') if item[:kind] == 'overlay' %>
+<% end %>
+
+<%= yield %>

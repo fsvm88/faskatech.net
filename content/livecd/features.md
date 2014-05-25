@@ -1,6 +1,6 @@
 ---
 kind: livecd
-layout: livecd
+layout: pages_with_sidebar
 ---
 ### Features
 LiveCD releases are based off Gentoo Minimal LiveCDs, they feature\:

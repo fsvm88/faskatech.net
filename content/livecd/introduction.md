@@ -1,6 +1,6 @@
 ---
 kind: livecd
-layout: livecd
+layout: pages_with_sidebar
 ---
 ### Introduction
 These CDs were built with the intent to help people have a fast, reliable, small recovery disk in case they use Reiser4 as a main filesystem. The release was born and is intended for power users, that is: users that know how to deal with the commandline tools (and also users who don't but wish to learn).    

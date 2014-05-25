@@ -2,7 +2,7 @@
 title: dfg2ext
 subtitle: Secure online defragmentation for ext2/3 filesystems
 kind: script
-layout: scripts
+layout: pages_with_sidebar
 ---
 This is a custom project I\'ve always run on my own\. I was looking for a way to defrag ext3 filesystems without having to back\-up/restore, to have online defragmentation\. I found davl\-tools, installed and after that had some serious bash scripting\. This is the cumulative work of over 2 years\. Since davl\-tools works also for ext2 filesystems you can also defragment ext2 filesystems\.
 

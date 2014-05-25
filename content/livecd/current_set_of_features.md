@@ -1,6 +1,6 @@
 ---
 kind: livecd
-layout: livecd
+layout: pages_with_sidebar
 ---
 ### Current set of features
 This is a list of what you'll find in the latest release
