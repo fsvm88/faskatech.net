@@ -83,4 +83,23 @@ hr { border-top: 1px solid #16a085; border-bottom: 1px solid #16a085; }
 .navbar-logo { max-height: 40px; padding: 0; }
 .navbar-brand { padding: 4px 4px 4px 4px; }
 
+.searchDiv {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
 .search-with-google { padding: 6px; border-radius: 4px; background-color: #16a085; color: white; }
+
+.atom-feed {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+@media screen and (max-width:992px) {
+	#sidebarWrapper { border-color: transparent; }
+}
+
+@media screen and (min-width:993px) {
+	#sidebarWrapper { border: 1px solid; border-color: transparent; border-left-color: #1abc9c; }
+}
