@@ -49,4 +49,25 @@ module Tags
 		end
 	end
 
+	def get_correlated_posts()
+		# Get the item tags
+		postCount = Hash.new
+		if @item[:tags]
+			sorted_articles.each { |article|
+				count = 0
+				if article[:tags]
+					article[:tags].each { |tag| count += 1 if @item[:tags].include?(tag) }
+					postCount[count] = Array.new unless postCount[count].is_a?(Array)
+					postCount[count].push(article)
+				end
+			}
+			plausiblePosts = postCount.sort.reverse
+			allPosts = Array.new
+			plausiblePosts.each { | count, idAry |
+				idAry.each { | element | allPosts << element unless @item.identifier == element.identifier }
+			}
+			return allPosts
+		end
+		return nil
+	end
 end

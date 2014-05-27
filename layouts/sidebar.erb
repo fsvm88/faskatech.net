@@ -28,4 +28,18 @@ Stay tuned with the ATOM feed!
 <script src="http://www.google.com/cse/api/partner-pub-4671015040339426/cse/7813195831/queries/js?oe=UTF-8&amp;callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
 </div>
 
+<!-- If it's a post, show correlated posts -->
+<% if @item[:kind] and @item[:kind] == 'article' %>
+	<% posts = get_correlated_posts.slice(0, @site.config[:correlated_posts]-1) %>
+	<% if posts %>
+		<p>Similar posts:</p>
+		<% posts.each do | post | %>
+			<p><%= link_to post[:title], post.path %></p>
+		<% end %>
+	<% else %>
+		<span>This post has no similar articles, or no such article could be found.</span>
+	<% end %>
+<% end %>
+<!-- END correlated posts -->
+
 <!-- RIGHT SKYSCRAPER --> <%= render 'google_ads' %> <!-- END RIGHT SKYSCRAPER -->
