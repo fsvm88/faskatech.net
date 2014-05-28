@@ -1,0 +1,45 @@
+<!-- Atom feed -->
+<a href="/atom.xml">
+<div class="atom-feed">
+<img src="/assets/img/RSS-Feeds-24.png" alt="ATOM Feed image">
+Stay tuned with the ATOM feed!
+</div>
+</a>
+<!-- END Atom feed -->
+
+<div class="searchDiv">
+<%= content_for(@item, :sidebar_extra) %>
+<!--<div class="search-with-google">Search with Google</div>-->
+<form action="http://www.google.com" id="cse-search-box" target="_blank" role="form">
+<div>
+<input type="hidden" name="cx" value="partner-pub-4671015040339426:7813195831" />
+<input type="hidden" name="ie" value="UTF-8" />
+<div class="form-group"> <!-- Begin form group -->
+<input type="text" class="form-control" name="q" />
+<input type="submit" class="btn btn-default center-block" name="sa" value="Search" />
+</div> <!-- END form group -->
+</div>
+</form>
+
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+<script type="text/javascript" src="http://www.google.com/cse/query_renderer.js"></script>
+<div id="queries"></div>
+<script src="http://www.google.com/cse/api/partner-pub-4671015040339426/cse/7813195831/queries/js?oe=UTF-8&amp;callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
+</div>
+
+<!-- If it's a post, show correlated posts -->
+<% if @item[:kind] and @item[:kind] == 'article' %>
+	<% posts = get_correlated_posts.slice(0, @site.config[:correlated_posts]-1) %>
+	<% if posts %>
+		<p>Similar posts:</p>
+		<% posts.each do | post | %>
+			<p><%= link_to post[:title], post.path %></p>
+		<% end %>
+	<% else %>
+		<span>This post has no similar articles, or no such article could be found.</span>
+	<% end %>
+<% end %>
+<!-- END correlated posts -->
+
+<!-- RIGHT SKYSCRAPER --> <%= render 'google_ads' %> <!-- END RIGHT SKYSCRAPER -->

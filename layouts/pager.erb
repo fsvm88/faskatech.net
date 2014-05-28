@@ -1,0 +1,4 @@
+<ul class="pager">
+	<li class="previous previousPagerButton<%= @item_id == @last_id ? " disabled" : "" %>"><%= link_to_unless_current('Older posts', get_older_link(@item_id, @last_id)) %></li>
+	<li class="next nextPagerButton<%= @item_id == 0 ? " disabled" : "" %>"><%= link_to_unless_current('Newer posts', get_newer_link(@item_id)) %></li>
+</ul>
