@@ -1,0 +1,11 @@
+- if @item[:kind] and @item[:kind] == 'article'
+  - posts = get_correlated_posts.slice(0, @site.config[:correlated_posts]-1)
+  - if posts
+      p
+        | Similar posts:
+        - posts.each do |post|
+            p
+              == link_to post[:title], post.path
+  - else
+    span
+      | This post has no similar articles, or no such article could be found.
