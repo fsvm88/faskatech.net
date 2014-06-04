@@ -1,0 +1,30 @@
+doctype html
+html lang="en"
+ head
+  meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+  meta name="viewport" content="width=device-width, initial-scale=1.0"
+  link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen"
+  link href="/assets/css/faskatech.css" rel="stylesheet" type="text/css" media="screen"
+  = get_metas_for_head
+
+ body
+  a id="gplusauthorattribution" href="https://plus.google.com/+FabioScaccabarozzi88?rel=author" title="g+ profile" Google Plus profile
+  div id="wrapper"
+
+   == render 'navbar'
+
+   div id="main"
+    .container
+     .row-fluid
+      div class="col-sm-12 col-md-9"
+       .container-fluid
+        == yield
+      div class="col-sm-12 col-md-3" id="sidebarWrapper"
+       == render 'sidebar'
+
+  == render 'footer'
+
+  script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+  script defer src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"
+  script defer src="/assets/js/activeswitcher.js"
+  == render 'google_analytics'
