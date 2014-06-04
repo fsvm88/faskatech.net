@@ -1,0 +1,13 @@
+.searchDiv
+  == content_for(@item, :sidebar_extra)
+  form action="http://www.google.com" id="cse-search-box" target="_blank" role="form"
+  div
+    input type="hidden" name="cx" value="partner-pub-4671015040339426:7813195831"
+    input type="hidden" name="ie" value="UTF-8"
+    .form-group
+      input type="text" class="form-control" name="q"
+      input type="submit" class="btn btn-default center-block" name="sa" value="Search"
+  script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en" defer
+  script type="text/javascript" src="http://www.google.com/cse/query_renderer.js" defer
+  div id="queries"
+  script src="http://www.google.com/cse/api/partner-pub-4671015040339426/cse/7813195831/queries/js?oe=UTF-8&amp;callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render" defer
