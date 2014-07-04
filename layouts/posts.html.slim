@@ -1,0 +1,15 @@
+.content
+  article class="post_content"
+    h4 class="post_title" = item[:title]
+    - if defined?(item[:kind]) && item[:kind] == "article" then
+        aside class="post_aside"
+          |  By Fabio Scaccabarozzi,
+          ==< get_pretty_date(item)
+        p class="post_tags"
+          | Tags:
+          =< tags_for(item, { :base_url => @site.config[:base_url] + '/tag/' } )
+	p
+
+	== yield
+
+  == render 'disqus'

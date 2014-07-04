@@ -118,4 +118,4 @@ route '*' do
   end
 end
 
-layout '*', :erb
+layout '*', :slim, format: :html5, pretty: true, disable_escape: true

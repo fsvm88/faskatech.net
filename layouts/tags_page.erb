@@ -1,9 +1,0 @@
-<% pages = sort_articles_for_tagger(items_with_tag(@item[:tag])) %>
-<h2>Posts tagged with: <%= @item[:tag] %></h2>
-<% pages.each do |post| %>
-	<div class='tagged-post'>
-		<h3><%= link_to post[:title], post.path %></h3>
-		<span>Posted at: <%= post[:created_at] %></span>
-		<span>Tags: <%= tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } ) %></span>
-	</div>
-<% end %>
