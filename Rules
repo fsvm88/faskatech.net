@@ -58,7 +58,7 @@ compile '*' do
       when 'md'
         filter :kramdown
       when 'html'
-      	nil
+	nil
       else
         filter :erb
     end
@@ -67,10 +67,6 @@ compile '*' do
     filter :cache_buster 
   end
 end
-
-#route '/stylesheet/' do
-#  '/style.css'
-#end
 
 route '/posts/feed' do
 	'/atom.xml'
@@ -81,22 +77,18 @@ route 'sitemap' do
 end
 
 route '/posts/*' do
-    y,m,slug = /([0-9]+)\/([0-9]+)\/([^\/]+)/
-      .match(item.identifier).captures
+	y,m,slug = /([0-9]+)\/([0-9]+)\/([^\/]+)/
+		.match(item.identifier).captures
 
-    "/#{y}/#{m}/#{slug}/index.html"
+	"/#{y}/#{m}/#{slug}/index.html"
+end
+
+route '*.erb' do
+	item.identifier.chop + '.html'
 end
 
 route '/pages/1/' do
 	'/index.html'
-end
-
-route '/overlay/neo2/*' do
-	'/overlay/neo2/index.html'
-end
-
-route '/overlay/outdated/*' do
-	'/overlay/outdated/index.html'
 end
 
 route '/livecd/changelog/*' do
