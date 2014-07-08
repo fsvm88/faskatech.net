@@ -148,15 +148,6 @@ You should see something like this:
     md1 : active raid1 sda1[2] sdb1[1]
           255808 blocks super 1.2 [2/2] [UU]
           [=============>.......]  check = 68.6% (176000/255808) finish=0.0min speed=44000K/sec
-          bitmap: 0/1 pages [0KB], 65536KB chunk
-
-    md2 : active raid1 sdb2[0] sda2[2]
-          908071424 blocks super 1.2 [2/2] [UU]
-          bitmap: 4/7 pages [16KB], 65536KB chunk
-
-    md3 : active raid1 sda5[0] sdb5[1]
-          57638784 blocks super 1.2 [2/2] [UU]
-          bitmap: 0/1 pages [0KB], 65536KB chunk
 
 ### Step 4: setup the partitions
 We will format the partitions according to the above schema with the following commands:
@@ -216,7 +207,7 @@ Also remember to put "domdadm" in the GRUB_CMDLINE_LINUX variable, so that md ar
         GRUB_CMDLINE_LINUX="domdadm"
         GRUB_DISABLE_LINUX_UUID=false
 
-If using systemd rather than openRC, add also the real_init string to GRUB_CMDLINE_LINUX:
+If using *systemd* rather than *openRC*, add also the real_init string to GRUB_CMDLINE_LINUX:
 
     nano -w /etc/default/grub
         GRUB_CMDLINE_LINUX="real_init=/usr/lib/systemd/systemd domdadm"
@@ -227,3 +218,21 @@ Lets finally install the bootloader on **both** disks:
     grub2-install --no-floppy --recheck /dev/sdb
 
 This will allow to start the system in case one of the disks fails, without liveCDs, allowing also for hot-recovery. Beware of course, that booting a 1-disk RAID1 array will be the same as booting without the RAID1 layer. If you lose the second disk, you lose everything.
+
+### Step 10: a little optimization
+We can push our configuration a little further, using a feature disabled by default, that can grant enormous speedups in case of power failures.
+
+    mdadm --grow --bitmap=internal /dev/mdX
+
+With this command we are adding a write-intent bitmap to the array. Basically, it works as a log of the writes in the array, allowing to resync only a small portion of the array in case of power failures. This has negligible performance cost, when compared with its benefits.  
+You can find more information about it on the [RAID kernel wiki](https://raid.wiki.kernel.org/index.php/Write-intent_bitmap){:target='_blank'}.
+
+**Note:** of course, this doesn't prevent a full resync after a disk failure. It serves as huge performance boost *only* in the case of a power failure, when the writes on the two disks may have not been committed entirely at the same time.
+
+After the addition, you can verify that the bitmap is correctly working by looking at the last line of the md in the /proc/mdstat file:
+
+    cat /proc/mdstat
+      Personalities : [raid1] [raid10] [raid6] [raid5] [raid4] [raid0] [linear] [multipath] 
+      md1 : active raid1 sda1[2] sdb1[1]
+            255808 blocks super 1.2 [2/2] [UU]
+            bitmap: 0/1 pages [0KB], 65536KB chunk <------
