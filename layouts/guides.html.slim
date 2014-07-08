@@ -1,0 +1,5 @@
+h2 == @item[:title]
+article
+  ul
+    - generic_sorted('guide','title').each do |guide|
+      li == link_to guide[:title], guide.path
