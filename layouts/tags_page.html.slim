@@ -1,0 +1,12 @@
+h2
+  | Posts tagged with: @item[:tag]
+
+  - sort_articles_for_tagger(items_with_tag(@item[:tag])).each do |post|
+      .tagged-post
+        h3 == link_to post[:title], post.path
+        span
+          | Posted at:
+          ==< post[:created_at]
+        span
+          | Tags:
+          ==< tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } )

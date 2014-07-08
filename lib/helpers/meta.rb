@@ -11,9 +11,9 @@ module Meta
 		end
 		
 		if @item[:desc]
-			metas["desc"] = @item[:desc]
+			metas["description"] = @item[:desc]
 		else
-			metas["desc"] = 'Linux projects for power users: reiser4+truecrypt enabled liveCDs, custom Gentoo overlays, linux guides and scripts.'
+			metas["description"] = 'Linux projects for power users: reiser4+truecrypt enabled liveCDs, custom Gentoo overlays, linux guides and scripts.'
 		end
 
 		if @item[:keywords]
@@ -46,7 +46,7 @@ module Meta
 
 		# Append OpenGraph (Facebook mainly) metas
 		headAppend << "<meta name=\"og:title\" content=\"" + metas["title"] + "\">"
-		headAppend << "<meta name=\"og:description\" content=\"" + metas["desc"] + "\">"
+		headAppend << "<meta name=\"og:description\" content=\"" + metas["description"] + "\">"
 		headAppend << "<meta name=\"og:url\" content=\"" + metas["url"] + "\">"
 		headAppend << "<meta name=\"og:type\" content=\"" + metas["type"] + "\">"
 		headAppend << "<meta name=\"og:image\" content=\"" + metas["image"] + "\">"
@@ -56,7 +56,7 @@ module Meta
 		headAppend << "<meta name=\”twitter:card\” content=\”summary\”>"
 		headAppend << "<meta name=\”twitter:url\” content=\”" + metas["url"] + "\”>"
 		headAppend << "<meta name=\”twitter:title\” content=\”" + metas["title"] + "\”>"
-		headAppend << "<meta name=\”twitter:description\” content=\”" + metas["desc"] + "\”>"
+		headAppend << "<meta name=\”twitter:description\” content=\”" + metas["description"] + "\”>"
 		headAppend << "<meta name=\”twitter:image\” content=\”" + metas["image"] + "\”>"
 
 		return headAppend.join("\n");
