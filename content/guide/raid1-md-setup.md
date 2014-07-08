@@ -71,6 +71,7 @@ Enough with the talk, lets move to the prompt!
 
 
 ### Step 0: planning
+You will need *mdadm* to go on with the following steps (emerge sys-fs/mdadm).  
 Before going for any partitioning, it's wise to use that little extra time you are going to save in the administration of the array to plan the disk space usage.  
 Personally, I'd delete the boot partition right away, but it's your safety net in case you want to use an exotic filesystem on the root partition. Afterall it's just 200Mb on a n-Tb drive anyway.  
   
@@ -93,10 +94,15 @@ Points worth some words:
 ### Step 1: Clearing the drives and partitioning
 For extra safety, you might want to zero out the first few megabytes of your drive. This will kill any previous MBR partition record and allow fdisk to present you a blank setup.
 
-    root@localhost ~ # dd if=/dev/zero of=/dev/sda bs=10M count=1
-    root@localhost ~ # dd if=/dev/zero of=/dev/sdb bs=10M count=1
+    dd if=/dev/zero of=/dev/sda bs=10M count=1
+    dd if=/dev/zero of=/dev/sdb bs=10M count=1
 
 Now go ahead and partition your first drive (sda in this case) using fdisk. Don't use cfdisk. Although it may sound tempting, it doesn't align partitions on a divisible-by-8 sector boundary (yet, as far as I know), which means you may incour the write penalty for 4k drives.
+
+    fdisk /dev/sda
+      # sda1: 200MB
+      # sda2; 900GB
+      # sda3: 10GB
 
 Dos and don'ts:
 
@@ -107,15 +113,117 @@ Dos and don'ts:
    * partition the second disk, I'll come to it in a minute
 
 ### Step 2: Copy your partition setup with sfdisk
-Easy paragraph: we'll use sfdisk (part of util-linux) to copy the partition setup from sda to sdb, performing a 1:1 copy, avoiding possible copy/paste issues.
+Easy paragraph: we'll use *sfdisk* (part of *util-linux*) to copy the partition setup from sda to sdb, performing a 1:1 copy, avoiding possible copy/paste issues.
 
-    root@localhost ~ # sfdisk -d /dev/sda > partitions
-    root@localhost ~ # sfdisk /dev/sdb < partitions
+    sfdisk -d /dev/sda > partitions
+    sfdisk /dev/sdb < partitions
 
 ### Step 3: create the RAID arrays
+In case you are recycling an existing setup and have left the partitions unchanged, be sure to zero the RAID array superblocks with
+
+    mdadm --zero-superblock /dev/sda*X* /dev/sdb*X*
+
+Create the RAID1 array using the following syntax
+
+    mdadm --create /dev/<name of the RAID device> --level 1 --raid-devices=2 /dev/sda<part num> /dev/sdb<part num>
+
+Following the schema explained above, we will then issue the following commands
+
+    # For boot
+    mdadm --create /dev/md1 --level 1 --raid-devices=2 /dev/sda1 /dev/sdb1
+    # For root
+    mdadm --create /dev/md2 --level 1 --raid-devices=2 /dev/sda2 /dev/sdb2
+    # For swap
+    mdadm --create /dev/md3 --level 1 --raid-devices=2 /dev/sda3 /dev/sdb3
+
+**Note:**  the md device number is arbitrary, it may change upon reboot
+
+You can verify that your RAID arrays are correctly resyncing after creation by issuing:
+
+    cat /proc/mdstat
+
+You should see something like this:
+
+    Personalities : [raid1] [raid10] [raid6] [raid5] [raid4] [raid0] [linear] [multipath] 
+    md1 : active raid1 sda1[2] sdb1[1]
+          255808 blocks super 1.2 [2/2] [UU]
+          [=============>.......]  check = 68.6% (176000/255808) finish=0.0min speed=44000K/sec
+          bitmap: 0/1 pages [0KB], 65536KB chunk
+
+    md2 : active raid1 sdb2[0] sda2[2]
+          908071424 blocks super 1.2 [2/2] [UU]
+          bitmap: 4/7 pages [16KB], 65536KB chunk
+
+    md3 : active raid1 sda5[0] sdb5[1]
+          57638784 blocks super 1.2 [2/2] [UU]
+          bitmap: 0/1 pages [0KB], 65536KB chunk
+
 ### Step 4: setup the partitions
-### Step 5: going with genkernel
+We will format the partitions according to the above schema with the following commands:
 
+    mkfs.ext4 -L boot /dev/md1
+    mkfs.xfs -d agcount=8 -l size=256m -l lazy-count=1 -s size=4096 -L root /dev/md2
+    mkswap -L swap /dev/md3
 
-Cheers,
-Fabio Scaccabarozzi
+The XFS command is complete of some optimization parameters:
+
+  * -d agcount=8: increase allocation parallelism and decrease height of the data structures of the filesystem
+  * -l size=256m: increase journal to a reasonable size for modern hard-disks
+  * -l lazy-count=1: delay updates of certain FS structures, increasing performance
+  * -s size=4096: set physical sector size of the underlying device to 4Kb
+
+The last option is only useful for 4k modern hard-disks. A 512-byte HDD won't benefit from it, but neither will see a performance drop, hence is enabled by default.
+
+### Step 5: do the actual installation
+In this paragraph we will perform the most basic installation tasks, which are not worth detailed explanations, given their ease:
+
+  * mount the root partition
+
+        mount /dev/md2 /mnt/gentoo
+
+  * extract the installation on the root filesystem
+  * mount proc, sys and dev filesystems
+
+        mount -t proc none /mnt/gentoo/proc
+        mount -o bind /dev /mnt/gentoo/dev
+        mount -o bind /sys /mnt/gentoo/sys
+
+  * chroot into the installation
+
+        chroot /mnt/gentoo /bin/bash
+
+  * perform the usual installation tasks (setup environment, portage tree etc)
+  * install mdadm (*emerge sys-fs/mdadm*)
+
+### Step 7: setup mdadm
+This is a simple step to have mdadm always use the same names, which will be the assigned ones at the time of execution of this command:
+
+    mdadm --detail --scan >> /etc/mdadm.conf
+
+Given that nowadays one uses labels and UUIDs over device names, this can be skipped without harm.
+
+### Step 8: compiling your kernel with genkernel
+The setup of the kernel is covered in a lot of guides throughout the web, rather than rewrite again well-known and documented information, I can only recommend the [Gentoo wiki on software RAID](http://wiki.gentoo.org/wiki/Complete_Handbook/Software_RAID){:target='_blank'} and the [Gentoo genkernel wiki](http://wiki.gentoo.org/wiki/Genkernel){:target='_blank'}, which contain the necessary steps to compile the kernel, plus, of course, many steps which are common to this guide.
+
+**Note:** Remember to pass --mdadm to the genkernel commandline, in order to be sure to include mdadm in the initramfs.
+
+### Step 9: setting up the bootloader
+The choice is for grub2, which is now stable in the portage tree.  
+Before installng the bootloader modify the GRUB_DISABLE_LINUX_UUID to false, so that grub will use UUIDs rather than device names when passing the root= option to the kernel commandline.  
+Also remember to put "domdadm" in the GRUB_CMDLINE_LINUX variable, so that md array detection starts after kernel boot.  
+
+    nano -w /etc/default/grub
+        GRUB_CMDLINE_LINUX="domdadm"
+        GRUB_DISABLE_LINUX_UUID=false
+
+If using systemd rather than openRC, add also the real_init string to GRUB_CMDLINE_LINUX:
+
+    nano -w /etc/default/grub
+        GRUB_CMDLINE_LINUX="real_init=/usr/lib/systemd/systemd domdadm"
+
+Lets finally install the bootloader on **both** disks:
+
+    grub2-install --no-floppy --recheck /dev/sda
+    grub2-install --no-floppy --recheck /dev/sdb
+
+This will allow to start the system in case one of the disks fails, without liveCDs, allowing also for hot-recovery. Beware of course, that booting a 1-disk RAID1 array will be the same as booting without the RAID1 layer. If you lose the second disk, you lose everything.
