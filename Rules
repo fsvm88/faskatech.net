@@ -19,11 +19,6 @@ preprocess do
 	create_tag_items
 end
 
-
-#compile '/assets/css/*' do
-#	filter :cache_buster
-#end
-
 compile '/assets/(cs|j)s/*' do
 	# nil
 	filter :cache_buster
@@ -33,22 +28,9 @@ compile '/posts/feed' do
 	filter :erb
 end
 
-#compile '/posts/*' do
-#	filter :kramdown
-#	layout '/posts/'
-#	layout '/default/'
-#	filter :cache_buster
-#end
-
 compile 'sitemap' do
 	filter :erb
 end
-
-#compile '/posts/*' do
-#    filter :kramdown
-#    layout 'post'
-#    filter :cache_buster 
-#end
 
 compile '*' do
   if item.binary?
