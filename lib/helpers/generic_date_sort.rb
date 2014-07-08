@@ -13,8 +13,8 @@ module GenericDatesort
 		sorted_items = my_items(kind).sort_by do |a|
 				if ( sort_field == 'time' )
 					attribute_to_time(a[:date])
-				elsif ( sort_field == 'name' )
-					a[:title]
+				else
+					a[:sort_field]
 				end
 			end
 		if (sort_field == 'time' )
