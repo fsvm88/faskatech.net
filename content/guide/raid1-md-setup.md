@@ -232,7 +232,7 @@ You can find more information about it on the [RAID kernel wiki](https://raid.wi
 After the addition, you can verify that the bitmap is correctly working by looking at the last line of the md in the /proc/mdstat file:
 
     cat /proc/mdstat
-      Personalities : [raid1] [raid10] [raid6] [raid5] [raid4] [raid0] [linear] [multipath] 
+      Personalities : [raid1] [raid5] [raid4] [raid0] [linear] [multipath] 
       md1 : active raid1 sda1[2] sdb1[1]
             255808 blocks super 1.2 [2/2] [UU]
-            bitmap: 0/1 pages [0KB], 65536KB chunk <------
+            bitmap: 0/1 pages [0KB], 65536KB chunk
