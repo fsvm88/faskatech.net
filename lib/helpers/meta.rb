@@ -1,6 +1,6 @@
 module Meta
 
-	def get_metas_for_head()
+	def getMetasForHead()
 		metas = Hash.new
 		metas["author"] = 'Fabio Scaccabarozzi'
 		metas["generator"] = 'nanoc'
