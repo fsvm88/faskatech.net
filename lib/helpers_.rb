@@ -1,5 +1,4 @@
 include GenericFunctions
-include LinkToExtended
 include Meta
 include OverlayGetter
 include Pagination
