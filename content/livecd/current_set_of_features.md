@@ -6,11 +6,11 @@ layout: pages_with_sidebar
 This is a list of what you'll find in the latest release
 
 *Current key features*
-* 2\.6\.33\.1 kernel \+ reiser4
-* gcc 4\.4\.3
-* glibc\-2\.11\-r1
-* linux\-headers\-2\.6\.33
-* TrueCrypt 6\.3a
+* 2.6.33.1 kernel + reiser4
+* gcc 4.4.3
+* glibc-2.11-r1
+* linux-headers-2.6.33
+* TrueCrypt 6.3a
 
 *Filesystem tools*
 * sys-fs/dosfstools
@@ -24,14 +24,14 @@ This is a list of what you'll find in the latest release
 * sys-fs/reiserfsprogs
 * sys-fs/xfsprogs
 * sys-fs/xfsdump
-* sys-fs/ecryptfs\-utils
-* sys-fs/btrfs\-progs
+* sys-fs/ecryptfs-utils
+* sys-fs/btrfs-progs
 
 *Applications*
 * app-admin/testdisk
 * app-arch/p7zip
 * app-arch/pbzip2
-* app-arch/xz\-utils
+* app-arch/xz-utils
 * app-misc/dtach
 * app-misc/screen
 * app-misc/secure-delete
