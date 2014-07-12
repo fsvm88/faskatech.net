@@ -24,7 +24,7 @@ module Tags
 #			}
 #		end
 
-		#:articles => sort_articles_for_tagger(items_with_tag(oneTag)),
+		#:articles => sortArticlesForTagger(items_with_tag(oneTag)),
 		# Generate items and append them to the items list
 		all_tags.each do | oneTag |
 			@items << Nanoc::Item.new(
@@ -35,7 +35,7 @@ module Tags
 		end
 	end
 
-	def sort_articles_for_tagger(articles)
+	def sortArticlesForTagger(articles)
 		articles.sort_by do |a|
 			attribute_to_time(a[:created_at])
 		end.reverse

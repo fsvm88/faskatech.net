@@ -1,7 +1,7 @@
 h2
   | Posts tagged with: @item[:tag]
 
-  - sort_articles_for_tagger(items_with_tag(@item[:tag])).each do |post|
+  - sortArticlesForTagger(items_with_tag(@item[:tag])).each do |post|
       .tagged-post
         h3 == link_to post[:title], post.path
         span
