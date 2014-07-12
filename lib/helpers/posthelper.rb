@@ -1,6 +1,6 @@
 module PostHelper
 
-	def get_pretty_date(post)
+	def getPrettyDate(post)
 		attribute_to_time(post[:created_at]).strftime('%B %-d, %Y')
 	end
 
@@ -9,7 +9,7 @@ module PostHelper
 	# 
 	# @example Put the following in your layout:
 	# 
-	#    <%= article_summary(item,'Read the full article>>') %>
+	#    <%= articleSummary(item,'Read the full article>>') %>
 	#    
 	# To customize the link text you can add 'read_more' attribute to your
 	# item metadata or pass the string to the helper, as above.
@@ -23,7 +23,7 @@ module PostHelper
 	#
 	# @param [String] separator Separates item summary from item body. Defaults to <!--MORE-->
 	#
-	def article_summary(item, read_more_text="Read more...", separator="<!--MORE-->")
+	def articleSummary(item, read_more_text="Read more...", separator="<!--MORE-->")
 		summary,body = item.compiled_content.split(separator)
 		return item.compiled_content unless body
 		link = link_to( (item[:read_more] || read_more_text), item.path, :class=>'readmore' )
