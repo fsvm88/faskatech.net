@@ -49,7 +49,7 @@ module Tags
 		end
 	end
 
-	def get_correlated_posts()
+	def getCorrelatedPosts()
 		# Get the item tags
 		postCount = Hash.new
 		if @item[:tags]

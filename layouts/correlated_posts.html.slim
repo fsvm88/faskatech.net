@@ -1,5 +1,5 @@
 - if @item[:kind] and @item[:kind] == 'article'
-  - posts = get_correlated_posts.slice(0, @site.config[:correlated_posts]-1)
+  - posts = getCorrelatedPosts.slice(0, @site.config[:correlated_posts]-1)
   - if posts
       p
         | Similar posts:
