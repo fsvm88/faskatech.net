@@ -1,6 +1,6 @@
 module Tags
 
-	def create_tag_items
+	def createTagItems
 		# Get all the articles
 		articles_to_paginate = sorted_articles
 

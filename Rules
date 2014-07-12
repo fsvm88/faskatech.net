@@ -16,7 +16,7 @@
 
 preprocess do
 	paginate_articles
-	create_tag_items
+	createTagItems
 end
 
 compile '/assets/(cs|j)s/*' do
