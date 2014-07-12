@@ -31,7 +31,7 @@ module Pagination
 		end
 	end
 
-	def get_older_link(id, last)
+	def getOlderLink(id, last)
 		if (id == last) or (id+2 > last+1)
 			return ""
 		else
@@ -39,7 +39,7 @@ module Pagination
 		end
 	end
 
-	def get_newer_link(id)
+	def getNewerLink(id)
 		if (id == 0)
 			return ""
 		elsif (id == 1)
