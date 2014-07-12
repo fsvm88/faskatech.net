@@ -1,6 +1,6 @@
 module Pagination
 
-	def paginate_articles
+	def paginateArticles
 		# Get all the articles
 		articles_to_paginate = sorted_articles
 		

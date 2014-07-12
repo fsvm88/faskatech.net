@@ -15,7 +15,7 @@
 
 
 preprocess do
-	paginate_articles
+	paginateArticles
 	createTagItems
 end
 
