@@ -24,10 +24,6 @@ compile '/assets/(cs|j)s/*' do
 	filter :cache_buster
 end
 
-compile '/posts/feed' do
-	filter :erb
-end
-
 compile 'sitemap' do
 	filter :erb
 end
