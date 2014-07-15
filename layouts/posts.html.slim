@@ -10,6 +10,7 @@
           =< tags_for(item, { :base_url => @site.config[:base_url] + '/tag/' } )
 	p
 
-	== yield
+	.text-justify
+	  == yield
 
   == render 'disqus'
