@@ -42,7 +42,7 @@ compile '*' do
     end
     layout item[:layout] if item[:layout]
     
-    if (('/^/guide//'.match(item.identifier)) || ('/^/contact/'.match(item.identifier)) || ('/^/about//'.match(item.identifier)))
+    if ( (Regexp.new('\A(\\/guide\\/)').match(item.identifier)) || (Regexp.new('\A(\\/contact\\/)').match(item.identifier)) || (Regexp.new('\A(\\/about\\/)').match(item.identifier)) )
 	layout 'content_without_sidebar'
     else
 	layout 'content_with_sidebar'
