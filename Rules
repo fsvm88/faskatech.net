@@ -15,17 +15,13 @@
 
 
 preprocess do
-	paginate_articles
-	create_tag_items
+	paginateArticles
+	createTagItems
 end
 
 compile '/assets/(cs|j)s/*' do
 	# nil
 	filter :cache_buster
-end
-
-compile '/posts/feed' do
-	filter :erb
 end
 
 compile 'sitemap' do
@@ -45,6 +41,13 @@ compile '*' do
         filter :erb
     end
     layout item[:layout] if item[:layout]
+    
+    if ( (Regexp.new('\A(\\/guide\\/)').match(item.identifier)) || (Regexp.new('\A(\\/contact\\/)').match(item.identifier)) || (Regexp.new('\A(\\/about\\/)').match(item.identifier)) )
+	layout 'content_without_sidebar'
+    else
+	layout 'content_with_sidebar'
+    end
+
     layout 'default'
     filter :cache_buster 
   end

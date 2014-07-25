@@ -3,15 +3,18 @@
 - sorted_articles.slice(@item[:item_id]*@config[:page_size], @config[:page_size]).each do |post|
     .post
       article class="post_content"
-        h3 class="post_title" == link_to post[:title], post.path
-        aside class="post_aside"
-           | By Fabio Scaccabarozzi,
-           ==< get_pretty_date(post)
-        p
-          | Tags:
-          =< tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } )
-	p
-	= article_summary(post)
+        header
+          h3 class="post_title" == link_to post[:title], post.path
+          aside class="post_aside"
+             | By Fabio Scaccabarozzi,
+             time
+                ==< getPrettyDate(post)
+          p
+            | Tags:
+            =< tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } )
+          p
+        .text-justify
+          == articleSummary(post)
     hr
 
 == render 'pager', { :item_id => @item[:item_id], :last_id => @item[:last_id] }

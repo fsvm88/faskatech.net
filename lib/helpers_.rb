@@ -1,7 +1,5 @@
-include GenericDatesort
-include LinkToExtended
+include GenericFunctions
 include Meta
-include OverlayGetter
 include Pagination
 include PostHelper
 include SidebarExtended

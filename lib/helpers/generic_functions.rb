@@ -1,16 +1,16 @@
-module GenericDatesort
-	def generic_attribute_to_time(time)
+module GenericFunctions
+	def convAllToTime(time)
 		time = Time.local(time.year, time.month, time.day) if time.is_a?(Date)
 		time = Time.parse(time) if time.is_a?(String)
 		time
 	end
 
-	def my_items(kind)
+	def selectItemsOfKind(kind)
 		@items.select { |item| item[:kind] == kind }
 	end
 
-	def generic_sorted(kind, sort_field)
-		sorted_items = my_items(kind).sort_by do |a|
+	def sortKindByField(kind, sort_field)
+		sorted_items = selectItemsOfKind(kind).sort_by do |a|
 				if ( sort_field == 'time' )
 					attribute_to_time(a[:date])
 				else
