@@ -1,45 +1,46 @@
-.navbar role="navigation"
-  .container
-   .row-fluid
-    .col-md-12
-     .navbar-header
-        button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-exl-collapse"
-          - 3.times do
-            span class="icon-bar"
-        a class="navbar-brand visible-xs visible-sm hidden-md hidden-lg" href="/"
-          img alt="Faskatech logo" src="/assets/img/logo.png" class="img-responsive navbar-logo"
-     div class="collapse navbar-collapse navbar-exl-collapse"
-        a class="navbar-brand pull-left hidden-xs hidden-sm visible-md visible-lg" href="/"
-           img alt="Faskatech logo" src="/assets/img/logo.png" class="img-responsive navbar-logo"
-        ul class="nav navbar-nav nav-pills pull-right"
-          li class="dropdown"
-             a href="/livecd/" class="dropdown-toggle" data-toggle="dropdown"
-               | LiveCD
-               span class="caret"
-             ul class="dropdown-menu"
-               li = link_to_unless_current('Introduction', '/livecd/introduction/')
-               li = link_to_unless_current('Features', '/livecd/features/')
-               li = link_to_unless_current('Changelog', '/livecd/changelog/')
-               li = link_to_unless_current('Download', '/livecd/download/')
-               li = link_to_unless_current('Disclaimer (TrueCrypt)', '/livecd/disclaimer_truecrypt/')
-               li = link_to_unless_current('Official thread @gentoo-forums', 'http://forums.gentoo.org/viewtopic-t-841256.html', :target => '_blank' )
+nav
+  .navbar role="navigation"
+    .container
+     .row-fluid
+      .col-md-12
+       .navbar-header
+          button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-exl-collapse"
+            - 3.times do
+              span class="icon-bar"
+          a class="navbar-brand visible-xs visible-sm hidden-md hidden-lg" href="/"
+            img alt="Faskatech logo" src="/assets/img/logo.png" class="img-responsive navbar-logo"
+       div class="collapse navbar-collapse navbar-exl-collapse"
+          a class="navbar-brand pull-left hidden-xs hidden-sm visible-md visible-lg" href="/"
+             img alt="Faskatech logo" src="/assets/img/logo.png" class="img-responsive navbar-logo"
+          ul class="nav navbar-nav nav-pills pull-right"
+            li class="dropdown"
+               a href="/livecd/" class="dropdown-toggle" data-toggle="dropdown"
+                 | LiveCD
+                 span class="caret"
+               ul class="dropdown-menu"
+                 li = link_to_unless_current('Introduction', '/livecd/introduction/')
+                 li = link_to_unless_current('Features', '/livecd/features/')
+                 li = link_to_unless_current('Changelog', '/livecd/changelog/')
+                 li = link_to_unless_current('Download', '/livecd/download/')
+                 li = link_to_unless_current('Disclaimer (TrueCrypt)', '/livecd/disclaimer_truecrypt/')
+                 li = link_to_unless_current('Official thread @gentoo-forums', 'http://forums.gentoo.org/viewtopic-t-841256.html', :target => '_blank' )
 
-          li class="dropdown"
-             a href="/scripts/" class="dropdown-toggle" data-toggle="dropdown"
-               | Scripts
-               span class="caret"
-             ul class="dropdown-menu"
-               li = link_to_unless_current('dfg2ext', '/scripts/dfg2ext/')
-               li = link_to_unless_current('mp3conv', '/scripts/mp3conv/')
+            li class="dropdown"
+               a href="/scripts/" class="dropdown-toggle" data-toggle="dropdown"
+                 | Scripts
+                 span class="caret"
+               ul class="dropdown-menu"
+                 li = link_to_unless_current('dfg2ext', '/scripts/dfg2ext/')
+                 li = link_to_unless_current('mp3conv', '/scripts/mp3conv/')
 
-          li class="dropdown"
-             a href="/overlay/" class="dropdown-toggle" data-toggle="dropdown"
-               | Overlays
-               span class="caret"
-             ul class="dropdown-menu"
-               li = link_to_unless_current('neo2', '/overlay/neo2/')
-               li = link_to_unless_current('outdated', '/overlay/outdated/')
+            li class="dropdown"
+               a href="/overlay/" class="dropdown-toggle" data-toggle="dropdown"
+                 | Overlays
+                 span class="caret"
+               ul class="dropdown-menu"
+                 li = link_to_unless_current('neo2', '/overlay/neo2/')
+                 li = link_to_unless_current('outdated', '/overlay/outdated/')
       
-          li = link_to_unless_current('Guides', '/guides/')
-          li = link_to_unless_current('About', '/about/')
-          li = link_to_unless_current('Contact', '/contact/')
+            li = link_to_unless_current('Guides', '/guides/')
+            li = link_to_unless_current('About', '/about/')
+            li = link_to_unless_current('Contact', '/contact/')
