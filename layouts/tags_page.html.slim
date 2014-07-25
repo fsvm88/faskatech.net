@@ -1,12 +1,16 @@
 h2
-  | Posts tagged with: @item[:tag]
+  | Posts tagged with:
+  ==< @item[:tag]
 
-  - sortArticlesForTagger(items_with_tag(@item[:tag])).each do |post|
-      .tagged-post
-        h3 == link_to post[:title], post.path
-        span
-          | Posted at:
-          ==< post[:created_at]
-        span
-          | Tags:
-          ==< tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } )
+- sortArticlesForTagger(items_with_tag(@item[:tag])).each do |post|
+   hr
+   section
+     .tagged-post
+       h3 == link_to post[:title], post.path
+       p
+         | Posted at:
+         time
+            ==< post[:created_at]
+         br
+         | Tags:
+         ==< tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } )
