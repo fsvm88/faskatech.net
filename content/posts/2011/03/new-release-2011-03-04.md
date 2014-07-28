@@ -13,8 +13,7 @@ tags:
 ---
 Hi all!
 
-The new release if finally out! It's been almost an year since the latest release.
-<!--MORE-->
+The new release if finally out! It's been almost an year since the latest release.  
 The long time since the last update brings some interesting news for you:
 
 * kernel 2.6.37.2 with reiser4 patches
