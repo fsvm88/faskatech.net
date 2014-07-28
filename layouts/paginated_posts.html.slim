@@ -7,8 +7,7 @@
           h3 class="post_title" == link_to post[:title], post.path
           aside class="post_aside"
              | By Fabio Scaccabarozzi,
-             time
-                ==< getPrettyDate(post)
+             time datetime=(getMachineDate(post)) = getPrettyDate(post)
           p
             | Tags:
             =< tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } )
