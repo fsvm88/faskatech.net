@@ -17,9 +17,9 @@ module Meta
 		end
 
 		if @item[:keywords]
-			metas["keywords"] = @item[:keywords]
+			metas["keywords"] = @item[:keywords].gsub(/\s+/, "")
 		else
-			metas["keywords"] = 'reiser4, livecd, live-cd, live, cd, linux, truecrypt'
+			metas["keywords"] = 'reiser4,livecd,live-cd,live,cd,linux,truecrypt'
 		end
 
 		headAppend = Array.new
