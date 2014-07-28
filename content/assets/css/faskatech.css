@@ -78,6 +78,7 @@ a:hover, a:focus { color: #16a085; text-decoration: none; }
 p { line-height: 1.7; }
 
 .readmore { text-align: right; }
+.correlated-post { font-size: 0.85em; }
 
 #gplusauthorattribution { display: none; }
 

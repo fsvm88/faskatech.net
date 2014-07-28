@@ -17,9 +17,9 @@ module Meta
 		end
 
 		if @item[:keywords]
-			metas["keywords"] = @item[:keywords]
+			metas["keywords"] = @item[:keywords].gsub(/\s+/, "")
 		else
-			metas["keywords"] = 'reiser4, livecd, live-cd, live, cd, linux, truecrypt'
+			metas["keywords"] = 'reiser4,livecd,live-cd,live,cd,linux,truecrypt'
 		end
 
 		headAppend = Array.new
@@ -53,11 +53,11 @@ module Meta
 		headAppend << "<meta name=\"fb:admins\" content=\"" + metas["fb_admins"] + "\">"
 
 		# Append Twitter metas
-		headAppend << "<meta name=\”twitter:card\” content=\”summary\”>"
-		headAppend << "<meta name=\”twitter:url\” content=\”" + metas["url"] + "\”>"
-		headAppend << "<meta name=\”twitter:title\” content=\”" + metas["title"] + "\”>"
-		headAppend << "<meta name=\”twitter:description\” content=\”" + metas["description"] + "\”>"
-		headAppend << "<meta name=\”twitter:image\” content=\”" + metas["image"] + "\”>"
+		headAppend << "<meta name=\"twitter:card\" content=\"summary\">"
+		headAppend << "<meta name=\"twitter:url\" content=\"" + metas["url"] + "\">"
+		headAppend << "<meta name=\"twitter:title\" content=\"" + metas["title"] + "\">"
+		headAppend << "<meta name=\"twitter:description\" content=\"" + metas["description"] + "\">"
+		headAppend << "<meta name=\"twitter:image\" content=\"" + metas["image"] + "\">"
 
 		return headAppend.join("\n");
 	end

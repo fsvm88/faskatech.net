@@ -12,7 +12,7 @@ Hi all!
 
 Just a quick update to notify about the status of the works.
 2.6.29 kernel has been released last week, and reiser4 patches are finally available.
-<!--MORE-->
+
 I've still got three main reasons, though, to delay a bit more this release:
 
 * if you look at the the kernel Changelog, the git one, you'll find out that in the last week a huge amount of fixes have been merged concerning the networking, like entire new schemas for handling packets/connection, not to mention important updates to the hardware drivers and still some others. So, hoping it'll be the next week, I'm still delaying to wait for 2.6.29.1 to come out

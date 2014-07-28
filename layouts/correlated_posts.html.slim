@@ -1,10 +1,10 @@
 - if @item[:kind] and @item[:kind] == 'article'
   - posts = getCorrelatedPosts.slice(0, @site.config[:correlated_posts]-1)
   - if posts
-      p
+      div
         | Similar posts:
         - posts.each do |post|
-            p
+            p class="correlated-post"
               == link_to post[:title], post.path
   - else
     span

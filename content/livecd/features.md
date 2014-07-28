@@ -1,8 +1,8 @@
 ---
 kind: livecd
 layout: pages_with_sidebar
+title: Features
 ---
-## Features
 LiveCD releases are based off Gentoo Minimal LiveCDs, they feature:
 
 * dev-lang/perl
