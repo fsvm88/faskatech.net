@@ -5,7 +5,7 @@
         header
           aside class="post_aside"
             |  By Fabio Scaccabarozzi,
-            time datetime=(getMachineDate(item)) = getPrettyDate(item)
+            time datetime=(getMachineDate(item)) =< getPrettyDate(item)
           p class="post_tags"
             | Tags:
             =< tags_for(item, { :base_url => @site.config[:base_url] + '/tag/' } )
