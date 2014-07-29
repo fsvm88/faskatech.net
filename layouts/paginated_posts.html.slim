@@ -10,7 +10,7 @@
              time datetime=(getMachineDate(post)) =< getPrettyDate(post)
           p
             | Tags:
-            =< tags_for(post, { :base_url => @site.config[:base_url] + '/tag/' } )
+            =< tags_for(post, { :base_url => '/tag/' } )
           p
         .text-justify
           == articleSummary(post)
