@@ -14,5 +14,5 @@ Stage 3:
 
 LiveCD:
 
-* x86 [HTTP](http://www.faskatech.net/latest/i686/installcd/install-i686-minimal-2011-03-04.iso), [FTP](ftp://ftp.faskatech.net/livecd/releases/latest/i686/installcd/install-i686-minimal-2011-03-04.iso), [digest](http://www.faskatech.net/latest/i686/installcd/install-i686-minimal-2011-03-04.iso.DIGESTS)
+* x86 [HTTP]/latest/i686/installcd/install-i686-minimal-2011-03-04.iso), [FTP](ftp://ftp.faskatech.net/livecd/releases/latest/i686/installcd/install-i686-minimal-2011-03-04.iso), [digest](/latest/i686/installcd/install-i686-minimal-2011-03-04.iso.DIGESTS)
 * amd64 [HTTP](/releases/2013-12-07/amd64/installcd/install-amd64-minimal-2013-12-07.iso), [FTP](ftp://ftp.faskatech.net/livecd/releases/2013-12-07/amd64/installcd/install-amd64-minimal-2013-12-07.iso), [digest](/releases/2013-12-07/amd64/installcd/install-amd64-minimal-2013-12-07.iso.DIGESTS)

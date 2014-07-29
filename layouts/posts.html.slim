@@ -8,7 +8,7 @@
             time datetime=(getMachineDate(item)) =< getPrettyDate(item)
           p class="post_tags"
             | Tags:
-            =< tags_for(item, { :base_url => @site.config[:base_url] + '/tag/' } )
+            =< tags_for(item, { :base_url => '/tag/' } )
           p
 
     .text-justify
