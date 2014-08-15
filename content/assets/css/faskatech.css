@@ -9,7 +9,6 @@ html, body {
 	font-size: 1.075em;
 	line-height: 1.6;
 	letter-spacing: 0.005rem;
-	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
 }
 
 a { color: #1abc9c; }
