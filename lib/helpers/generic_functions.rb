@@ -25,6 +25,6 @@ module GenericFunctions
 	end
 
    def selectItemsOfExt(extension)
-       @items.select { |item| item if item.identifier.end_with?(extension) }
+       @items.select { |item| item if item.raw_filename.end_with?(extension) }
    end
 end
