@@ -23,4 +23,8 @@ module GenericFunctions
 			sorted_items
 		end
 	end
+
+   def selectItemsOfExt(extension)
+       @items.select { |item| item if item.raw_filename.end_with?(extension) }
+   end
 end

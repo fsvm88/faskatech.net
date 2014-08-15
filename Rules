@@ -19,9 +19,19 @@ preprocess do
 	createTagItems
 end
 
-compile '/assets/(cs|j)s/*' do
-	# nil
-	filter :cache_buster
+compile '/assets/(cs|j)s/all/include/*/' do
+   # nil
+end
+
+compile '/assets/js/all/' do
+   filter :concat_js
+   filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } }
+   filter :cache_buster
+end
+
+compile '/assets/css/*/' do
+   filter :rainpress
+   filter :cache_buster
 end
 
 compile 'sitemap' do
@@ -61,13 +71,6 @@ route 'sitemap' do
 	item.identifier.chop + '.xml'
 end
 
-#route '/posts/*' do
-#	y,m,slug = /([0-9]+)\/([0-9]+)\/([^\/]+)/
-#		.match(item.identifier).captures
-#
-#	"/#{y}/#{m}/#{slug}/index.html"
-#end
-
 route '*.erb' do
 	item.identifier.chop + '.html'
 end
@@ -76,11 +79,16 @@ route '/pages/1/' do
 	'/index.html'
 end
 
-route '/livecd/changelog/*' do
-	'/livecd/changelog/index.html'
+route '/assets/(cs|j)s/include/*/' do
+    nil
 end
 
-route '/assets/*' do
+route '/assets/js/all/' do
+	hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
+	item.identifier.chop + hash + '.' + item[:extension]
+end
+
+route '/assets/css/*' do
 	hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
 	item.identifier.chop + hash + '.' + item[:extension]
 end
