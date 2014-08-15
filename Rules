@@ -19,6 +19,10 @@ preprocess do
 	createTagItems
 end
 
+compile '/assets/(cs|j)s/all/include/*/' do
+   # nil
+end
+
 compile '/assets/js/all/' do
    filter :concat_js
    filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } }
@@ -29,15 +33,6 @@ compile '/assets/css/all/' do
    filter :concat_js
    filter :rainpress
    filter :cache_buster
-end
-
-compile '/assets/(cs|j)s/all/include/*/' do
-    nil
-end
-
-compile '/assets/css/*' do
-	# nil
-	filter :cache_buster
 end
 
 compile 'sitemap' do
@@ -73,6 +68,10 @@ route '/posts/feed' do
 	'/atom.xml'
 end
 
+route '/assets/(cs|j)s/include/*/' do
+    nil
+end
+
 route 'sitemap' do
 	item.identifier.chop + '.xml'
 end
@@ -92,11 +91,7 @@ route '/pages/1/' do
 	'/index.html'
 end
 
-route '/livecd/changelog/*' do
-	'/livecd/changelog/index.html'
-end
-
-route '/assets/*' do
+route '/assets/(cs|j)s/all/' do
 	hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
 	item.identifier.chop + hash + '.' + item[:extension]
 end
