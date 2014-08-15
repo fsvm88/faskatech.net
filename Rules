@@ -19,7 +19,23 @@ preprocess do
 	createTagItems
 end
 
-compile '/assets/(cs|j)s/*' do
+compile '/assets/js/all/' do
+   filter :concat_js
+   filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } }
+   filter :cache_buster
+end
+
+compile '/assets/css/all/' do
+   filter :concat_js
+   filter :rainpress
+   filter :cache_buster
+end
+
+compile '/assets/(cs|j)s/all/include/*/' do
+    nil
+end
+
+compile '/assets/css/*' do
 	# nil
 	filter :cache_buster
 end
