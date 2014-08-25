@@ -4,8 +4,8 @@
 
 ### Personal Information
 Hi all! Well well, here starts my experience as a webmaster.  
-My name is Fabio Scaccabarozzi, I was born in Vimercate, Italy on 20th November 1988. I've got a brother (2 years younger than me) and no pets. I attended high schools at the local state liceum A. Banfi.  
-I'm currently an employee at <a href="http://www.statusnobilis.com">Status Nobilis SA</a> and I moved to a small town near Como when I got the job.  
+My name is Fabio Scaccabarozzi, I was born in Vimercate, Italy on 20th November 1988. I've got a brother (2 years younger than me) and a dog named Lulù. I attended high schools at the local state liceum A. Banfi.  
+I'm currently an employee at <a href="http://www.epress.it" target="_blank">Epress Information Services</a> and working for Esselunga S.p.A. in their head office, in Limito di Pioltello.  
 Computer science has been my passion since I was six. My dad bought me an Intel Pentium in 1994, its main function being a playbox, something like a PlayStation. I experimented with Windows 95, Windows 98, Windows XP, and my main fun slowly moved from playing a game to solving Windows' errors and optimizing Windows' bottlenecks. Then came the ADSL modem. Fixed bill for unlimited traffic gave me the opportunity to browse undefinitely and learn the most out of the web.
 
 ### Ideals
