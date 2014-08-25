@@ -3,8 +3,11 @@ html lang="en"
  head
   meta charset="UTF-8"
   meta name="viewport" content="width=device-width, initial-scale=1.0"
-  link href="/assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="screen"
-  link href="/assets/css/faskatech.css" rel="stylesheet" type="text/css" media="screen"
+  - if @config[:debug]
+     - for file in @config[:stylesheets]
+        link rel="stylesheet" type="text/css" href="/assets/css/<%= file %>.css"
+  - else
+     link rel="stylesheet" type="text/css" href="/assets/css/all.css"
   = getMetasForHead
 
  body
@@ -17,5 +20,9 @@ html lang="en"
 
   == render 'footer'
 
-  script src="/assets/js/all.js"
+  - if @config[:debug]
+    - for file in @config[:scripts]
+        script src="/assets/js/<%= file %>.js"
+  - else
+     script src="/assets/js/all.js"
   == render 'google_analytics'

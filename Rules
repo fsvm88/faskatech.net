@@ -23,15 +23,18 @@ compile '/assets/(cs|j)s/all/include/*/' do
    # nil
 end
 
-compile '/assets/js/all/' do
-   filter :concat_js
-   filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } }
-   filter :cache_buster
+compile '/assets/css/*' do
+    filter :erb
+    filter :rainpress if File.basename(item[:content_filename], ".*") == 'all'
+    filter :cache_buster
 end
 
-compile '/assets/css/*/' do
-   filter :rainpress
-   filter :cache_buster
+compile '/assets/js/*' do
+    filter :erb
+    if File.basename(item[:content_filename], ".*") == 'all'
+        filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } }
+    end
+    filter :cache_buster
 end
 
 compile 'sitemap' do
@@ -83,15 +86,35 @@ route '/assets/(cs|j)s/include/*/' do
     nil
 end
 
-route '/assets/js/all/' do
-	hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
-	item.identifier.chop + hash + '.' + item[:extension]
+route '/assets/css/*' do
+    unless @config[:debug]
+        hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
+        item.identifier.chop + hash + '.css' if File.basename(item[:content_filename], ".*") == 'all'
+    else
+        hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
+        item.identifier.chop + hash + '.css'
+    end
 end
 
-route '/assets/css/*' do
-	hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
-	item.identifier.chop + hash + '.' + item[:extension]
+route '/assets/js/*' do
+    unless @config[:debug]
+        hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
+        item.identifier.chop + hash + '.js' if File.basename(item[:content_filename], ".*") == 'all'
+    else
+        hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
+        item.identifier.chop + hash + '.js'
+    end
 end
+
+#route '/assets/js/all/' do
+#	hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
+#	item.identifier.chop + hash + '.' + item[:extension]
+#end
+
+#route '/assets/css/*' do
+#	hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
+#	item.identifier.chop + hash + '.' + item[:extension]
+#end
 
 route '*' do
   if item.binary?

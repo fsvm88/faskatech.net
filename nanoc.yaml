@@ -84,3 +84,18 @@ watcher:
   # When to send notifications (using Growl or notify-send).
   notify_on_compilation_success: true
   notify_on_compilation_failure: true
+
+# Configuration for combining JS and CSS
+debug: false
+
+# List of scripts without extensions
+scripts:
+    - jquery-2.1.1.min
+    - bootstrap.min
+    - activeswitcher
+    - pager
+
+# List of stylesheets without extensions
+stylesheets:
+    - bootstrap
+    - faskatech
