@@ -26,12 +26,15 @@ nav
                  li = link_to_unless_current('Official thread @gentoo-forums', 'http://forums.gentoo.org/viewtopic-t-841256.html', :target => '_blank' )
 
             li class="dropdown"
-               a href="/scripts/" class="dropdown-toggle" data-toggle="dropdown"
-                 | Scripts
+               a href="/coding/" class="dropdown-toggle" data-toggle="dropdown"
+                 | Coding
                  span class="caret"
                ul class="dropdown-menu"
-                 li = link_to_unless_current('dfg2ext', '/scripts/dfg2ext/')
-                 li = link_to_unless_current('mp3conv', '/scripts/mp3conv/')
+                 li
+                   | Bash
+                   ul
+                     li = link_to_unless_current('dfg2ext', '/coding/scripts/dfg2ext/')
+                     li = link_to_unless_current('mp3conv', '/coding/scripts/mp3conv/')
 
             li class="dropdown"
                a href="/overlay/" class="dropdown-toggle" data-toggle="dropdown"
