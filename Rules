@@ -28,7 +28,9 @@ end
 
 compile '/assets/js/*' do
     filter :erb
-    filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } }
+    if File.basename(item[:content_filename], ".*") == 'all'
+        filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } }
+    end
 end
 
 compile 'sitemap' do
