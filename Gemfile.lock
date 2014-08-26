@@ -1,4 +1,5 @@
 GEM
+  remote: https://rubygems.org/
   specs:
     bigdecimal (1.2.5)
     builder (3.2.2)
@@ -16,6 +17,8 @@ GEM
       cri (~> 2.3)
     nanoc-cachebuster (0.3.1)
       nanoc (>= 3.3.0)
+    nanoc-gzip-filter (0.0.1)
+      nanoc (>= 3.4.0)
     nanoc-toolbox (0.2.0)
       jsmin (~> 1.0)
       nanoc (~> 3.6)
@@ -53,6 +56,7 @@ DEPENDENCIES
   kramdown
   nanoc
   nanoc-cachebuster
+  nanoc-gzip-filter
   nanoc-toolbox
   rainpress
   slim

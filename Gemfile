@@ -1,3 +1,5 @@
+source 'https://rubygems.org'
+
 gem "bigdecimal"
 gem "bundler-unload"
 gem "builder"
@@ -7,6 +9,7 @@ gem "execjs"
 gem "kramdown"
 gem "nanoc"
 gem "nanoc-cachebuster"
+gem 'nanoc-gzip-filter'
 gem "nanoc-toolbox"
 gem "rainpress"
 gem "slim"
