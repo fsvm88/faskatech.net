@@ -19,19 +19,18 @@ preprocess do
 	createTagItems
 end
 
-compile '/assets/(cs|j)s/all/include/*/' do
-   # nil
+compile '/assets/css/*' do
+    filter :erb
+    if File.basename(item[:content_filename], ".*") == 'all'
+        filter :yui_compressor, { :type => 'css', :munge => true, :preserve_semicolons => false, :optimize => true }
+    end
 end
 
-compile '/assets/js/all/' do
-   filter :concat_js
-   filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } }
-   filter :cache_buster
-end
-
-compile '/assets/css/*/' do
-   filter :rainpress
-   filter :cache_buster
+compile '/assets/js/*' do
+    filter :erb
+    if File.basename(item[:content_filename], ".*") == 'all'
+        filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } }
+    end
 end
 
 compile 'sitemap' do
@@ -44,11 +43,11 @@ compile '*' do
   else
     case item[:extension]
       when 'md'
-        filter :kramdown
+          filter :kramdown
       when 'html'
-	nil
+          nil
       else
-        filter :erb
+          filter :erb
     end
     layout item[:layout] if item[:layout]
     
@@ -79,18 +78,24 @@ route '/pages/1/' do
 	'/index.html'
 end
 
-route '/assets/(cs|j)s/include/*/' do
-    nil
-end
-
-route '/assets/js/all/' do
-	hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
-	item.identifier.chop + hash + '.' + item[:extension]
-end
-
 route '/assets/css/*' do
-	hash = cachebust?(item) ? fingerprint(item[:filename]) : ''
-	item.identifier.chop + hash + '.' + item[:extension]
+    unless @config[:debug]
+        item.identifier.chop + fingerprint(item[:filename]) + '.css' if File.basename(item[:content_filename], ".*") == 'all'
+    else
+        item.identifier.chop + fingerprint(item[:filename]) + '.css'
+    end
+end
+
+route '/assets/js/*' do
+    unless @config[:debug]
+        item.identifier.chop + fingerprint(item[:filename]) + '.js' if File.basename(item[:content_filename], ".*") == 'all'
+    else
+        item.identifier.chop + fingerprint(item[:filename]) + '.js'
+    end
+end
+
+route '/assets/*' do
+   item.identifier.chop + fingerprint(item[:filename]) + '.' + item[:extension]
 end
 
 route '*' do

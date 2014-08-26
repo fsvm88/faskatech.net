@@ -1,0 +1,66 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bigdecimal (1.2.5)
+    builder (3.2.2)
+    bundler-unload (1.0.2)
+    colored (1.2)
+    cri (2.6.1)
+      colored (~> 1.2)
+    execjs (2.2.1)
+    jsmin (1.0.1)
+    json (1.8.1)
+    kramdown (1.4.1)
+    libv8 (3.16.14.3)
+    mini_portile (0.6.0)
+    nanoc (3.7.2)
+      cri (~> 2.3)
+    nanoc-cachebuster (0.3.1)
+      nanoc (>= 3.3.0)
+    nanoc-gzip-filter (0.0.1)
+      nanoc (>= 3.4.0)
+    nanoc-toolbox (0.2.0)
+      jsmin (~> 1.0)
+      nanoc (~> 3.6)
+      nokogiri (~> 1.6)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
+    rainpress (1.0)
+    ref (1.0.5)
+    slim (2.0.3)
+      temple (~> 0.6.6)
+      tilt (>= 1.3.3, < 2.1)
+    temple (0.6.8)
+    therubyracer (0.12.1)
+      libv8 (~> 3.16.14.0)
+      ref
+    tilt (2.0.1)
+    uglifier (2.5.3)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
+    w3c_validators (1.2)
+      json
+      nokogiri
+    yuicompressor (1.3.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bigdecimal
+  builder
+  bundler-unload
+  colored
+  cri
+  execjs
+  kramdown
+  nanoc
+  nanoc-cachebuster
+  nanoc-gzip-filter
+  nanoc-toolbox
+  rainpress
+  slim
+  therubyracer
+  uglifier
+  w3c_validators
+  yuicompressor

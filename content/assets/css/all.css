@@ -1,0 +1,1 @@
+<%= getAllCssItems @config[:stylesheets] %>
