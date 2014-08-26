@@ -1,6 +1,7 @@
 GEM
   specs:
     bigdecimal (1.2.5)
+    builder (3.2.2)
     bundler-unload (1.0.2)
     colored (1.2)
     cri (2.6.1)
@@ -8,6 +9,7 @@ GEM
     execjs (2.2.1)
     jsmin (1.0.1)
     json (1.8.1)
+    kramdown (1.4.1)
     libv8 (3.16.14.3)
     mini_portile (0.6.0)
     nanoc (3.7.2)
@@ -43,10 +45,12 @@ PLATFORMS
 
 DEPENDENCIES
   bigdecimal
+  builder
   bundler-unload
   colored
   cri
   execjs
+  kramdown
   nanoc
   nanoc-cachebuster
   nanoc-toolbox
