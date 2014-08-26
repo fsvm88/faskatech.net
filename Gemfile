@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem "bigdecimal"
 gem "bundler-unload"
 gem "builder"
