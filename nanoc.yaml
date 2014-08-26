@@ -97,5 +97,6 @@ scripts:
 
 # List of stylesheets without extensions
 stylesheets:
+    - fonts
     - bootstrap
     - faskatech
