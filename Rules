@@ -22,6 +22,7 @@ end
 compile '/assets/css/*' do
     filter :erb
     if File.basename(item[:content_filename], ".*") == 'all'
+        filter :sass, { :cache => false, :style => :compressed }
         filter :yui_compressor, { :type => 'css', :munge => true, :preserve_semicolons => false, :optimize => true }
     end
 end
