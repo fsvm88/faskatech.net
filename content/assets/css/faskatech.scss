@@ -44,10 +44,26 @@ a
     .container .navbar-brand
       margin-left: 0
 
-.nav
-  > li > a
-    &:hover, &:focus
-      background-color: $theme-inverse-color
+ul.nav
+  > li
+    > a
+      &:hover, &:focus
+        background-color: $theme-inverse-color
+    > ul.dropdown-menu
+      > li
+        > a
+          &:hover, &:focus
+            color: $text-inverse-color
+            background-color: $theme-inverse-color
+        > span
+          display: block
+          padding: 3px 20px
+          clear: both
+          font-weight: normal
+          line-height: 1.428571429
+          color: $text-inverse-color
+          white-space: nowrap
+          background-color: $theme-inverse-color
   .open > a
     background-color: $theme-inverse-color
     &:hover, &:focus
@@ -62,21 +78,6 @@ a
 
 .icon-bar
   background-color: $theme-border-color
-
-.dropdown-menu > li >
-  a
-    &:hover, &:focus
-      color: $text-inverse-color
-      background-color: $theme-inverse-color
-  span
-    display: block
-    padding: 3px 20px
-    clear: both
-    font-weight: normal
-    line-height: 1.428571429
-    color: $text-inverse-color
-    white-space: nowrap
-    background-color: $theme-inverse-color
 
 .pager li > a
   color: $text-inverse-color
