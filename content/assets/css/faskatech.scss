@@ -1,8 +1,13 @@
 /* GENERIC STYLES
 
 $theme-light-blue: #1abc9c
+$theme-darker-blue: #16a085
+$theme-inverse-color: #2c3e50
+$theme-border-color: whitesmoke
+$theme-buttons-color: #1a8a72
 $text-inverse-color: white
 $text-color: black
+$text-color-darkest: #0B5042
 
 html, body
   font-family: 'Montserrat Alternates', sans-serif
@@ -15,15 +20,15 @@ html, body
 a
   color: $theme-light-blue
   &:hover, &:focus
-    color: #16a085
+    color: $theme-darker-blue
     text-decoration: none
 
 .navbar
   background-color: $theme-light-blue
   border-color: $theme-light-blue
-  color: white
+  color: $text-inverse-color
   a
-    color: white
+    color: $text-inverse-color
 
 .navbar-nav > li > span
   padding: 15px 15px 15px 15px
@@ -33,36 +38,36 @@ a
 
 .navbar
   .active
-    background-color: #2c3e50
+    background-color: $theme-inverse-color
     border-radius: 5px
   >
-    .container .navbar-brand, .container-fluid .navbar-brand
+    .container .navbar-brand
       margin-left: 0
 
 .nav
   > li > a
     &:hover, &:focus
-      background-color: #2c3e50
+      background-color: $theme-inverse-color
   .open > a
-    background-color: #2c3e50
+    background-color: $theme-inverse-color
     &:hover, &:focus
-      background-color: #2c3e50
+      background-color: $theme-inverse-color
 
 .navbar-toggle
-  background-color: #1a8a72
-  border: 1px solid whitesmoke
+  background-color: $theme-buttons-color 
+  border: 1px solid $theme-border-color 
   &:focus, &:hover
-    background-color: #2c3e50
-    border: 1px solid whitesmoke
+    background-color: $theme-inverse-color
+    border: 1px solid $theme-border-color
 
 .icon-bar
-  background-color: whitesmoke
+  background-color: $theme-border-color
 
 .dropdown-menu > li >
   a
     &:hover, &:focus
-      color: white
-      background-color: #2c3e50
+      color: $text-inverse-color
+      background-color: $theme-inverse-color
   span
     display: block
     padding: 3px 20px
@@ -71,15 +76,15 @@ a
     line-height: 1.428571429
     color: $text-inverse-color
     white-space: nowrap
-    background-color: #2c3e50
+    background-color: $theme-inverse-color
 
 .pager li > a
   color: $text-inverse-color
-  background-color: #16a085
+  background-color: $theme-buttons-color
   font-weight: bold
   font-size: 14px
   &:hover, &:focus
-    background-color: #2c3e50
+    background-color: $theme-inverse-color
 
 #main
   overflow: auto
@@ -104,7 +109,7 @@ a
   a
     color: white
     &:hover, &:focus
-      color: #0B5042
+      color: $text-color-darkest 
       text-decoration: none
 
 /* TEXT STYLES
@@ -133,8 +138,8 @@ p
 /* VARIOUS STYLES
 
 hr
-  border-top: 1px solid #16a085
-  border-bottom: 1px solid #16a085
+  border-top: 1px solid $theme-darker-blue
+  border-bottom: 1px solid $theme-darker-blue
 
 /* POST SPECIFIC STYLES
 
@@ -164,7 +169,7 @@ hr
 .search-with-google
   padding: 6px
   border-radius: 4px
-  background-color: #16a085
+  background-color: $theme-darker-blue
   color: $text-inverse-color
 
 .atom-feed
