@@ -1,21 +1,24 @@
 /* GENERIC STYLES
 
+$theme-light-blue: #1abc9c
+
 html, body
   font-family: 'Montserrat Alternates', sans-serif
   height: 100%
   font-size: 1.075em
   line-height: 1.6
   letter-spacing: 0.005rem
+  color: black
 
 a
-  color: #1abc9c
+  color: $theme-light-blue
   &:hover, &:focus
     color: #16a085
     text-decoration: none
 
 .navbar
-  background-color: #1abc9c
-  border-color: #1abc9c
+  background-color: $theme-light-blue
+  border-color: $theme-light-blue
   color: white
   a
     color: white
@@ -87,7 +90,7 @@ a
   padding-bottom: 50px
 
 .bs-footer
-  background-color: #1abc9c
+  background-color: $theme-light-blue
   height: 50px
   margin-top: -50px
   font-size: 14px
@@ -175,4 +178,4 @@ hr
   #sidebarWrapper
     border: 1px solid
     border-color: transparent
-    border-left-color: #1abc9c
+    border-left-color: $theme-light-blue 
