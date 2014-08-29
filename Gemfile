@@ -14,6 +14,7 @@ gem "nanoc-cachebuster"
 gem 'nanoc-gzip-filter'
 gem "nanoc-toolbox"
 gem "rainpress"
+gem "sass"
 gem "slim"
 gem "therubyracer"
 gem "uglifier"

@@ -5,7 +5,7 @@ html lang="en"
   meta name="viewport" content="width=device-width, initial-scale=1.0"
   - if @config[:debug]
      - for file in @config[:stylesheets]
-        link rel="stylesheet" type="text/css" href="/assets/css/<%= file %>.css"
+        link rel="stylesheet" type="text/css" href="/assets/css/#{file}.css"
   - else
      link rel="stylesheet" type="text/css" href="/assets/css/all.css"
   = getMetasForHead
@@ -22,7 +22,7 @@ html lang="en"
 
   - if @config[:debug]
     - for file in @config[:scripts]
-        script src="/assets/js/<%= file %>.js"
+       script src="/assets/js/#{file}.js"
   - else
      script src="/assets/js/all.js"
   == render 'google_analytics'

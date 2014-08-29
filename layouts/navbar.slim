@@ -14,7 +14,7 @@ nav
              img alt="Faskatech logo" src="/assets/img/logo.png" class="img-responsive navbar-logo"
           ul class="nav navbar-nav nav-pills pull-right"
             li class="dropdown"
-               a href="/livecd/" class="dropdown-toggle" data-toggle="dropdown"
+               button class="btn btn-default dropdown-toggle" type="button" id="livecdDropdown" data-toggle="dropdown"
                  | LiveCD
                  span class="caret"
                ul class="dropdown-menu"
@@ -26,15 +26,18 @@ nav
                  li = link_to_unless_current('Official thread @gentoo-forums', 'http://forums.gentoo.org/viewtopic-t-841256.html', :target => '_blank' )
 
             li class="dropdown"
-               a href="/scripts/" class="dropdown-toggle" data-toggle="dropdown"
-                 | Scripts
+               button class="btn btn-default dropdown-toggle" type="button" id="livecdDropdown" data-toggle="dropdown"
+                 | Coding
                  span class="caret"
                ul class="dropdown-menu"
-                 li = link_to_unless_current('dfg2ext', '/scripts/dfg2ext/')
-                 li = link_to_unless_current('mp3conv', '/scripts/mp3conv/')
+                 li
+                   | Bash
+                   ul
+                     li = link_to_unless_current('dfg2ext', '/coding/scripts/dfg2ext/')
+                     li = link_to_unless_current('mp3conv', '/coding/scripts/mp3conv/')
 
             li class="dropdown"
-               a href="/overlay/" class="dropdown-toggle" data-toggle="dropdown"
+               button class="btn btn-default dropdown-toggle" type="button" id="livecdDropdown" data-toggle="dropdown"
                  | Overlays
                  span class="caret"
                ul class="dropdown-menu"
