@@ -27,43 +27,58 @@ a
   background-color: $theme-light-blue
   border-color: $theme-light-blue
   color: $text-inverse-color
-  a
-    color: $text-inverse-color
-
-.navbar-nav > li > span
-  padding: 15px 15px 15px 15px
-  line-height: 20px
-  border-radius: 0
-  display: block
 
 .navbar
   .active
     background-color: $theme-inverse-color
     border-radius: 5px
-  >
-    .container .navbar-brand
-      margin-left: 0
+  > .container .navbar-brand
+    margin-left: 0
 
-ul.nav
+@mixin navbar-li-a 
+  color: $text-color
+  &:hover, &:focus
+    background-color: $theme-inverse-color
+
+@mixin menu-li-a
+  &:hover, &:focus
+    color: $text-color
+    background-color: $theme-inverse-color
+
+@mixin menu-li-active-span
+  display: block
+  padding: 3px 20px
+  clear: both
+  font-weight: 400
+  color: $text-inverse-color
+  white-space: nowrap
+  background-color: $theme-inverse-color
+
+.navbar-nav
   > li
     > a
-      &:hover, &:focus
-        background-color: $theme-inverse-color
+      @include navbar-li-a
+      color: $text-inverse-color
     > ul.dropdown-menu
       > li
         > a
-          &:hover, &:focus
-            color: $text-inverse-color
-            background-color: $theme-inverse-color
+          color: $text-color
         > span
-          display: block
-          padding: 3px 20px
-          clear: both
-          font-weight: normal
-          line-height: 1.428571429
-          color: $text-inverse-color
-          white-space: nowrap
-          background-color: $theme-inverse-color
+          @include menu-li-active-span
+      > li.dropdown-header
+        font-size: 15px
+        > ul
+          -webkit-padding-start: 20px
+          > li
+            > a
+              color: $text-color
+            > span
+              @include menu-li-active-span
+    > span
+      padding: 15px 15px 15px 15px
+      line-height: 20px
+      border-radius: 0
+      display: block
   .open > a
     background-color: $theme-inverse-color
     &:hover, &:focus
@@ -74,7 +89,6 @@ ul.nav
   border: 1px solid $theme-border-color 
   &:focus, &:hover
     background-color: $theme-inverse-color
-    border: 1px solid $theme-border-color
 
 .icon-bar
   background-color: $theme-border-color
@@ -102,7 +116,7 @@ ul.nav
   height: 50px
   margin-top: -50px
   font-size: 14px
-  color: #fff
+  color: $text-inverse-color
   clear: both
   border-radius: 4px
   padding-top: 15px
@@ -114,12 +128,6 @@ ul.nav
       text-decoration: none
 
 /* TEXT STYLES
-
-.text-center
-  font-weight: bold
-
-.text-justify
-  text-align: justify
 
 .sections-sidetext
   font-size: 12px
