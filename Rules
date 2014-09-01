@@ -22,17 +22,17 @@ end
 compile '/assets/css/*' do
     filter :erb
     if item[:extension] == 'scss'
-        filter :sass, { :cache => false, :style => :compressed }
+        filter :sass, { :cache => false, :style => (@config[:debug] ? :compact : :compressed) }
     end
     if File.basename(item[:content_filename], ".*") == 'all'
-        filter :yui_compressor, { :type => 'css', :munge => true, :preserve_semicolons => false, :optimize => true }
+        filter :yui_compressor, { :type => 'css', :munge => true, :preserve_semicolons => false, :optimize => true } unless @config[:debug]
     end
 end
 
 compile '/assets/js/*' do
     filter :erb
     if File.basename(item[:content_filename], ".*") == 'all'
-        filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } }
+        filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } } unless @config[:debug]
     end
 end
 
