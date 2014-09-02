@@ -93,7 +93,6 @@ scripts:
     - jquery_2_1_1_min
     - bootstrap_min
     - activeswitcher
-    - pager
 
 # List of stylesheets without extensions
 stylesheets:
