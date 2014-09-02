@@ -41,8 +41,9 @@ a
     background-color: $theme-inverse-color
 
 @mixin menu-li-a
+  color: $text-color
   &:hover, &:focus
-    color: $text-color
+    color: $text-inverse-color
     background-color: $theme-inverse-color
 
 @mixin menu-li-active-span
@@ -62,7 +63,7 @@ a
     > ul.dropdown-menu
       > li
         > a
-          color: $text-color
+          @include menu-li-a
         > span
           @include menu-li-active-span
       > li.dropdown-header
@@ -73,7 +74,7 @@ a
           -webkit-padding-start: 20px
           > li
             > a
-              color: $text-color
+              @include menu-li-a
             > span
               @include menu-li-active-span
     > span
