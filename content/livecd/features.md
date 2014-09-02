@@ -16,6 +16,7 @@ LiveCD releases are based off Gentoo Minimal LiveCDs, they feature:
 * various extra packages
 
 Some have already asked for X/graphics inclusion, my answer has always been "no" for the following reasons:
+
 * minimal liveCDs weigh ~100Mb, full liveCDs ~700Mb or more (less pain for users, faster availability)
 * troubleshooting the base profile with basic settings it's a matter of hours, whereas troubleshooting >700 packages it's a matter of weeks (I don't have such time)
 * I don't have enough CPU power available to make a big release available to the public in my few spare weeks (2~3 weeks every 3~4 months)
