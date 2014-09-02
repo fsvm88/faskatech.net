@@ -67,6 +67,8 @@ a
           @include menu-li-active-span
       > li.dropdown-header
         font-size: 15px
+        @media (max-width: 767px)
+          color: $text-inverse-color
         > ul
           -webkit-padding-start: 20px
           > li
