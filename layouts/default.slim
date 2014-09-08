@@ -12,11 +12,13 @@ html lang="en"
 
  body
   a id="gplusauthorattribution" href="https://plus.google.com/+FabioScaccabarozzi88?rel=author" title="g+ profile" Google Plus profile
-  div id="wrapper"
 
-   == render 'navbar'
+  == render 'navbar'
 
-   == yield
+  main
+    .container
+      .row-fluid
+        == yield
 
   == render 'footer'
 

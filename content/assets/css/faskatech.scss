@@ -9,19 +9,41 @@ $text-inverse-color: white
 $text-color: black
 $text-color-darkest: #0B5042
 
-html, body
-  font-family: 'Montserrat Alternates', sans-serif
-  height: 100%
+@mixin main-font()
+  font-family: 'Montserrat Alternates'
   font-size: 1.075em
-  line-height: 1.6
   letter-spacing: 0.005rem
+  line-height: 1.6
   color: $text-color
+
+*, *:before, *:after
+  -webkit-box-sizing: border-box
+  -moz-boz-sizing: border-box
+  box-sizing: border-box
+
+
+html
+  height: 100%
+  @include main-font
+
+body
+  min-height: 100%
+  padding-bottom: 4rem
+  position: relative
+  @include main-font
 
 a
   color: $theme-light-blue
   &:hover, &:focus
     color: $theme-darker-blue
     text-decoration: none
+
+main
+  margin: 0 auto
+  margin-bottom: 50px
+
+nav
+  top: 0
 
 .navbar
   background-color: $theme-light-blue
@@ -104,26 +126,16 @@ a
   &:hover, &:focus
     background-color: $theme-inverse-color
 
-#main
-  overflow: auto
-  padding-bottom: 50px
-
-#wrapper
-  min-height: 100%
-  height: auto !important
-  height: 100%
-  padding-bottom: 50px
-
-.bs-footer
+footer
+  position: absolute
+  right: 0
+  left: 0
+  bottom: 0
+  padding: 1rem
   background-color: $theme-light-blue
-  height: 50px
-  margin-top: -50px
-  font-size: 14px
+  font-size: 0.85em
   color: $text-inverse-color
-  clear: both
   border-radius: 4px
-  padding-top: 15px
-  position: relative
   a
     color: white
     &:hover, &:focus

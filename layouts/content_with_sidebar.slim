@@ -1,8 +1,5 @@
-div id="main"
-  .container
-    .row-fluid
-      div class="col-sm-12 col-md-9"
-        .container-fluid
-          == yield
-      div class="col-sm-12 col-md-3" id="sidebarWrapper"
-         == render 'sidebar'
+div class="col-sm-12 col-md-9"
+  .container-fluid
+    == yield
+div class="col-sm-12 col-md-3" id="sidebarWrapper"
+  == render 'sidebar'
