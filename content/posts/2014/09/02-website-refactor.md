@@ -13,6 +13,7 @@ tags:
 Hi all!  
 
 After struggling for a (very long) while with [nanoc](http://nanoc.ws/){:target='_blank'}, I was able to make many small improvements to the site structure.  
+<!--MORE-->
 "Scripts" section has disappeared in favor of a more generic "Coding" one, divided by language.  
 Lots of cleanups went into JavaScript and CSS (which is now written in SASS).  
 Site layouting was changed to slim for better readability and maintainability (and less HTML-did-I-close-the-tag? headaches).  
