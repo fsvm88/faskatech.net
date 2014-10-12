@@ -28,7 +28,7 @@ module PostHelper
 	# @param [String] separator Separates item summary from item body. Defaults to <!--MORE-->
 	#
 	def articleSummary(item, read_more_text="Read more...", separator="<!--MORE-->")
-		summary,body = item.compiled_content.split(separator)
+		summary,body = item.raw_content.split(separator)
 		return item.compiled_content unless body
 		link = link_to( (item[:read_more] || read_more_text), item.path, :class=>'readmore' )
 		return summary+"<p class=\"readmore\">#{link}</p>"
