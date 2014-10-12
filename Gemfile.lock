@@ -59,6 +59,7 @@ DEPENDENCIES
   nanoc-cachebuster
   nanoc-gzip-filter
   nanoc-toolbox
+  nokogiri
   rainpress
   sass
   slim
