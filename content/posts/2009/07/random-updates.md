@@ -12,6 +12,7 @@ Hi all!
 
 First of all sorry for the long absence, it's been a very busy month.
 Anyway, I've got a bunch of news:
+<!--MORE-->
 
 * Worked on automatic stage rebuilding, all should work as expected. You will find the stages in [experimental FTP directory](ftp://ftp.faskatech.net/experimental/) (now building new stages for i686, later for amd64). Please note that those releases **include** GCC 4.4.x (currently 4.4.1) without graphite deps (that's because I can't tune USE flags during stage1/2/3). They will be built every three weeks and the process gets niced to avoid server slowdowns. You can find the script I'm using in the [mkstage FTP directory](ftp://ftp.faskatech.net/mkstage/).
 * General server updates and review

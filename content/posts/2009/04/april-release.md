@@ -12,7 +12,7 @@ Hi all, guys!
 
 Been working on the release in the weekend. The snapshot it is built against is 2009-04-03 evening. I'm aware of no critical feature update since then.
 There are some improvements: some visible, some other invisible.
-
+<!--MORE-->
 About the former:
 
 xfsprogs has been updated to version 3.0.0 + xfsdump has been included

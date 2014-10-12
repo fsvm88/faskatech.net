@@ -17,9 +17,8 @@ I intended to make a release available before the 30th of September, but I decid
 * GCC 4.5.1 has been added to the tree
 * a new tool for building stages has been released and gained a lot of popularity recently: [Metro](http://www.funtoo.org/en/metro/tutorial/){:target='_blank'}
 While GCC 4.5.1 still has some [problems](http://bugs.gentoo.org/show_bug.cgi?id=296658){:target='_blank'} with some packages (I'd consider only grub-9999 a showstopper), I consider it to be fairly stable for a non mission-critical system. Therefore, I'm really considering the opportunity to make it the default compiler for this release.
-
+<!--MORE-->
 The Glibc version will be the 2.12.1-r1 unless a newer one shows up (with 2.6.35 headers).
-
 
 In the meanwhile, I tested Metro as an alternative to Catalyst for stage building. I will be switching the stage rebuild infrastructure on the server as soon as the bug with libxml2 gets fixed (which prevents stage3 from building correctly). Metro is superb when compared to Catalyst. It allows to set per-package flags, features automatic renaming according to the current date and allows to use only one spec file shared between all architectures, which means that you can write one single file only once and you're ready to build all stages for all architectures for any date. Basically it allows to tune every single parameter in a very flexible manner.
 
