@@ -1,5 +1,3 @@
-== render 'pager', { :item_id => @item[:item_id], :last_id => @item[:last_id] }
-
 - sorted_articles.slice(@item[:item_id]*@config[:page_size], @config[:page_size]).each do |post|
     article class="post_content"
       header
