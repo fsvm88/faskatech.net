@@ -21,7 +21,7 @@ end
 
 compile '/assets/css/*' do
     filter :erb
-    if item[:extension] == 'scss'
+    if item[:extension] == 'scss' or item[:extension] == 'sass'
         filter :sass, { :cache => false, :style => (@config[:debug] ? :compact : :compressed) }
     end
     if File.basename(item[:content_filename], ".*") == 'all'
