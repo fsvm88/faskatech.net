@@ -98,4 +98,5 @@ scripts:
 stylesheets:
     - fonts
     - bootstrap
+    - font-awesome_min
     - faskatech
