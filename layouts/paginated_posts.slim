@@ -3,7 +3,7 @@
 - sorted_articles.slice(@item[:item_id]*@config[:page_size], @config[:page_size]).each do |post|
     article class="post_content"
       header
-          h1 class="post_title" == link_to post[:title], post.path
+          h2 class="post_title" == link_to post[:title], post.path
           aside class="post_aside"
              | By Fabio Scaccabarozzi,
              time datetime=(getMachineDate(post)) =< getPrettyDate(post)
