@@ -4,7 +4,7 @@
     .post
       article class="post_content"
         header
-          h3 class="post_title" == link_to post[:title], post.path
+          h1 class="post_title" == link_to post[:title], post.path
           aside class="post_aside"
              | By Fabio Scaccabarozzi,
              time datetime=(getMachineDate(post)) =< getPrettyDate(post)

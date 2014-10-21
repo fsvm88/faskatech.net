@@ -1,4 +1,4 @@
-h2 == @item[:title]
+h1 == @item[:title]
 ul
   - sortKindByField('guide','title').each do |guide|
      li == link_to guide[:title], guide.path

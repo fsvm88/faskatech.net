@@ -1,6 +1,6 @@
 .content
   article class="post_content"
-    h4 class="post_title" = item[:title]
+    h1 class="post_title" = item[:title]
     - if defined?(item[:kind]) && item[:kind] == "article" then
         header
           aside class="post_aside"

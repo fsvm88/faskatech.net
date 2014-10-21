@@ -7,7 +7,7 @@ layout: pages_with_sidebar
 {::options parse_block_html="true" /}
 
 <article>
-### 9th release (2013-02-07)
+## 9th release (2013-02-07)
 * 3.11.10 kernel + reiser4 patch
 * gcc-4.8.2
 * glibc 2.17
@@ -22,7 +22,7 @@ layout: pages_with_sidebar
 </article>
 
 <article>
-### 8th release (2011-03-04)
+## 8th release (2011-03-04)
 * 2.6.37.2 kernel + reiser4
 * gcc-4.5.2
 * glibc 2.13-r1
@@ -37,7 +37,7 @@ layout: pages_with_sidebar
 </article>
 
 <article>
-### 7th release (2010-03-16)
+## 7th release (2010-03-16)
 * 2.6.33.1 kernel + reiser4
 * gcc 4.4.3
 * glibc 2.11-r1
@@ -58,7 +58,7 @@ layout: pages_with_sidebar
 </article>
 
 <article>
-### 6th release (2009-09-14)
+## 6th release (2009-09-14)
 * 2.6.31 kernel + reiser4
 * gcc 4.4.1
 * glibc-2.10.1
@@ -69,7 +69,7 @@ layout: pages_with_sidebar
 </article>
 
 <article>
-### 5th release (2009-04-07)
+## 5th release (2009-04-07)
 * 2.6.29.1 kernel + reiser4
 * gcc 4.3.3-r2
 * glibc-2.9_p20081201-r2
@@ -87,7 +87,7 @@ layout: pages_with_sidebar
 </article>
 
 <article>
-### 4th release (2008-12-20)
+## 4th release (2008-12-20)
 * 2.6.27.10 kernel + reiser4
 * gcc 4.3.2
 * glibc-2.9_p20081201
@@ -113,7 +113,7 @@ layout: pages_with_sidebar
 </article>
 
 <article>
-### 3rd release (2008-09-15)
+## 3rd release (2008-09-15)
 * 2.6.26.5 kernel + reiser4
 * gcc 4.3.1-r1
 * glibc-2.7-r2
@@ -131,7 +131,7 @@ layout: pages_with_sidebar
 </article>
 
 <article>
-### 2nd release (2008-06-16)
+## 2nd release (2008-06-16)
 * 2.6.25-reiser4-r5 (based upon 2.6.25.6, don't let the name mislead you)
 * gcc 4.3.1
 * glibc-2.7-r2
@@ -149,7 +149,7 @@ layout: pages_with_sidebar
 </article>
 
 <article>
-### 1st release (2008-03-23)
+## 1st release (2008-03-23)
 * Added drivers:
     * net-wireless/acx
     * net-wireless/acx-firmware (custom ov. ebuild)

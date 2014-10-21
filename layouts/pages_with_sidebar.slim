@@ -8,8 +8,8 @@
   - when 'overlay'
     = getSidebarCapture('Overlays', 'There goes a list of my actual overlays. In the outdated-overlay ebuild list only appear ebuilds that are no longer mantained. Ebuilds that have newer versions available in neo2-overlay are not listed, though available in the overlay.')
 
-h2 == @item[:title]
+h1 == @item[:title]
 - if @item[:subtitle]
-    h4 == @item[:subtitle]
+    h2 == @item[:subtitle]
 .text-justify
   == yield
