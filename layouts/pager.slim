@@ -1,10 +1,6 @@
 ul class="pager"
-  - if @item_id == @last_id
-      li class="previous previousPagerButton disabled" == link_to_unless_current('Older posts', getOlderLink(@item_id, @last_id)) 
-  - else
-      li class="previous previousPagerButton" == link_to_unless_current('Older posts', getOlderLink(@item_id, @last_id)) 
-  
-  - if @item_id == 0
-      li class="next nextPagerButton disabled" == link_to_unless_current('Newer posts', getNewerLink(@item_id)) 
-  - else
-      li class="next nextPagerButton" == link_to_unless_current('Newer posts', getNewerLink(@item_id)) 
+  - unless @item_id == @last_id
+      li class="previous previousPagerButton" == link_to_unless_current('<i class="fa fa-angle-double-left"></i>', getOlderLink(@item_id, @last_id))
+
+  - unless @item_id == 0
+      li class="next nextPagerButton" == link_to_unless_current('<i class="fa fa-angle-double-right"></i>', getNewerLink(@item_id))
