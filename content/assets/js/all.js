@@ -1,1 +1,0 @@
-<%= getAllJsItems @config[:scripts] %>

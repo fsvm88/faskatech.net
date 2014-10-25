@@ -3,12 +3,10 @@ html lang="en"
  head
   meta charset="UTF-8"
   meta name="viewport" content="width=device-width, initial-scale=1.0"
+  link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"
   link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
-  - if @config[:debug]
-     - for file in @config[:stylesheets]
-        link rel="stylesheet" type="text/css" href="/assets/css/#{file}.css"
-  - else
-     link rel="stylesheet" type="text/css" href="/assets/css/all.css"
+  link href="/assets/css/fonts.css" rel="stylesheet"
+  link href="/assets/css/faskatech.css" rel="stylesheet"
   = getMetasForHead
 
  body
@@ -23,9 +21,7 @@ html lang="en"
 
   == render 'footer'
 
-  - if @config[:debug]
-    - for file in @config[:scripts]
-       script src="/assets/js/#{file}.js"
-  - else
-     script src="/assets/js/all.js"
+  script src="//code.jquery.com/jquery-2.1.1.min.js"
+  script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
+  script src="/assets/js/activeswitcher.js"
   == render 'google_analytics'

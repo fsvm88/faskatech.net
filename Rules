@@ -20,20 +20,15 @@ preprocess do
 end
 
 compile '/assets/css/*' do
-    filter :erb
     if item[:extension] == 'scss' or item[:extension] == 'sass'
         filter :sass, { :cache => false, :style => (@config[:debug] ? :compact : :compressed) }
     end
-    if File.basename(item[:content_filename], ".*") == 'all'
-        filter :yui_compressor, { :type => 'css', :munge => true, :preserve_semicolons => false, :optimize => true } unless @config[:debug]
-    end
+    filter :yui_compressor, { :type => 'css', :munge => true, :preserve_semicolons => false, :optimize => true } unless @config[:debug]
 end
 
 compile '/assets/js/*' do
     filter :erb
-    if File.basename(item[:content_filename], ".*") == 'all'
-        filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } } unless @config[:debug]
-    end
+    filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } } unless @config[:debug]
 end
 
 compile 'sitemap' do
@@ -82,19 +77,11 @@ route '/pages/1/' do
 end
 
 route '/assets/css/*' do
-    unless @config[:debug]
-        item.identifier.chop + fingerprint(item[:filename]) + '.css' if File.basename(item[:content_filename], ".*") == 'all'
-    else
-        item.identifier.chop + fingerprint(item[:filename]) + '.css'
-    end
+   item.identifier.chop + fingerprint(item[:filename]) + '.css'
 end
 
 route '/assets/js/*' do
-    unless @config[:debug]
-        item.identifier.chop + fingerprint(item[:filename]) + '.js' if File.basename(item[:content_filename], ".*") == 'all'
-    else
-        item.identifier.chop + fingerprint(item[:filename]) + '.js'
-    end
+   item.identifier.chop + fingerprint(item[:filename]) + '.js'
 end
 
 route '/assets/*' do

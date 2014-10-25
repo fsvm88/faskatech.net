@@ -85,18 +85,5 @@ watcher:
   notify_on_compilation_success: true
   notify_on_compilation_failure: true
 
-# Configuration for combining JS and CSS
+# Controls whether to completely compress local CSS and JS
 debug: false
-
-# List of scripts without extensions
-scripts:
-    - jquery_2_1_1_min
-    - bootstrap_min
-    - activeswitcher
-
-# List of stylesheets without extensions
-stylesheets:
-    - fonts
-    - bootstrap
-    - font-awesome_min
-    - faskatech
