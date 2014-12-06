@@ -50,9 +50,9 @@ compile '*' do
     layout item[:layout] if item[:layout]
     
     if ( (Regexp.new('\A(\\/guide\\/)').match(item.identifier)) || (Regexp.new('\A(\\/contact\\/)').match(item.identifier)) || (Regexp.new('\A(\\/about\\/)').match(item.identifier)) )
-	layout 'content_without_sidebar'
+        layout 'content_without_sidebar'
     else
-	layout 'content_with_sidebar'
+        layout 'content_with_sidebar'
     end
 
     layout 'default'
@@ -76,16 +76,15 @@ route '/pages/1/' do
 	'/index.html'
 end
 
-route '/assets/css/*' do
-   item.identifier.chop + fingerprint(item[:filename]) + '.css'
-end
-
-route '/assets/js/*' do
-   item.identifier.chop + fingerprint(item[:filename]) + '.js'
-end
-
 route '/assets/*' do
-   item.identifier.chop + fingerprint(item[:filename]) + '.' + item[:extension]
+    case item[:extension]
+    when 'svg'
+        item.identifier.chop + '.' + item[:extension]
+    when 'sass'
+        item.identifier.chop + fingerprint(item[:filename]) + '.' + 'css'
+    else
+        item.identifier.chop + fingerprint(item[:filename]) + '.' + item[:extension]
+    end
 end
 
 route '*' do
