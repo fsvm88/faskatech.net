@@ -78,8 +78,6 @@ end
 
 route '/assets/*' do
     case item[:extension]
-    when 'ico'
-        "/favicon.ico" if item.identifier.chop.split('/').last == 'favicon'
     when 'svg'
         item.identifier.chop + '.' + item[:extension]
     when 'sass'
