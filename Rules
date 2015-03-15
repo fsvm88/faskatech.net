@@ -107,4 +107,4 @@ route '*' do
   end
 end
 
-layout '*', :slim, format: :html5, pretty: true, disable_escape: true
+layout '*', :slim, format: :html, pretty: true, disable_escape: true
