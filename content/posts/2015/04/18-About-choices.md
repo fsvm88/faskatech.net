@@ -1,5 +1,5 @@
 ---
-title: 'Reasons why I killed system'
+title: 'Reasons why I killed systemd'
 subtitle: 'AKA: systemd vs openrc'
 kind: article
 layout: posts
