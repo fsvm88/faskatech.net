@@ -45,10 +45,10 @@ I don't know for other distros, but for Gentoo you have this big repository of s
 Systemd tries really hard to slim down service files, along the lines of "init scripts should not be long and hard to read". Agreed.  
 What happens now is that the previous 100-lines-long init script is shifted to a bash script living somewhere in the package directory, with the same old init content: directory setup, permission changes and so forth.
   
-  
-
+## Epilogue
 
 This is just a small list of reasons why I went back to openRC, and never looked back. I experimented with systemd when it was still in its infancy, and I saw it grow full of features for almost two years. I eventually came to a point where it was a much bigger issue troubleshooting systemd's problems than openRC ones, so I stepped back.
+  
   
 
 Cheers,  
