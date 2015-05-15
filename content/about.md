@@ -5,8 +5,11 @@
 ## Personal Information
 Hi all! Well well, here starts my experience as a webmaster.  
 My name is Fabio Scaccabarozzi, I was born in Vimercate, Italy on 20th November 1988. I've got a brother (2 years younger than me) and a dog named Lulù. I attended high schools at the local state liceum A. Banfi.  
-I'm currently an employee at <a href="http://www.epress.it" target="_blank">Epress Information Services</a> and working for Esselunga S.p.A. in their head office, in Limito di Pioltello.  
 Computer science has been my passion since I was six. My dad bought me an Intel Pentium in 1994, its main function being a playbox, something like a PlayStation. I experimented with Windows 95, Windows 98, Windows XP, and my main fun slowly moved from playing a game to solving Windows' errors and optimizing Windows' bottlenecks. Then came the ADSL modem. Fixed bill for unlimited traffic gave me the opportunity to browse undefinitely and learn the most out of the web.
+
+## Work
+After a brief experience in a no longer existing startup near Switzerland's border in 2013, for most of 2014 I have been an employee at <a href="http://www.epress.it" target="_blank">Epress Information Services</a> and working for Esselunga S.p.A. in their head office, in Limito di Pioltello (near Milan, Italy).  
+Starting December, 2014 I am an employee of Forexus GmbH in Zürich, Switzerland. Here I am working as Junior eDiscovery Consultant, being part of the processing team in a well-known bank.  
 
 ## Ideals
 I follow the hacker ethics as much as I can, that's how my mind "works". If I have to solve a problem I usually spend a lot of time documenting, searching and so on. Forums are my last resource, usually. Overall, at least learned the basic concepts of chroot jail and testing before actually setting up things (my first experiments always led to OS reinstallation). If there's somewhere I can contribute, I usually report my experiences and try to help less experienced users.  
