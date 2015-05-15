@@ -9,7 +9,7 @@ Computer science has been my passion since I was six. My dad bought me an Intel 
 
 ## Work
 After a brief experience in a no longer existing startup near Switzerland's border in 2013, for most of 2014 I have been an employee at <a href="http://www.epress.it" target="_blank">Epress Information Services</a> and working for Esselunga S.p.A. in their head office, in Limito di Pioltello (near Milan, Italy).  
-Starting December, 2014 I am an employee of Forexus GmbH in Zürich, Switzerland. Here I am working as Junior eDiscovery Consultant, being part of the processing team in a well-known bank.  
+Starting December, 2014 I am an employee of <a href="http://www.forexus.ch/" target="_blank">Forexus GmbH</a> in Zürich, Switzerland. Here I am working as Junior eDiscovery Consultant, being part of the processing team in a well-known bank.  
 
 ## Ideals
 I follow the hacker ethics as much as I can, that's how my mind "works". If I have to solve a problem I usually spend a lot of time documenting, searching and so on. Forums are my last resource, usually. Overall, at least learned the basic concepts of chroot jail and testing before actually setting up things (my first experiments always led to OS reinstallation). If there's somewhere I can contribute, I usually report my experiences and try to help less experienced users.  
