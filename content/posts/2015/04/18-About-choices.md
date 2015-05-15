@@ -38,18 +38,21 @@ I do remember one time where in order to disable a service, I actually had to re
 ## File layout is a mess
 
 By trying to solve the problem, in my opinion systemd made it worse.
-I don't know for other distros, but for Gentoo you have this big repository of service files which is */usr/lib64/systemd/system*, where all the packages install their service files. Previously that place was */etc/init,d*, and I actually liked that because it gave the admin the chance to *update* the init file and *look* at the changes. Now everything happens without anybody noticing.
+I don't know for other distros, but for Gentoo you have this big repository of service files which is */usr/lib64/systemd/system*, where all the packages install their service files. Previously that place was */etc/init.d*, and I actually liked that because it gave the admin the chance to *update* the init file and *look* at the changes.  
+Now everything happens without anybody noticing.
 
 ## Init scripts should be short
 
 Systemd tries really hard to slim down service files, along the lines of "init scripts should not be long and hard to read". Agreed.  
 What happens now is that the previous 100-lines-long init script is shifted to a bash script living somewhere in the package directory, with the same old init content: directory setup, permission changes and so forth.
   
+## Security and linux philosophy
+On a side note, from the security point of view, I really don't like the idea of slamming 1MB of binary code which does *everything* into a process on which the whole system relies so heavily. That makes it for a very *huge* attack surface, as opposed to the 40KB sysvinit (which does **one** thing).  
+
 ## Epilogue
 
 This is just a small list of reasons why I went back to openRC, and never looked back. I experimented with systemd when it was still in its infancy, and I saw it grow full of features for almost two years. I eventually came to a point where it was a much bigger issue troubleshooting systemd's problems than openRC ones, so I stepped back.
   
   
-
 Cheers,  
 Fabio Scaccabarozzi
