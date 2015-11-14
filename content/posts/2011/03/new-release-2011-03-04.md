@@ -38,5 +38,5 @@ Along with the new release I delivered some updates to the server:
 
 Hoping that all of this will result in a more pleasant experience, I invite you to download and test the latest liveCDs, already available from the download page.
 
-Cheers,
+Cheers,  
 Fabio Scaccabarozzi

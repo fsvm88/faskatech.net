@@ -26,5 +26,5 @@ About the latter: since kernel includes squashfs now, the underlying filesystem 
 
 Enjoy the new release and have fun! ;)
 
-Cheers,
+Cheers,  
 Fabio Scaccabarozzi

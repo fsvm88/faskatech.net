@@ -21,5 +21,5 @@ One thing's still to fix. Please pay attention when downloading by accessing FTP
 
 Enjoy!
 
-Cheers,
+Cheers,  
 Neo2

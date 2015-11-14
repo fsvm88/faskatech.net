@@ -26,5 +26,5 @@ The feature bumps in this release include:
 * linux-headers-2.6.30-r1
 * 2.6.31 kernel + reiser4
 
-Cheers,
+Cheers,  
 Fabio Scaccabarozzi

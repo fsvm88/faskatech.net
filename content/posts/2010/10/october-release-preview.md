@@ -34,5 +34,5 @@ Accounting about a week for the patches to catch up (most notably the Reiser4 on
 
 I would appreciate feedback on these decisions because a few things are going to change in this release and not everybody may welcome them. Please have a stop at the [official thread at gentoo.org](http://forums.gentoo.org/viewtopic-t-841256.html){:target='_blank'} if you are interested in the topic.
 
-Cheers,
+Cheers,  
 Fabio Scaccabarozzi

@@ -21,5 +21,5 @@ If you notice any regression (eg. something that was working is now non-working)
 
 I would also like to thank all the supporters and the people out there (and especially the ones at Gentoo Forums!) for both the appreciation and the critics, we have made it two years far =)
 
-Cheers,
+Cheers,  
 Fabio Scaccabarozzi
