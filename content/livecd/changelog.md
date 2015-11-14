@@ -1,7 +1,7 @@
 ---
 title: Changelog
 kind: livecd
-layout: pages_with_sidebar
+layout: '/pages_with_sidebar.*'
 ---
 
 {::options parse_block_html="true" /}

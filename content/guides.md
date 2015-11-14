@@ -1,4 +1,4 @@
 ---
 title: Guides
-layout: guides 
+layout: '/guides.*'
 ---

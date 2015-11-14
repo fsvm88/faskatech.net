@@ -1,6 +1,6 @@
-include Nanoc3::Helpers::Blogging
-include Nanoc3::Helpers::CacheBusting
-include Nanoc3::Helpers::LinkTo
-include Nanoc3::Helpers::Rendering
-include Nanoc3::Helpers::Tagging
-include Nanoc3::Helpers::XMLSitemap
+include Nanoc::Helpers::Blogging
+include Nanoc::Helpers::CacheBusting
+include Nanoc::Helpers::LinkTo
+include Nanoc::Helpers::Rendering
+include Nanoc::Helpers::Tagging
+include Nanoc::Helpers::XMLSitemap

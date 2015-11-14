@@ -1,7 +1,6 @@
 ---
 title: 'New release: 2011-03-06'
 kind: article
-layout: posts
 created_at: 2011-03-06 14:22
 subject: livecd
 tags:

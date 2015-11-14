@@ -17,8 +17,8 @@ module Pagination
 			first = i*@config[:page_size] + 1
 			last = (i+1)*@config[:page_size]
 
-			@items << Nanoc::Item.new(
-				"<%= render 'paginated_posts' %>",
+			@items.create(
+				"<%= render '/paginated_posts.*' %>",
 				{
 					:item_id => i,
 					:last_id => last_article_is,

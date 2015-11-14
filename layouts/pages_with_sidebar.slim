@@ -1,8 +1,8 @@
 - content_for :sidebar_extra do
   - case @item[:kind]
   - when 'coding'
-    = getSidebarCapture('Scripts', 'This is a simple list of scripts that I\'ve written myself. They are proof-of-concepts or small utilities which I could not find elsewhere.') if @item.identifier.match('^/coding/scripts/.*')
-    = 'This section pulls in all the coding projects I\'ve worked on so far. These Include bash scripts, a Java game and a simple python parser.' unless @item.identifier.match('^/coding/scripts/.*')
+    = getSidebarCapture('Scripts', 'This is a simple list of scripts that I\'ve written myself. They are proof-of-concepts or small utilities which I could not find elsewhere.') if @item.identifier.without_exts.match('^/coding/scripts/.*')
+    = 'This section pulls in all the coding projects I\'ve worked on so far. These Include bash scripts, a Java game and a simple python parser.' unless @item.identifier.without_exts.match('^/coding/scripts/.*')
   - when 'livecd'
     = getSidebarCapture('Reiser4-TrueCrypt liveCDs', 'LiveCDs dedicated to power users and system administrators. No GUI, reiser4&amp;truecrypt enabled, with additional tools for offline system administration and disaster recovery.')
   - when 'overlay'

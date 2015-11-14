@@ -1,7 +1,7 @@
 ---
 title: 'How-to: RAID1 with MD on two identical disks'
 kind: guide
-layout: posts
+layout: '/posts.*'
 created_at: 2014-05-03 16:05
 tags:
  - server

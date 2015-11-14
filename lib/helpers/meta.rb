@@ -41,7 +41,7 @@ module Meta
 			metas["type"] = "website"
 		end
 
-		metas["image"] = @site.config[:base_url] + '/assets/img/logo.png'
+		metas["image"] = @config[:base_url] + '/assets/img/logo.png'
 		metas["fb_admins"] = "fabio.scaccabarozzi2"
 
 		# Append OpenGraph (Facebook mainly) metas

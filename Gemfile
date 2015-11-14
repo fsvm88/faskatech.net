@@ -12,7 +12,6 @@ gem "kramdown"
 gem "nanoc"
 gem "nanoc-cachebuster"
 gem 'nanoc-gzip-filter'
-gem "nanoc-toolbox"
 gem "nokogiri"
 gem "rainpress"
 gem "sass"

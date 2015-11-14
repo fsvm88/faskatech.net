@@ -2,7 +2,6 @@
 title: 'LiveCD updates'
 subtitle: 'AKA: new release, cool stuff!'
 kind: article
-layout: posts
 created_at: 2015-11-14 21:00
 subject: livecd
 tags:
