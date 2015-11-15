@@ -16,7 +16,7 @@
 
 preprocess do
 	paginateArticles
-#	createTagItems
+	createTagItems
 end
 
 compile '/assets/css/*' do
