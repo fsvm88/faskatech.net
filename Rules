@@ -62,7 +62,6 @@ compile '/**/*' do
 
       layout '/default.*'
     end
-#    filter :cache_buster 
   end
 end
 
@@ -89,10 +88,8 @@ end
 route '/assets/**/*' do
     case item.identifier.ext
     when 'sass', 'scss'
-        #item.identifier.without_exts + fingerprint(item[:filename]) + '.' + 'css'
         item.identifier.without_exts + '.' + 'css'
     else
-        #item.identifier.without_exts + fingerprint(item[:filename]) + '.' + item.identifier.ext
         item.identifier.to_s
     end
 end

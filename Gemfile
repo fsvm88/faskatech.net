@@ -10,8 +10,6 @@ gem "cri"
 gem "execjs"
 gem "kramdown"
 gem "nanoc"
-gem "nanoc-cachebuster"
-gem 'nanoc-gzip-filter'
 gem "nokogiri"
 gem "rainpress"
 gem "sass"
