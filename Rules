@@ -20,7 +20,7 @@ preprocess do
 end
 
 compile '/assets/css/*' do
-    if item[:extension] == 'scss' or item[:extension] == 'sass'
+    if item.identifier.ext == 'scss' or item.identifier.ext == 'sass'
         filter :sass, { :cache => false, :style => (@config[:debug] ? :compact : :compressed) }
     end
     filter :yui_compressor, { :type => 'css', :munge => true, :preserve_semicolons => false, :optimize => true } unless @config[:debug]
@@ -71,39 +71,39 @@ route '/posts/feed.*' do
 end
 
 route '/browserconfig.*' do
-    item.identifier.chop + '.xml'
+    item.identifier.without_exts + '.xml'
 end
 
 route '/sitemap.*' do
-	item.identifier.chop + '.xml'
+	item.identifier.without_exts + '.xml'
 end
 
 route '/*.erb' do
-	item.identifier.chop + '.html'
+	item.identifier.without_exts + '.html'
 end
 
 route '/pages/1' do
 	'/index.html'
 end
 
-route '/assets/*' do
-    case item[:extension]
-    when 'svg'
-        item.identifier.chop + '.' + item[:extension]
-    when 'sass'
-        item.identifier.chop + fingerprint(item[:filename]) + '.' + 'css'
+route '/assets/**/*' do
+    case item.identifier.ext
+    when 'sass', 'scss'
+        #item.identifier.without_exts + fingerprint(item[:filename]) + '.' + 'css'
+        item.identifier.without_exts + '.' + 'css'
     else
-        item.identifier.chop + fingerprint(item[:filename]) + '.' + item[:extension]
+        #item.identifier.without_exts + fingerprint(item[:filename]) + '.' + item.identifier.ext
+        item.identifier.to_s
     end
 end
 
 route '/**/*' do
   if item.binary?
     # Write item with identifier /foo/ to /foo.ext
-    item.identifier.chop + '.' + item[:extension]
+    item.identifier.to_s
   else
     # Write item with identifier /foo/ to /foo/index.html
-    item.identifier + '/index.html'
+    item.identifier.without_exts + '/index.html'
   end
 end
 
