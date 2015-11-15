@@ -43,6 +43,7 @@ compile '/**/*' do
       else
           filter :erb
     end
+    layout '/posts.*' if (Regexp.new('\A(\\/posts\\/)').match(item.identifier))
     layout item[:layout] if item[:layout]
     
     unless ['xml'].include?(item[:extension])
