@@ -29,10 +29,10 @@ Below is a summary of the key points that helped me decide when comparing the th
         * zero management: setup is static and decided at assemble time
     * Cons:
         * "dumb" solution: requires perfect disk match and has no understanding of the data contained (or better: size will be limited to the smallest partition in a RAID1 array)
-	* initramfs required: kernel array autobuilding is discouraged, and as far as I was able to find autoassembling does **not** work for MD metadata after 0.9x
-	* rebuild is a major bottleneck, as the disk or partition containing the new disk must be **fully** resynched (1Tb disk needs 1Tb read-write cycle, though the array should be usable in the meantime)
-	* needs initramfs to assemble the array at boot
-	* no data checksumming
+        * initramfs required: kernel array autobuilding is discouraged, and as far as I was able to find autoassembling does **not** work for MD metadata after 0.9x
+        * rebuild is a major bottleneck, as the disk or partition containing the new disk must be **fully** resynched (1Tb disk needs 1Tb read-write cycle, though the array should be usable in the meantime)
+        * needs initramfs to assemble the array at boot
+        * no data checksumming
  * ZFS
     * Pros:
         * fast, resilient COW FS with support for many additional features
