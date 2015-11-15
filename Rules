@@ -31,19 +31,11 @@ compile '/assets/js/*' do
     filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } } unless @config[:debug]
 end
 
-compile '/sitemap.*' do
-    filter :erb
-end
-
-compile '/posts/feed.*' do
-    filter :erb
-end
-
 compile '/**/*' do
   if item.binary?
     # don’t filter binary items
   else
-    case item[:extension]
+    case item.identifier.ext
       when 'md'
           filter :kramdown
       when 'html'
@@ -75,10 +67,6 @@ end
 
 route '/sitemap.*' do
 	item.identifier.without_exts + '.xml'
-end
-
-route '/*.erb' do
-	item.identifier.without_exts + '.html'
 end
 
 route '/pages/1' do
