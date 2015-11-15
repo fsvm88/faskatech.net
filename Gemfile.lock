@@ -8,21 +8,12 @@ GEM
     cri (2.7.0)
       colored (~> 1.2)
     execjs (2.6.0)
-    jsmin (1.0.1)
     json (1.8.3)
     kramdown (1.9.0)
     libv8 (3.16.14.13)
     mini_portile (0.6.2)
-    nanoc (3.8.0)
+    nanoc (4.0.0)
       cri (~> 2.3)
-    nanoc-cachebuster (0.3.1)
-      nanoc (>= 3.3.0)
-    nanoc-gzip-filter (0.0.1)
-      nanoc (>= 3.4.0)
-    nanoc-toolbox (0.2.1)
-      jsmin (~> 1.0)
-      nanoc (~> 3.7)
-      nokogiri (~> 1.6)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     rainpress (1.0)
@@ -56,9 +47,6 @@ DEPENDENCIES
   execjs
   kramdown
   nanoc
-  nanoc-cachebuster
-  nanoc-gzip-filter
-  nanoc-toolbox
   nokogiri
   rainpress
   sass

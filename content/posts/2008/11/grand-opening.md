@@ -1,7 +1,6 @@
 ---
 title: 'Grand Opening'
 kind: article
-layout: posts
 created_at: 2008-11-04 18:47
 subject: site
 tags:

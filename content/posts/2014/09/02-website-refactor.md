@@ -1,7 +1,6 @@
 ---
 title: 'Website refactor'
 kind: article
-layout: posts
 created_at: 2014-09-02 20:19
 subject: website
 tags:

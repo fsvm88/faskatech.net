@@ -26,9 +26,9 @@ module Tags
 
 		#:articles => sortArticlesForTagger(items_with_tag(oneTag)),
 		# Generate items and append them to the items list
-		all_tags.each do | oneTag |
-			@items << Nanoc::Item.new(
-				"<%= render 'tags_page' %>",
+		all_tags.uniq.each do | oneTag |
+			@items.create(
+				"<%= render '/tags_page.*' %>",
 				{ :tag => oneTag },
 				"/tag/#{oneTag}"
 			)

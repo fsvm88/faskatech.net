@@ -1,7 +1,6 @@
 ---
 title: 'April release (formerly "March release")'
 kind: article
-layout: posts
 created_at: 2009-04-07 22:01
 subject: livecd
 tags:

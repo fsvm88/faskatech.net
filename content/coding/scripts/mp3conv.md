@@ -2,7 +2,7 @@
 title: mp3conv
 subtitle: Sanitize mp3!
 kind: coding
-layout: pages_with_sidebar
+layout: '/pages_with_sidebar.*'
 ---
 This illustrates a simple script I've made to reconvert mp3 files.
 

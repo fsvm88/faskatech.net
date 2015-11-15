@@ -2,7 +2,6 @@
 title: 'Reasons why I killed systemd'
 subtitle: 'AKA: systemd vs openrc'
 kind: article
-layout: posts
 created_at: 2015-05-15 14:00
 subject: website
 tags:

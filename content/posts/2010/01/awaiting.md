@@ -1,7 +1,6 @@
 ---
 title: 'Awaiting...'
 kind: article
-layout: posts
 created_at: 2010-01-24 18:30
 subject: livecd
 tags:

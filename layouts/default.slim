@@ -7,22 +7,22 @@ html lang="en"
   link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
   link href="/assets/css/fonts.css" rel="stylesheet"
   link href="/assets/css/faskatech.css" rel="stylesheet"
-  == render 'favicons'
+  == render '/favicons.*'
   = getMetasForHead
 
  body
   a id="gplusauthorattribution" href="https://plus.google.com/+FabioScaccabarozzi88?rel=author" title="g+ profile" Google Plus profile
 
-  == render 'navbar'
+  == render '/navbar.*'
 
   main
     .container
       .row-fluid
         == yield
 
-  == render 'footer'
+  == render '/footer.*'
 
   script src="//code.jquery.com/jquery-2.1.1.min.js"
   script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
   script src="/assets/js/activeswitcher.js"
-  == render 'google_analytics'
+  == render '/google_analytics.*'

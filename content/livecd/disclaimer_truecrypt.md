@@ -1,6 +1,6 @@
 ---
 kind: livecd
-layout: pages_with_sidebar
+layout: '/pages_with_sidebar.*'
 title: Disclaimer (about TrueCrypt)
 ---
 This section exists only to fully meet the [TrueCrypt license](http://www.truecrypt.org/legal/license){:target='_blank'}.
