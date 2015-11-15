@@ -23,5 +23,5 @@ Anyway, I've got a bunch of news:
 
 Now, lets come to the CDs: I know kernel 2.6.30 has been released and has also seen 3 minor revisions, but I'm waiting for GCC 4.4.x to become at least unstable (drop the hardmask). There are a good number of packages that exhibit problems with GCC 4.4.x, as you can see from the [GCC 4.4 porting bug](http://bugs.gentoo.org/249226){:target='_blank'}. A lot of those bugs have been addressed, but still a few need to be fixed before it can be marked unstable. I hope that for the end of September it will be possible to drop the hardmask, so to be able to release a new version. Meanwhile, you can stick onto the auto-stages and old CDs (that don't lack any vital functionality regarding 2.6.29->2.6.30 bump).
 
-Cheers,
+Cheers,  
 Fabio Scaccabarozzi

@@ -7,6 +7,35 @@ layout: pages_with_sidebar
 {::options parse_block_html="true" /}
 
 <article>
+## 10th release (2015-11-14)
+* 4.2.6 kernel + reiser4 patch and btrfs delayed references patch (necessary for balance to work)
+* gcc-4.9.3
+* glibc 2.22-r1
+* linux-headers 4.3
+* Drivers:
+    * added F2FS support
+    * ndiswrapper still left out, no updates to ndiswrapper since 28/11/2013 - I didn't even try compiling it
+* Added packages (miscellaneous forensic tools + ncdu)
+    * app-forensics/cmospwd
+    * app-forensics/examiner
+    * app-forensics/foremost
+    * app-forensics/lynis
+    * app-forensics/mac-robber
+    * app-forensics/magicrescue
+    * app-forensics/memdump
+    * app-forensics/scalpel
+    * app-forensics/sleuthkit
+    * app-forensics/volatility
+    * app-forensics/yasat
+    * app-forensics/zzuf
+    * app-crypt/nasty
+    * sys-block/whdd
+    * sys-fs/ncdu
+* Removed packages:
+    * sys-fs/xfsdump fails to compile due to locale settings, will probably be re-added in the next release
+</article>
+
+<article>
 ## 9th release (2013-02-07)
 * 3.11.10 kernel + reiser4 patch
 * gcc-4.8.2

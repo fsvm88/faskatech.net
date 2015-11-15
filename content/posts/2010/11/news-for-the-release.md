@@ -16,5 +16,5 @@ Of course, I can't blame anybody for this. Reiser4 work is being volunteered by 
 
 So, if no new patches will be available by November 14th, I'll be sticking to 2.6.35 and build the new release upon it.
 
-Cheers,
+Cheers,  
 Fabio Scaccabarozzi

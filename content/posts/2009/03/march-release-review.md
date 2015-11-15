@@ -23,5 +23,5 @@ I've still got three main reasons, though, to delay a bit more this release:
 
 Apart from the reasons above, I think I'll be releasing the stages first with some advance from the CDs, if I find no critical toolchain update is to be published before Saturday.
 
-Cheers,
+Cheers,  
 Fabio Scaccabarozzi

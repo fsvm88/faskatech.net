@@ -31,5 +31,5 @@ Now, some information about the next release: as stated in the [official thread@
 Likewhoa contacted me for testing his JustBOOT liveCD generator script, I will test it without a doubt during the building of the release.
 I'm also planning to wait some more time for the release: about the 15th of March should be a reasonable date. The fact is that next week university exams begin and I'll be forced to stay away from the machines for a while. This will also provide some more time to debug and test the reiser4 code in zen-sources, which should allow for a smoother diff/transaction.
 
-Cheers,
+Cheers,  
 Fabio Scaccabarozzi

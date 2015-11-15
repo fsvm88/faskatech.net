@@ -22,5 +22,5 @@ I'm also planning to implement two wordpress blogs on subdomains of faskatech.ne
 
 Stay tuned ;)
 
-Cheers,
+Cheers,  
 Fabio Scaccabarozzi

@@ -14,5 +14,5 @@ Well well, after a lot of time spent learning Joomla, Apache, MySQL and configur
 
 The main section, dedicated to my liveCDs, is ready. The other ones (being only "Scripts" right now) are still work in progress. Stay tuned for news, and update your bookmarks.
 
-Cheers,
+Cheers,  
 Neo2
