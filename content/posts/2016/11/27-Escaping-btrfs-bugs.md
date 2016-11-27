@@ -112,7 +112,7 @@ Expanding the filesystem again we get:
 
 Now the volume has 6GB unallocated! No more ENOSPC!
 
-**Addendum**: Note that when I started writing this article, I was running kernel 4.6. I'm now on 4.8 and cannot be sure whether this can still be reproduced.
+**Note**: when I started writing this article, I was running kernel 4.6. I'm now on 4.8 and cannot be sure whether this can still be reproduced.
 
 
 
