@@ -11,6 +11,10 @@ output_dir: output
 # Needed for RSS atom feed generation
 base_url: http://www.faskatech.net
 
+# Needed for easy site name reference
+site_name: Faskatech.net
+claim_text: Linux projects for power users
+
 # Page size for pagination (number of posts)
 page_size: 3
 

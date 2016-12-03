@@ -4,8 +4,10 @@ module Meta
 		metas = Hash.new
 		metas["author"] = 'Fabio Scaccabarozzi'
 		metas["generator"] = 'nanoc'
-		if @item[:title]
-			metas["title"] = @item[:title]
+		if @item[:metatitle]
+			metas["title"] = @item[:metatitle] + " | " + @config[:site_name] + " - " + @config[:claim_text]
+      elsif @item[:title]
+         metas["title"] = @item[:title]
 		else
 			metas["title"] = 'Faskatech | Linux projects for power users'
 		end

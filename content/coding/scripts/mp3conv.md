@@ -1,4 +1,5 @@
 ---
+metatitle: mp3conv - Sanitize mp3!
 title: mp3conv
 subtitle: Sanitize mp3!
 kind: coding
