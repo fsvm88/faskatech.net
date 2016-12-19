@@ -4,6 +4,7 @@ subtitle: 'AKA: systemd vs openrc'
 kind: article
 created_at: 2015-05-15 14:00
 subject: website
+desc: 'Reasons to kill systemd'
 tags:
   - changes
   - systemd

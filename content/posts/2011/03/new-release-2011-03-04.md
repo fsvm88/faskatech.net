@@ -3,6 +3,7 @@ title: 'New release: 2011-03-06'
 kind: article
 created_at: 2011-03-06 14:22
 subject: livecd
+desc: '2011 March release published'
 tags:
  - march
  - metro

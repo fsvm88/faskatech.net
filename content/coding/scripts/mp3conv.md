@@ -3,6 +3,7 @@ metatitle: mp3conv - Sanitize mp3!
 title: mp3conv
 subtitle: Sanitize mp3!
 kind: coding
+desc: 'Reconvert mp3 files using lame via bash script'
 layout: '/pages_with_sidebar.*'
 ---
 This illustrates a simple script I've made to reconvert mp3 files.

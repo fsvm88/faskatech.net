@@ -1,6 +1,7 @@
 ---
 kind: livecd
 layout: '/pages_with_sidebar.*'
+desc: 'Reiser4 LiveCD download'
 title: Downloads
 ---
 These are the available downloads, I'm showing only the latest version (what everybody should want).

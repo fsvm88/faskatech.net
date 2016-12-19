@@ -1,6 +1,7 @@
 ---
 title: Changelog
 kind: livecd
+desc: 'Reiser4 LiveCD Changelog'
 layout: '/pages_with_sidebar.*'
 ---
 

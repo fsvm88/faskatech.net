@@ -3,6 +3,7 @@ title: 'Two years later'
 kind: article
 created_at: 2013-12-11 19:10
 subject: livecd
+desc: 'Two-years updates'
 tags:
  - december
  - release

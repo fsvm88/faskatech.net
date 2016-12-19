@@ -3,6 +3,7 @@ title: 'Website refactor'
 kind: article
 created_at: 2014-09-02 20:19
 subject: website
+desc: 'Website refactoring part 2'
 tags:
  - changes
  - updates

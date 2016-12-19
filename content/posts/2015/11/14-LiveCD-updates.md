@@ -4,6 +4,7 @@ subtitle: 'AKA: new release, cool stuff!'
 kind: article
 created_at: 2015-11-14 21:00
 subject: livecd
+desc: 'November 2015 release'
 tags:
   - november
   - livecd

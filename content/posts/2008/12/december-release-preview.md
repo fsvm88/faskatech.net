@@ -3,6 +3,7 @@ title: 'December release preview'
 kind: article
 created_at: 2008-12-14 11:08
 subject: livecd
+desc: 'December release preview for Reiser4+TrueCrypt LiveCDs'
 tags:
  - december
  - release

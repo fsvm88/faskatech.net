@@ -3,6 +3,7 @@ title: 'September release'
 kind: article
 created_at: 2009-09-14 17:08
 subject: livecd
+desc: 'September release published'
 tags:
 - september
 - awaiting

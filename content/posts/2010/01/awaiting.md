@@ -3,6 +3,7 @@ title: 'Awaiting...'
 kind: article
 created_at: 2010-01-24 18:30
 subject: livecd
+desc: 'Server updates, BOINC network and website updates'
 tags:
 - awaiting
 - server

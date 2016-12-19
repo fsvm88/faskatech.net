@@ -1,6 +1,7 @@
 ---
 kind: livecd
 layout: '/pages_with_sidebar.*'
+desc: 'Reiser4 LiveCD - Truecrypt disclaimer'
 title: Disclaimer (about TrueCrypt)
 ---
 This section exists only to fully meet the [TrueCrypt license](http://www.truecrypt.org/legal/license){:target='_blank'}.

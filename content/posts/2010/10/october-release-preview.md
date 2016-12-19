@@ -3,6 +3,7 @@ title: 'October release preview'
 kind: article
 created_at: 2010-10-09 13:37
 subject: livecd
+desC: 'October release preview, planning'
 tags:
 - metro
 - preview

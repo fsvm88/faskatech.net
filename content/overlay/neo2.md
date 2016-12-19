@@ -1,6 +1,7 @@
 ---
 title: neo2-overlay
 kind: overlay
+desc: 'neo2-overlay@faskatech.net'
 layout: '/pages_with_sidebar.*'
 ---
 

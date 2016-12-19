@@ -3,6 +3,7 @@ title: 'Grand Opening'
 kind: article
 created_at: 2008-11-04 18:47
 subject: site
+desc: 'Grand opening - First setup'
 tags:
 - server
 - webserver

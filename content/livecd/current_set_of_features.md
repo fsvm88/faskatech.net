@@ -1,6 +1,7 @@
 ---
 kind: livecd
 layout: '/pages_with_sidebar.*'
+desc: 'Reiser4 LiveCD features'
 title: Current set of features
 ---
 This is a list of what you'll find in the latest release

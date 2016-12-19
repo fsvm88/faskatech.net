@@ -3,6 +3,7 @@ title: 'News for the release'
 kind: article
 created_at: 2010-11-11 16:25
 subject: livecd
+desc: 'October release delayed, November release'
 tags:
 - october
 - update

@@ -3,6 +3,7 @@ title: 'Hello world!'
 kind: article
 created_at: 2008-10-12 11:11
 subject: site
+desc: 'Hello world!'
 tags:
 - hello
 - world

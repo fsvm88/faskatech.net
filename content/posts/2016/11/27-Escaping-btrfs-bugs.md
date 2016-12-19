@@ -4,6 +4,7 @@ subtitle: 'Thinking outside the box and saving your data!'
 kind: article
 created_at: 2016-11-27 17:30
 subject: filesystem
+desc: 'How ENOSPC in BTRFS is still badly broken'
 tags:
   - filesystem
   - btrfs

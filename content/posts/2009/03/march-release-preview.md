@@ -3,6 +3,7 @@ title: 'March release preview'
 kind: article
 created_at: 2009-03-05 10:32
 subject: livecd
+desc: 'March release preview, updates'
 tags:
 - march
 - preview

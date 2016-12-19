@@ -3,6 +3,7 @@ title: 'Random updates'
 kind: article
 created_at: 2009-07-27 09:22
 subject: site
+desc: 'Updates in between releases'
 tags:
 - minimal
 - server

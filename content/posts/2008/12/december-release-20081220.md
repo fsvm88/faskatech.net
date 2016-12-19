@@ -3,6 +3,7 @@ title: 'December release - 20081220'
 kind: article
 created_at: 2008-12-23 22:02
 subject: livecd
+desc: 'December release 20081220 - +madwifi +keymap'
 tags:
 - truecrypt
 - release

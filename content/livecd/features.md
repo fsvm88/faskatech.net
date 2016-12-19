@@ -1,6 +1,7 @@
 ---
 kind: livecd
 layout: '/pages_with_sidebar.*'
+desc: 'Reiser4 LiveCD features'
 title: Features
 ---
 LiveCD releases are based off Gentoo Minimal LiveCDs, they feature:
