@@ -195,7 +195,7 @@ This is a simple step to have mdadm always use the same names, which will be the
 Given that nowadays one uses labels and UUIDs over device names, this can be skipped without harm.
 
 ## Step 8: compiling your kernel with genkernel
-The setup of the kernel is covered in a lot of guides throughout the web, rather than rewrite again well-known and documented information, I can only recommend the [Gentoo wiki on software RAID](http://wiki.gentoo.org/wiki/Complete_Handbook/Software_RAID){:target='_blank'} and the [Gentoo genkernel wiki](http://wiki.gentoo.org/wiki/Genkernel){:target='_blank'}, which contain the necessary steps to compile the kernel, plus, of course, many steps which are common to this guide.
+The setup of the kernel is covered in a lot of guides throughout the web, rather than rewrite again well-known and documented information, I can only recommend the [Gentoo wiki on software RAID](https://wiki.gentoo.org/wiki/Complete_Handbook/Software_RAID){:target='_blank'} and the [Gentoo genkernel wiki](https://wiki.gentoo.org/wiki/Genkernel){:target='_blank'}, which contain the necessary steps to compile the kernel, plus, of course, many steps which are common to this guide.
 
 **Note:** Remember to pass --mdadm to the genkernel commandline, in order to be sure to include mdadm in the initramfs.
 

@@ -12,7 +12,7 @@ Hi, all!
 
 I'm happy to announce the revision bump of the April release.
 
-I've been following a request from kernelOfTruth and Jupiter1TX to have the USB and HID modules builtin, so to have USB keyboards properly working (genkernel bug?) and that has been done (thanks goes out to kernelOfTruth and Jupiter1TX for the testing the betas). You can read about this on the [Official thread @Gentoo Forums](http://forums.gentoo.org/viewtopic-t-841256.html){:target='_blank'}.
+I've been following a request from kernelOfTruth and Jupiter1TX to have the USB and HID modules builtin, so to have USB keyboards properly working (genkernel bug?) and that has been done (thanks goes out to kernelOfTruth and Jupiter1TX for the testing the betas). You can read about this on the [Official thread @Gentoo Forums](https://forums.gentoo.org/viewtopic-t-841256.html){:target='_blank'}.
 Another important thing, which may pass unobserved, is the update to TrueCrypt 6.2a. Thanks to the the trustees council on May 17th, the ebuild has been unmasked and upgraded, and then included in the release :-)
 
 <!--MORE-->

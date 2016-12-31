@@ -12,7 +12,7 @@ tags:
 ---
 Hi all!  
 
-After struggling for a (very long) while with [nanoc](http://nanoc.ws/){:target='_blank'}, I was able to make many small improvements to the site structure.  
+After struggling for a (very long) while with [nanoc](https://nanoc.ws/){:target='_blank'}, I was able to make many small improvements to the site structure.  
 <!--MORE-->
 "Scripts" section has disappeared in favor of a more generic "Coding" one, divided by language.  
 Lots of cleanups went into JavaScript and CSS (which is now written in SASS).  
@@ -24,7 +24,7 @@ I am applying for becoming a Gentoo developer, and I am slowly testing packages 
 I will try to follow up this round of updates with some serious nanoc examples, as I find that the documentation online is somewhat scarce.  
 You will find them under the newly added "Guides" section, along with a new RAID1 guide for MD (*mdadm*).
 
-In the meanwhile I also migrated my server to a much more powerful one, basically, everything doubled in the specs. I am partecipating in many [BOINC projects](http://boincstats.com/it/stats/-1/user/detail/208278/projectList){:target='_blank'} now, compared to the 4-5 previous ones.
+In the meanwhile I also migrated my server to a much more powerful one, basically, everything doubled in the specs. I am partecipating in many [BOINC projects](https://boincstats.com/it/stats/-1/user/detail/208278/projectList){:target='_blank'} now, compared to the 4-5 previous ones.
 
 
 Cheers,  

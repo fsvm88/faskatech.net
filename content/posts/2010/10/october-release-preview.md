@@ -15,8 +15,8 @@ I intended to make a release available before the 30th of September, but I decid
 
 * 2.6.36 is coming around
 * GCC 4.5.1 has been added to the tree
-* a new tool for building stages has been released and gained a lot of popularity recently: [Metro](http://www.funtoo.org/en/metro/tutorial/){:target='_blank'}
-While GCC 4.5.1 still has some [problems](http://bugs.gentoo.org/show_bug.cgi?id=296658){:target='_blank'} with some packages (I'd consider only grub-9999 a showstopper), I consider it to be fairly stable for a non mission-critical system. Therefore, I'm really considering the opportunity to make it the default compiler for this release.  
+* a new tool for building stages has been released and gained a lot of popularity recently: [Metro](https://www.funtoo.org/en/metro/tutorial/){:target='_blank'}
+While GCC 4.5.1 still has some [problems](https://bugs.gentoo.org/show_bug.cgi?id=296658){:target='_blank'} with some packages (I'd consider only grub-9999 a showstopper), I consider it to be fairly stable for a non mission-critical system. Therefore, I'm really considering the opportunity to make it the default compiler for this release.  
 
 <!--MORE-->
 
@@ -32,7 +32,7 @@ I'm also going to include some tools for hdd/filesystem backup/restoration such 
 
 Accounting about a week for the patches to catch up (most notably the Reiser4 ones), I expect to have the release ready before the end of October.
 
-I would appreciate feedback on these decisions because a few things are going to change in this release and not everybody may welcome them. Please have a stop at the [official thread at gentoo.org](http://forums.gentoo.org/viewtopic-t-841256.html){:target='_blank'} if you are interested in the topic.
+I would appreciate feedback on these decisions because a few things are going to change in this release and not everybody may welcome them. Please have a stop at the [official thread at gentoo.org](https://forums.gentoo.org/viewtopic-t-841256.html){:target='_blank'} if you are interested in the topic.
 
 Cheers,  
 Fabio Scaccabarozzi
