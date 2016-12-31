@@ -31,6 +31,10 @@ compile '/assets/js/*' do
     filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } } unless @config[:debug]
 end
 
+compile '/robots.txt' do
+    nil
+end
+
 compile '/**/*' do
   if item.binary?
     # don’t filter binary items
@@ -68,6 +72,10 @@ end
 
 route '/sitemap.*' do
 	item.identifier.without_exts + '.xml'
+end
+
+route '/robots.txt' do
+    '/robots.txt'
 end
 
 route '/pages/1' do
