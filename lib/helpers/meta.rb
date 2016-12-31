@@ -16,6 +16,7 @@ module Meta
 		if @item[:metatitle]
 			item_title = @item[:metatitle] + " | " + @config[:site_name]
 		end
+		# Insert the title meta (standalone tag)
       headAppend << "\n<title>" + item_title + "</title>"
 		
 		if @item[:desc]
@@ -24,8 +25,6 @@ module Meta
 			metas["description"] = 'Linux projects for power users: reiser4+truecrypt enabled liveCDs, custom Gentoo overlays, linux guides and scripts.'
 		end
 
-		# Insert the title meta (standalone tag)
-		headAppend << "\n<title>" + item_title + "</title>"
 		# Append default metas
 		metas.each do | key, value |
 			headAppend << "<meta name=\"" + key + "\" content=\"" + value + "\">"
