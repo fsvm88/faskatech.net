@@ -9,7 +9,7 @@
 output_dir: output
 
 # Needed for RSS atom feed generation
-base_url: http://www.faskatech.net
+base_url: https://www.faskatech.net
 
 # Needed for easy site name reference
 site_name: Faskatech.net
