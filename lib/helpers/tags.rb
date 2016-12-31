@@ -29,7 +29,7 @@ module Tags
 		all_tags.uniq.each do | oneTag |
 			@items.create(
 				"<%= render '/tags_page.*' %>",
-				{ :tag => oneTag },
+            { :title => 'Posts tagged with: ' + oneTag, :metadesc => 'All the items on Faskatech.net tagged with: ' + oneTag, :tag => oneTag },
 				"/tag/#{oneTag}"
 			)
 		end
