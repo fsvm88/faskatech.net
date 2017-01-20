@@ -1,69 +1,68 @@
 #!/usr/bin/env ruby
 
-# A few helpful tips about the Rules file:
-#
-# * The string given to #compile and #route are matching patterns for
-#   identifiers--not for paths. Therefore, you can’t match on extension.
-#
-# * The order of rules is important: for each item, only the first matching
-#   rule is applied.
-#
-# * Item identifiers start and end with a slash (e.g. “/about/” for the file
-#   “content/about.html”). To select all children, grandchildren, … of an
-#   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
-#   because “*” matches zero or more characters.
-
-
+# Preprocess rules for item pagination
 preprocess do
-	paginateArticles
-	createTagItems
+    paginateArticles
+    createTagItems
 end
 
-compile '/assets/css/*' do
+#############################
+############### COMPILE RULES
+#############################
+
+# Assets
+compile '/assets/css/*.{sc,sa,c}ss' do
     if item.identifier.ext == 'scss' or item.identifier.ext == 'sass'
         filter :sass, { :cache => false, :style => (@config[:debug] ? :compact : :compressed) }
     end
     filter :yui_compressor, { :type => 'css', :munge => true, :preserve_semicolons => false, :optimize => true } unless @config[:debug]
 end
 
-compile '/assets/js/*' do
+# JavaScript
+compile '/assets/js/*.js' do
     filter :erb
     filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } } unless @config[:debug]
 end
 
-compile '/robots.txt' do
+# Robots.txt must be skipped
+compile '/robots.txt/' do
     nil
 end
 
 compile '/**/*' do
-  if item.binary?
-    # don’t filter binary items
-  else
-    case item.identifier.ext
-      when 'md'
-          filter :kramdown
-      when 'html'
-          nil
-      else
-          filter :erb
-    end
-    layout '/posts.*' if (Regexp.new('\A(\\/posts\\/)').match(item.identifier))
-    layout item[:layout] if item[:layout]
-    
-    unless ['xml'].include?(item[:extension])
-      if ( (Regexp.new('\A(\\/guide\\/)').match(item.identifier)) || (Regexp.new('\A(\\/contact\\/)').match(item.identifier)) || (Regexp.new('\A(\\/about\\/)').match(item.identifier)) )
-          layout '/content_without_sidebar.*'
-      else 
-          layout '/content_with_sidebar.*'
-      end
+    if item.binary?
+        # If the item is a binary, skip it
+        nil
+    else
+        case item.identifier.ext
+        when 'md'
+            filter :kramdown
+        when 'html'
+            nil
+        else
+            filter :erb
+        end
 
-      layout '/default.*'
+        layout '/posts/' if item.identifier =~ '/posts/'
+
+        layout item[:layout] if item[:layout]unless ['xml'].include?(item[:identifier])
+        
+        if item.identifier =~ '/guide/' or item.identifier =~ '/contact/' or item.identifier =~ '/about/'
+            layout '/content_without_sidebar.*'
+        else
+            layout '/content_with_sidebar.*'
+        end
+        
+        layout '/default.*'
     end
-  end
 end
 
+##############################
+################ ROUTING RULES
+##############################
+
 route '/posts/feed.*' do
-	'/atom.xml'
+    item.identifier.without_exts + '.xml'
 end
 
 route '/browserconfig.*' do
@@ -71,15 +70,15 @@ route '/browserconfig.*' do
 end
 
 route '/sitemap.*' do
-	item.identifier.without_exts + '.xml'
+    item.identifier.without_exts + '.xml'
 end
 
 route '/robots.txt' do
     '/robots.txt'
 end
 
-route '/pages/1' do
-	'/index.html'
+route '/pages/1/' do
+    '/index.html'
 end
 
 route '/assets/**/*' do
@@ -92,13 +91,13 @@ route '/assets/**/*' do
 end
 
 route '/**/*' do
-  if item.binary?
-    # Write item with identifier /foo/ to /foo.ext
-    item.identifier.to_s
-  else
-    # Write item with identifier /foo/ to /foo/index.html
-    item.identifier.without_exts + '/index.html'
-  end
+    if item.binary?
+        # Write item with identifier /foo/ to /foo.ext
+        item.identifier.to_s
+    else
+        # Write item with identifier /foo/ to /foo/index.html
+        item.identifier.without_exts + '/index.html'
+    end
 end
 
-layout '/*', :slim, format: :html, pretty: true, disable_escape: true
+layout '/**/*', :slim, { format: html, pretty: true, disable_escape: true }
