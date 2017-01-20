@@ -94,7 +94,7 @@ checks:
 base_url: https://www.faskatech.net
 
 # Needed for easy site name reference
-site_claim: Faskatech.net
+site_name: Faskatech.net
 claim_text: Linux projects for power users
 
 # Page size for pagination
