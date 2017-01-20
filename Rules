@@ -26,7 +26,19 @@ end
 
 # Robots.txt must be skipped
 compile '/robots.txt/' do
-    nil
+    write '/robots.txt'
+end
+
+compile '/sitemap.*' do
+    filter :erb
+end
+
+compile '/posts/feed.*' do
+    filter :erb
+end
+
+compile '/*.xml' do
+    write item.identifier.to_s
 end
 
 compile '/**/*' do
@@ -45,7 +57,7 @@ compile '/**/*' do
 
         layout '/posts/' if item.identifier =~ '/posts/'
 
-        layout item[:layout] if item[:layout]unless ['xml'].include?(item[:identifier])
+        layout item[:layout] if item[:layout]
         
         if item.identifier =~ '/guide/' or item.identifier =~ '/contact/' or item.identifier =~ '/about/'
             layout '/content_without_sidebar.*'
@@ -65,19 +77,7 @@ route '/posts/feed.*' do
     item.identifier.without_exts + '.xml'
 end
 
-route '/browserconfig.*' do
-    item.identifier.without_exts + '.xml'
-end
-
-route '/sitemap.*' do
-    item.identifier.without_exts + '.xml'
-end
-
-route '/robots.txt' do
-    '/robots.txt'
-end
-
-route '/pages/1/' do
+route '/pages/1' do
     '/index.html'
 end
 
@@ -90,6 +90,10 @@ route '/assets/**/*' do
     end
 end
 
+route '/{sitemap,browserconfig}.*' do
+    item.identifier.without_ext + '.xml'
+end
+
 route '/**/*' do
     if item.binary?
         # Write item with identifier /foo/ to /foo.ext
@@ -100,4 +104,4 @@ route '/**/*' do
     end
 end
 
-layout '/**/*', :slim, { format: html, pretty: true, disable_escape: true }
+layout '/**/*', :slim, { :format => :html, :pretty => true, :disable_escape => true, :sort_attrs => true }
