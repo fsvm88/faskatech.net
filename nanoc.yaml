@@ -1,30 +1,22 @@
-# A list of file extensions that nanoc will consider to be textual rather than
+# The syntax to use for patterns in the Rules file. Can be either `"glob"`
+# (default) or `"legacy"`. The former will enable glob patterns, which behave
+# like Ruby’s File.fnmatch. The latter will enable Nanoc 3.x-style patterns.
+string_pattern_type: glob
+
+# A list of file extensions that Nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
 # will be considered as binary.
-#text_extensions: [ 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'ms', 'mustache', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml' ]
+text_extensions: [ 'adoc', 'asciidoc', 'atom', 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'ms', 'mustache', 'php', 'rb', 'rdoc', 'sass', 'scss', 'slim', 'txt', 'xhtml', 'xml' ]
 
 # The path to the directory where all generated files will be written to. This
 # can be an absolute path starting with a slash, but it can also be path
 # relative to the site directory.
 output_dir: output
 
-# Needed for RSS atom feed generation
-base_url: https://www.faskatech.net
-
-# Needed for easy site name reference
-site_name: Faskatech.net
-claim_text: Linux projects for power users
-
-# Page size for pagination (number of posts)
-page_size: 3
-
-# Set default number of correlated posts to display
-correlated_posts: 5
-
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
 # “index.html”, but depending on the web server, this may be something else,
-# such as “default.htm”. This list is used by nanoc to generate pretty URLs.
+# such as “default.htm”. This list is used by Nanoc to generate pretty URLs.
 index_filenames: [ 'index.html' ]
 
 # Whether or not to generate a diff of the compiled content when compiling a
@@ -33,8 +25,8 @@ index_filenames: [ 'index.html' ]
 enable_output_diff: false
 
 prune:
-  # Whether to automatically remove files not managed by nanoc from the output
-  # directory. For safety reasons, this is turned off by default.
+  # Whether to automatically remove files not managed by Nanoc from the output
+  # directory.
   auto_prune: true
 
   # Which files and directories you want to exclude from pruning. If you version
@@ -42,16 +34,14 @@ prune:
   # .git, .svn etc.
   exclude: [ '.git', '.hg', '.svn', 'CVS' ]
 
-# The data sources where nanoc loads its data from. This is an array of
+# The data sources where Nanoc loads its data from. This is an array of
 # hashes; each array element represents a single data source. By default,
 # there is only a single data source that reads data from the “content/” and
 # “layout/” directories in the site directory.
 data_sources:
   -
-    # The type is the identifier of the data source. By default, this will be
-    # `filesystem_unified`.
-    type: filesystem_unified
-    identifier_type: full
+    # The type is the identifier of the data source.
+    type: filesystem
 
     # The path where items should be mounted (comparable to mount points in
     # Unix-like systems). This is “/” by default, meaning that items will have
@@ -64,31 +54,55 @@ data_sources:
     # same as the items root, but applies to layouts rather than items.
     layouts_root: /
 
-    # Whether to allow periods in identifiers. When turned off, everything
-    # past the first period is considered to be the extension, and when
-    # turned on, only the characters past the last period are considered to
-    # be the extension. For example,  a file named “content/about.html.erb”
-    # will have the identifier “/about/” when turned off, but when turned on
-    # it will become “/about.html/” instead.
-    allow_periods_in_identifiers: false
+    # The encoding to use for input files. If your input files are not in
+    # UTF-8 (which they should be!), change this.
+    encoding: utf-8
 
-# Configuration for the “watch” command, which watches a site for changes and
-# recompiles if necessary.
-watcher:
-  # A list of directories to watch for changes. When editing this, make sure
-  # that the “output/” and “tmp/” directories are _not_ included in this list,
-  # because recompiling the site will cause these directories to change, which
-  # will cause the site to be recompiled, which will cause these directories
-  # to change, which will cause the site to be recompiled again, and so on.
-  dirs_to_watch: [ 'content', 'layouts', 'lib' ]
+    # The kind of identifier to use for items and layouts. The default is
+    # “full”, meaning that identifiers include file extensions. This can also
+    # be “legacy”, primarily used by older Nanoc sites.
+    identifier_type: full
 
-  # A list of single files to watch for changes. As mentioned above, don’t put
-  # any files from the “output/” or “tmp/” directories in here.
-  files_to_watch: [ 'nanoc.yaml', 'Rules' ]
+# Configuration for the “check” command, which run unit tests on the site.
+checks:
+  # Configuration for the “internal_links” checker, which checks whether all
+  # internal links are valid.
+  internal_links:
+    # A list of patterns, specified as regular expressions, to exclude from the check.
+    # If an internal link matches this pattern, the validity check will be skipped.
+    # E.g.:
+    #   exclude: ['^/server_status']
+    exclude: []
 
-  # When to send notifications (using Growl or notify-send).
-  notify_on_compilation_success: true
-  notify_on_compilation_failure: true
+  # Configuration for the “external_links” checker, which checks whether all
+  # external links are valid.
+  external_links:
+    # A list of patterns, specified as regular expressions, to exclude from the check.
+    # If an external link matches this pattern, the validity check will be skipped.
+    # E.g.:
+    #   exclude: ['^http://example.com$']
+    exclude: []
 
-# Controls whether to completely compress local CSS and JS
+    # A list of file patterns, specified as regular expressions, to exclude from the check.
+    # If a file matches this pattern, the links from this file will not be checked.
+    # E.g.:
+    #   exclude_files: ['blog/page']
+    exclude_files: []
+
+# Custom stuff
+# Base_url: needed for atom feed generation
+base_url: https://www.faskatech.net
+
+# Needed for easy site name reference
+site_claim: Faskatech.net
+claim_text: Linux projects for power users
+
+# Page size for pagination
+page_size: 3
+
+# Set default number of correlated posts
+correlated_posts: 5
+
+# Whether to enable debugging for CSS and JS minification
 debug: false
+
