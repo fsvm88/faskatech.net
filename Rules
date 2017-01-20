@@ -25,7 +25,7 @@ compile '/assets/js/*.js' do
 end
 
 # Robots.txt must be skipped
-compile '/robots.txt/' do
+compile '/robots.txt' do
     write '/robots.txt'
 end
 
