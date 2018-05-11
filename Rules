@@ -21,7 +21,7 @@ end
 # JavaScript
 compile '/assets/js/*.js' do
     filter :erb
-    filter :uglify_js, { :mangle => { :sort => true }, :compress => { :drop_console => true } } unless @config[:debug]
+    filter :uglify_js, { :compress => { :drop_console => true } } unless @config[:debug]
 end
 
 # Robots.txt must be skipped
@@ -55,11 +55,11 @@ compile '/**/*' do
             filter :erb
         end
 
-        layout '/posts/' if item.identifier =~ '/posts/'
+        layout '/posts.*' if item.identifier =~ /posts/
 
         layout item[:layout] if item[:layout]
         
-        if item.identifier =~ '/guide/' or item.identifier =~ '/contact/' or item.identifier =~ '/about/'
+        if item.identifier =~ /guide/ or item.identifier =~ /contact/ or item.identifier =~ /about/
             layout '/content_without_sidebar.*'
         else
             layout '/content_with_sidebar.*'
@@ -90,8 +90,12 @@ route '/assets/**/*' do
     end
 end
 
-route '/{sitemap,browserconfig}.*' do
+route '/browserconfig.*' do
     item.identifier.without_ext + '.xml'
+end
+
+route '/sitemap.*' do
+    '/atom.xml'
 end
 
 route '/**/*' do
