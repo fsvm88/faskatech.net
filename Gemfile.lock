@@ -16,7 +16,7 @@ GEM
     ddmetrics (1.0.0)
     ddplugin (1.0.2)
     execjs (2.7.0)
-    ffi (1.9.23)
+    ffi (1.15.3)
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     json (2.1.0)
