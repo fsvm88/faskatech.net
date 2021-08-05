@@ -20,7 +20,8 @@ GEM
     hamster (3.0.0)
       concurrent-ruby (~> 1.0)
     json (2.1.0)
-    kramdown (1.16.2)
+    kramdown (2.3.1)
+      rexml
     libv8 (3.16.14.19)
     mini_portile2 (2.3.0)
     nanoc (4.9.2)
@@ -43,6 +44,7 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     ref (2.0.0)
+    rexml (3.2.5)
     sass (3.5.6)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
